@@ -30,35 +30,30 @@ VALID_DDDS = {
 # =============================================================================
 LOCAL_OPTIONS = [
     {"id": "1",  "nome": "INSTITUTO AL\u00c9M DOS OLHOS - POLO 1 (Regional IX)"},
-    {"id": "3",  "nome": "INSTITUI\u00c7\u00c3O COLETIVO OLHANDO PRA FRENTE (Regional IX)"},
-    {"id": "4",  "nome": "INSTITUTO AMIGOS DO BEM (Regional VI)"},
-    {"id": "5",  "nome": "INSTITUTO VELAUMAR (Regional XII)"},
-    {"id": "6",  "nome": "CONSELHO COMUNIT\u00c1RIO DO PARQUE S\u00c3O JOS\u00c9 (Regional X)"},
-    {"id": "7",  "nome": "INSTITUTO LOURDES VIANA (Regional II)"},
-    {"id": "8",  "nome": "INSTITUTO NOVO RENASCER (Regional I)"},
-    {"id": "9",  "nome": "ASSOCIA\u00c7\u00c3O FUTURO DA CRIAN\u00c7A (Regional I)"},
-    {"id": "10", "nome": "INSTITUTO DOANDO QUE SE RECEBE (Regional IV)"},
-    {"id": "11", "nome": "INSTITUTO VIVA IDOSO (Regional IV)"},
-    {"id": "12", "nome": "PROJETO AMIGOS DE DEUS (Regional V)"},
+    {"id": "2",  "nome": "INSTITUI\u00c7\u00c3O COLETIVO OLHANDO PRA FRENTE (Regional IX)"},
+    {"id": "3",  "nome": "INSTITUTO AMIGOS DO BEM (Regional VI)"},
+    {"id": "4",  "nome": "INSTITUTO VELAUMAR (Regional XII)"},
+    {"id": "5",  "nome": "CONSELHO COMUNIT\u00c1RIO DO PARQUE S\u00c3O JOS\u00c9 (Regional X)"},
+    {"id": "6",  "nome": "INSTITUTO LOURDES VIANA (Regional II)"},
+    {"id": "7",  "nome": "INSTITUTO NOVO RENASCER (Regional I)"},
+    {"id": "8",  "nome": "ASSOCIA\u00c7\u00c3O FUTURO DA CRIAN\u00c7A (Regional I)"},
+    {"id": "9",  "nome": "INSTITUTO DOANDO QUE SE RECEBE (Regional IV)"},
+    {"id": "10", "nome": "INSTITUTO VIVA IDOSO (Regional IV)"},
+    {"id": "11", "nome": "PROJETO AMIGOS DE DEUS (Regional V)"},
 ]
 
 # =============================================================================
-# 2. CAT\u00c1LOGO DE CURSOS (cada turma tem c\u00f3digo \u00fanico)
+# 2. CAT\u00c1LOGO DE CURSOS — agrupados por nome
 # =============================================================================
 COURSE_CATALOG = [
-    {"id": "4",  "nome": "26/INAT 001 - INTELIG\u00caNCIA ARTIFICIAL"},
-    {"id": "5",  "nome": "26/DSUN 004 - DESIGNER DE UNHAS"},
-    {"id": "6",  "nome": "26/MARK 004 - MARKETING DIGITAL"},
-    {"id": "7",  "nome": "26/OFDN 009 - OFICINA DE DAN\u00c7A"},
-    {"id": "8",  "nome": "26/OFDN 010 - OFICINA DE DAN\u00c7A"},
-    {"id": "9",  "nome": "26/DSUN 005 - DESIGNER DE UNHAS"},
-    {"id": "10", "nome": "26/INAT 004 - INTELIG\u00caNCIA ARTIFICIAL"},
-    {"id": "11", "nome": "26/RECP 001 - RECEPCIONISTA"},
-    {"id": "12", "nome": "26/MNCR 008 - MANICURE"},
-    {"id": "13", "nome": "26/EXTC 005 - EXTENS\u00c3O DE C\u00cdLIOS"},
-    {"id": "14", "nome": "26/MNCR 007 - MANICURE"},
-    {"id": "15", "nome": "26/MARK 006 - MARKETING DIGITAL"},
-    {"id": "16", "nome": "26/SOMD 008 - SOCIAL MEDIA"},
+    {"id": "1", "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
+    {"id": "2", "nome": "MARKETING DIGITAL"},
+    {"id": "3", "nome": "OFICINA DE DAN\u00c7A"},
+    {"id": "4", "nome": "DESIGNER DE UNHAS"},
+    {"id": "5", "nome": "RECEPCIONISTA"},
+    {"id": "6", "nome": "MANICURE"},
+    {"id": "7", "nome": "EXTENS\u00c3O DE C\u00cdLIOS"},
+    {"id": "8", "nome": "SOCIAL MEDIA"},
 ]
 
 # =============================================================================
@@ -79,97 +74,103 @@ ADDRESS_OPTIONS = {
 }
 
 # =============================================================================
-# 4. TURMAS
+# 4. TURMAS — curso_id aponta para COURSE_CATALOG agrupado
 # =============================================================================
 TURMA_OPTIONS = [
-    # Turmas originais Regional IX
+    # INTELIGÊNCIA ARTIFICIAL (curso_id=1)
     {
-        "id": "4", "curso_id": "4", "local_id": "1",
+        "id": "101", "curso_id": "1", "local_id": "1",
         "turma_codigo": "26/INAT-001",
         "dias_aula": "Ter\u00e7a e Quinta", "horario": "15h at\u00e9 17h",
         "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
         "endereco_id": "1",
     },
     {
-        "id": "5", "curso_id": "5", "local_id": "3",
-        "turma_codigo": "26/DSUN-004",
-        "dias_aula": "Segunda a Sexta", "horario": "08h at\u00e9 12h",
-        "data_inicio": "17/08/2026", "encerramento": "21/08/2026",
-        "endereco_id": "2",
+        "id": "102", "curso_id": "1", "local_id": "6",
+        "turma_codigo": "26/INAT-004",
+        "dias_aula": "Ter\u00e7a e Quinta", "horario": "18h30 at\u00e9 20h30",
+        "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
+        "endereco_id": "6",
     },
-    # Turmas do cronograma PDF
+    # MARKETING DIGITAL (curso_id=2)
     {
-        "id": "6", "curso_id": "6", "local_id": "4",
+        "id": "201", "curso_id": "2", "local_id": "3",
         "turma_codigo": "26/MARK-004",
         "dias_aula": "Ter\u00e7a e Quinta", "horario": "09h at\u00e9 11h",
         "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
         "endereco_id": "3",
     },
     {
-        "id": "7", "curso_id": "7", "local_id": "5",
+        "id": "202", "curso_id": "2", "local_id": "11",
+        "turma_codigo": "26/MARK-006",
+        "dias_aula": "Ter\u00e7a e Quinta", "horario": "14h at\u00e9 16h",
+        "data_inicio": "08/09/2026", "encerramento": "01/10/2026",
+        "endereco_id": "11",
+    },
+    # OFICINA DE DANÇA (curso_id=3)
+    {
+        "id": "301", "curso_id": "3", "local_id": "4",
         "turma_codigo": "26/OFDN-009",
         "dias_aula": "Quarta", "horario": "18h at\u00e9 20h",
         "data_inicio": "26/08/2026", "encerramento": "26/08/2026",
         "endereco_id": "4",
     },
     {
-        "id": "8", "curso_id": "8", "local_id": "5",
+        "id": "302", "curso_id": "3", "local_id": "4",
         "turma_codigo": "26/OFDN-010",
         "dias_aula": "Quarta", "horario": "18h at\u00e9 20h",
         "data_inicio": "02/09/2026", "encerramento": "02/09/2026",
         "endereco_id": "4",
     },
+    # DESIGNER DE UNHAS (curso_id=4)
     {
-        "id": "9", "curso_id": "9", "local_id": "6",
+        "id": "401", "curso_id": "4", "local_id": "2",
+        "turma_codigo": "26/DSUN-004",
+        "dias_aula": "Segunda a Sexta", "horario": "08h at\u00e9 12h",
+        "data_inicio": "17/08/2026", "encerramento": "21/08/2026",
+        "endereco_id": "2",
+    },
+    {
+        "id": "402", "curso_id": "4", "local_id": "5",
         "turma_codigo": "26/DSUN-005",
         "dias_aula": "Segunda a Sexta", "horario": "18h30 at\u00e9 20h30",
         "data_inicio": "02/09/2026", "encerramento": "08/09/2026",
         "endereco_id": "5",
     },
+    # RECEPCIONISTA (curso_id=5)
     {
-        "id": "10", "curso_id": "10", "local_id": "7",
-        "turma_codigo": "26/INAT-004",
-        "dias_aula": "Ter\u00e7a e Quinta", "horario": "18h30 at\u00e9 20h30",
-        "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
-        "endereco_id": "6",
-    },
-    {
-        "id": "11", "curso_id": "11", "local_id": "8",
+        "id": "501", "curso_id": "5", "local_id": "7",
         "turma_codigo": "26/RECP-001",
         "dias_aula": "Ter\u00e7a e Quinta", "horario": "18h30 at\u00e9 20h30",
         "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
         "endereco_id": "7",
     },
+    # MANICURE (curso_id=6)
     {
-        "id": "12", "curso_id": "12", "local_id": "9",
+        "id": "601", "curso_id": "6", "local_id": "8",
         "turma_codigo": "26/MNCR-008",
         "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h30",
         "data_inicio": "31/08/2026", "encerramento": "04/09/2026",
         "endereco_id": "8",
     },
     {
-        "id": "13", "curso_id": "13", "local_id": "10",
-        "turma_codigo": "26/EXTC-005",
-        "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h30",
-        "data_inicio": "31/08/2026", "encerramento": "04/09/2026",
-        "endereco_id": "9",
-    },
-    {
-        "id": "14", "curso_id": "14", "local_id": "11",
+        "id": "602", "curso_id": "6", "local_id": "10",
         "turma_codigo": "26/MNCR-007",
         "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h30",
         "data_inicio": "07/09/2026", "encerramento": "11/08/2026",
         "endereco_id": "10",
     },
+    # EXTENSÃO DE CÍLIOS (curso_id=7)
     {
-        "id": "15", "curso_id": "15", "local_id": "12",
-        "turma_codigo": "26/MARK-006",
-        "dias_aula": "Ter\u00e7a e Quinta", "horario": "14h at\u00e9 16h",
-        "data_inicio": "08/09/2026", "encerramento": "01/10/2026",
-        "endereco_id": "11",
+        "id": "701", "curso_id": "7", "local_id": "9",
+        "turma_codigo": "26/EXTC-005",
+        "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h30",
+        "data_inicio": "31/08/2026", "encerramento": "04/09/2026",
+        "endereco_id": "9",
     },
+    # SOCIAL MEDIA (curso_id=8)
     {
-        "id": "16", "curso_id": "16", "local_id": "12",
+        "id": "801", "curso_id": "8", "local_id": "11",
         "turma_codigo": "26/SOMD-008",
         "dias_aula": "Segunda e Quarta", "horario": "14h at\u00e9 16h",
         "data_inicio": "09/09/2026", "encerramento": "30/09/2026",
@@ -178,7 +179,7 @@ TURMA_OPTIONS = [
 ]
 
 # =============================================================================
-# 5. FUN\u00c7\u00d5ES AUXILIARES
+# 5. FUNÇÕES AUXILIARES
 # =============================================================================
 def build_course_options():
     local_by_id  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
