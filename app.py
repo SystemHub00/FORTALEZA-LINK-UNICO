@@ -29,17 +29,17 @@ VALID_DDDS = {
 # 1. LOCAIS
 # =============================================================================
 LOCAL_OPTIONS = [
-    {"id": "1",  "nome": "INSTITUTO AL\u00c9M DOS OLHOS - POLO 1 (Regional IX)"},
-    {"id": "2",  "nome": "INSTITUI\u00c7\u00c3O COLETIVO OLHANDO PRA FRENTE (Regional IX)"},
-    {"id": "3",  "nome": "INSTITUTO AMIGOS DO BEM (Regional VI)"},
-    {"id": "4",  "nome": "INSTITUTO VELAUMAR (Regional XII)"},
-    {"id": "5",  "nome": "CONSELHO COMUNIT\u00c1RIO DO PARQUE S\u00c3O JOS\u00c9 (Regional X)"},
-    {"id": "6",  "nome": "INSTITUTO LOURDES VIANA (Regional II)"},
-    {"id": "7",  "nome": "INSTITUTO NOVO RENASCER (Regional I)"},
-    {"id": "8",  "nome": "ASSOCIA\u00c7\u00c3O FUTURO DA CRIAN\u00c7A (Regional I)"},
-    {"id": "9",  "nome": "INSTITUTO DOANDO QUE SE RECEBE (Regional IV)"},
-    {"id": "10", "nome": "INSTITUTO VIVA IDOSO (Regional IV)"},
-    {"id": "11", "nome": "PROJETO AMIGOS DE DEUS (Regional V)"},
+    {"id": "1",  "nome": "INSTITUTO AL\u00c9M DOS OLHOS - POLO 1"},
+    {"id": "2",  "nome": "INSTITUI\u00c7\u00c3O COLETIVO OLHANDO PRA FRENTE"},
+    {"id": "3",  "nome": "INSTITUTO AMIGOS DO BEM"},
+    {"id": "4",  "nome": "INSTITUTO VELAUMAR"},
+    {"id": "5",  "nome": "CONSELHO COMUNIT\u00c1RIO DO PARQUE S\u00c3O JOS\u00c9"},
+    {"id": "6",  "nome": "INSTITUTO LOURDES VIANA"},
+    {"id": "7",  "nome": "INSTITUTO NOVO RENASCER"},
+    {"id": "8",  "nome": "ASSOCIA\u00c7\u00c3O FUTURO DA CRIAN\u00c7A"},
+    {"id": "9",  "nome": "INSTITUTO DOANDO QUE SE RECEBE"},
+    {"id": "10", "nome": "INSTITUTO VIVA IDOSO"},
+    {"id": "11", "nome": "PROJETO AMIGOS DE DEUS"},
 ]
 
 # =============================================================================
