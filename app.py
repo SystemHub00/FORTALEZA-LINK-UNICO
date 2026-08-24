@@ -124,13 +124,6 @@ TURMA_OPTIONS = [
     },
     # DESIGNER DE UNHAS (curso_id=4)
     {
-        "id": "401", "curso_id": "4", "local_id": "2",
-        "turma_codigo": "26/DSUN-004",
-        "dias_aula": "Segunda a Sexta", "horario": "08h at\u00e9 12h",
-        "data_inicio": "17/08/2026", "encerramento": "21/08/2026",
-        "endereco_id": "2",
-    },
-    {
         "id": "402", "curso_id": "4", "local_id": "5",
         "turma_codigo": "26/DSUN-005",
         "dias_aula": "Segunda a Sexta", "horario": "18h30 at\u00e9 20h30",
