@@ -25,56 +25,179 @@ VALID_DDDS = {
     "91","92","93","94","95","96","97","98","99",
 }
 
+# =============================================================================
+# 1. LOCAIS
+# =============================================================================
 LOCAL_OPTIONS = [
-    {"id": "1", "nome": "INSTITUTO AL\u00c9M DOS OLHOS - POLO 1"},
-    {"id": "3", "nome": "INSTITUI\u00c7\u00c3O COLETIVO OLHANDO PRA FRENTE"},
+    {"id": "1",  "nome": "INSTITUTO AL\u00c9M DOS OLHOS - POLO 1 (Regional IX)"},
+    {"id": "3",  "nome": "INSTITUI\u00c7\u00c3O COLETIVO OLHANDO PRA FRENTE (Regional IX)"},
+    {"id": "4",  "nome": "INSTITUTO AMIGOS DO BEM (Regional VI)"},
+    {"id": "5",  "nome": "INSTITUTO VELAUMAR (Regional XII)"},
+    {"id": "6",  "nome": "CONSELHO COMUNIT\u00c1RIO DO PARQUE S\u00c3O JOS\u00c9 (Regional X)"},
+    {"id": "7",  "nome": "INSTITUTO LOURDES VIANA (Regional II)"},
+    {"id": "8",  "nome": "INSTITUTO NOVO RENASCER (Regional I)"},
+    {"id": "9",  "nome": "ASSOCIA\u00c7\u00c3O FUTURO DA CRIAN\u00c7A (Regional I)"},
+    {"id": "10", "nome": "INSTITUTO DOANDO QUE SE RECEBE (Regional IV)"},
+    {"id": "11", "nome": "INSTITUTO VIVA IDOSO (Regional IV)"},
+    {"id": "12", "nome": "PROJETO AMIGOS DE DEUS (Regional V)"},
 ]
 
+# =============================================================================
+# 2. CAT\u00c1LOGO DE CURSOS (cada turma tem c\u00f3digo \u00fanico)
+# =============================================================================
 COURSE_CATALOG = [
-    {"id": "4", "nome": "26/INAT 001 - INTELIG\u00caNCIA ARTIFICIAL"},
-    {"id": "5", "nome": "26/DSUN 004 - DESIGNER DE UNHAS"},
+    {"id": "4",  "nome": "26/INAT 001 - INTELIG\u00caNCIA ARTIFICIAL"},
+    {"id": "5",  "nome": "26/DSUN 004 - DESIGNER DE UNHAS"},
+    {"id": "6",  "nome": "26/MARK 004 - MARKETING DIGITAL"},
+    {"id": "7",  "nome": "26/OFDN 009 - OFICINA DE DAN\u00c7A"},
+    {"id": "8",  "nome": "26/OFDN 010 - OFICINA DE DAN\u00c7A"},
+    {"id": "9",  "nome": "26/DSUN 005 - DESIGNER DE UNHAS"},
+    {"id": "10", "nome": "26/INAT 004 - INTELIG\u00caNCIA ARTIFICIAL"},
+    {"id": "11", "nome": "26/RECP 001 - RECEPCIONISTA"},
+    {"id": "12", "nome": "26/MNCR 008 - MANICURE"},
+    {"id": "13", "nome": "26/EXTC 005 - EXTENS\u00c3O DE C\u00cdLIOS"},
+    {"id": "14", "nome": "26/MNCR 007 - MANICURE"},
+    {"id": "15", "nome": "26/MARK 006 - MARKETING DIGITAL"},
+    {"id": "16", "nome": "26/SOMD 008 - SOCIAL MEDIA"},
 ]
 
-SCHEDULE_OPTIONS = {
-    "4": {"dias_aula": "Ter\u00e7a e Quinta", "horario": "15h at\u00e9 17h"},
-    "5": {"dias_aula": "Segunda a Sexta",       "horario": "08h at\u00e9 12h"},
-}
-
-START_DATE_OPTIONS = {
-    "4": "25/08/2026",
-    "5": "17/08/2026",
-}
-
-END_DATE_OPTIONS = {
-    "4": "17/09/2026",
-    "5": "21/08/2026",
-}
-
+# =============================================================================
+# 3. ENDERE\u00c7OS
+# =============================================================================
 ADDRESS_OPTIONS = {
-    "1": "\U0001f4cdRua Jorn. Ant\u00f4nio Pontes, n\u00ba 1138, bairro Cajazeiras - CEP.: 60.864-590",
-    "2": "\U0001f4cdRua B, n\u00ba 39, bairro Jangurussu - CEP.: 60.870-605",
+    "1":  "\U0001f4cdRua Jorn. Ant\u00f4nio Pontes, n\u00ba 1138, bairro Cajazeiras - CEP.: 60.864-590",
+    "2":  "\U0001f4cdRua B, n\u00ba 39, bairro Jangurussu - CEP.: 60.870-605",
+    "3":  "\U0001f4cdRua G - Bairro Paupina (Conjunto dos escrit\u00f3rios). Fortaleza, CE - CEP.: 60873575",
+    "4":  "\U0001f4cdAvenida Tamandar\u00e9, n\u00ba 41, bairro Praia de Iracema - CEP.: 60.060-200",
+    "5":  "\U0001f4cdRua Costa Freire, n\u00ba 2238, bairro Parangaba - Fortaleza, CE - CEP.: 60.730-255",
+    "6":  "\U0001f4cdRua J\u00falia Vasconcelos, n\u00ba 199 - Tatuap\u00e9 - Fortaleza, CE - CEP.: 60125-150",
+    "7":  "\U0001f4cdAvenida Ferreira dos Santos, n\u00ba 8b, bairro \u00c1lvaro Weyne - Fortaleza, CE - CEP.: 60.335-570",
+    "8":  "\U0001f4cdRua Parambu, n\u00ba 560, bairro Vila Velha - Fortaleza, CE - CEP.: 60.347-160",
+    "9":  "\U0001f4cdRua Einstein, n\u00ba 1322 - bairro Vila Peri - Fortaleza, CE - CEP.: 60730-145",
+    "10": "\U0001f4cdRua Nove, n\u00ba 803 - bairro Passar\u00e9 - Fortaleza, CE - CEP.: 60810-670",
+    "11": "\U0001f4cdRua Humberto Lomeu, n\u00ba 2442 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
 }
 
+# =============================================================================
+# 4. TURMAS
+# =============================================================================
 TURMA_OPTIONS = [
-    {"id":"4","curso_id":"4","local_id":"1","turma_codigo":"26/INAT-001","agenda_id":"4","periodo_id":"4","encerramento_id":"4","endereco_id":"1"},
-    {"id":"5","curso_id":"5","local_id":"3","turma_codigo":"26/DSUN-004","agenda_id":"5","periodo_id":"5","encerramento_id":"5","endereco_id":"2"},
+    # Turmas originais Regional IX
+    {
+        "id": "4", "curso_id": "4", "local_id": "1",
+        "turma_codigo": "26/INAT-001",
+        "dias_aula": "Ter\u00e7a e Quinta", "horario": "15h at\u00e9 17h",
+        "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
+        "endereco_id": "1",
+    },
+    {
+        "id": "5", "curso_id": "5", "local_id": "3",
+        "turma_codigo": "26/DSUN-004",
+        "dias_aula": "Segunda a Sexta", "horario": "08h at\u00e9 12h",
+        "data_inicio": "17/08/2026", "encerramento": "21/08/2026",
+        "endereco_id": "2",
+    },
+    # Turmas do cronograma PDF
+    {
+        "id": "6", "curso_id": "6", "local_id": "4",
+        "turma_codigo": "26/MARK-004",
+        "dias_aula": "Ter\u00e7a e Quinta", "horario": "09h at\u00e9 11h",
+        "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
+        "endereco_id": "3",
+    },
+    {
+        "id": "7", "curso_id": "7", "local_id": "5",
+        "turma_codigo": "26/OFDN-009",
+        "dias_aula": "Quarta", "horario": "18h at\u00e9 20h",
+        "data_inicio": "26/08/2026", "encerramento": "26/08/2026",
+        "endereco_id": "4",
+    },
+    {
+        "id": "8", "curso_id": "8", "local_id": "5",
+        "turma_codigo": "26/OFDN-010",
+        "dias_aula": "Quarta", "horario": "18h at\u00e9 20h",
+        "data_inicio": "02/09/2026", "encerramento": "02/09/2026",
+        "endereco_id": "4",
+    },
+    {
+        "id": "9", "curso_id": "9", "local_id": "6",
+        "turma_codigo": "26/DSUN-005",
+        "dias_aula": "Segunda a Sexta", "horario": "18h30 at\u00e9 20h30",
+        "data_inicio": "02/09/2026", "encerramento": "08/09/2026",
+        "endereco_id": "5",
+    },
+    {
+        "id": "10", "curso_id": "10", "local_id": "7",
+        "turma_codigo": "26/INAT-004",
+        "dias_aula": "Ter\u00e7a e Quinta", "horario": "18h30 at\u00e9 20h30",
+        "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
+        "endereco_id": "6",
+    },
+    {
+        "id": "11", "curso_id": "11", "local_id": "8",
+        "turma_codigo": "26/RECP-001",
+        "dias_aula": "Ter\u00e7a e Quinta", "horario": "18h30 at\u00e9 20h30",
+        "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
+        "endereco_id": "7",
+    },
+    {
+        "id": "12", "curso_id": "12", "local_id": "9",
+        "turma_codigo": "26/MNCR-008",
+        "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h30",
+        "data_inicio": "31/08/2026", "encerramento": "04/09/2026",
+        "endereco_id": "8",
+    },
+    {
+        "id": "13", "curso_id": "13", "local_id": "10",
+        "turma_codigo": "26/EXTC-005",
+        "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h30",
+        "data_inicio": "31/08/2026", "encerramento": "04/09/2026",
+        "endereco_id": "9",
+    },
+    {
+        "id": "14", "curso_id": "14", "local_id": "11",
+        "turma_codigo": "26/MNCR-007",
+        "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h30",
+        "data_inicio": "07/09/2026", "encerramento": "11/08/2026",
+        "endereco_id": "10",
+    },
+    {
+        "id": "15", "curso_id": "15", "local_id": "12",
+        "turma_codigo": "26/MARK-006",
+        "dias_aula": "Ter\u00e7a e Quinta", "horario": "14h at\u00e9 16h",
+        "data_inicio": "08/09/2026", "encerramento": "01/10/2026",
+        "endereco_id": "11",
+    },
+    {
+        "id": "16", "curso_id": "16", "local_id": "12",
+        "turma_codigo": "26/SOMD-008",
+        "dias_aula": "Segunda e Quarta", "horario": "14h at\u00e9 16h",
+        "data_inicio": "09/09/2026", "encerramento": "30/09/2026",
+        "endereco_id": "11",
+    },
 ]
 
+# =============================================================================
+# 5. FUN\u00c7\u00d5ES AUXILIARES
+# =============================================================================
 def build_course_options():
     local_by_id  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
     course_by_id = {opt["id"]: opt for opt in COURSE_CATALOG}
     options = []
     for t in TURMA_OPTIONS:
-        local    = local_by_id[t["local_id"]]
-        course   = course_by_id[t["curso_id"]]
-        schedule = SCHEDULE_OPTIONS[t["agenda_id"]]
+        local  = local_by_id[t["local_id"]]
+        course = course_by_id[t["curso_id"]]
         options.append({
-            "id": t["id"], "curso_id": t["curso_id"], "local_id": t["local_id"],
-            "local":  local["nome"],  "curso": course["nome"],
-            "turma":  f"{t['turma_codigo']} - {course['nome']}",
-            "dias_aula": schedule["dias_aula"], "horario": schedule["horario"],
-            "data_inicio":    START_DATE_OPTIONS[t["periodo_id"]],
-            "encerramento":   END_DATE_OPTIONS[t["encerramento_id"]],
+            "id":             t["id"],
+            "curso_id":       t["curso_id"],
+            "local_id":       t["local_id"],
+            "local":          local["nome"],
+            "curso":          course["nome"],
+            "turma":          f"{t['turma_codigo']} - {course['nome']}",
+            "dias_aula":      t["dias_aula"],
+            "horario":        t["horario"],
+            "data_inicio":    t["data_inicio"],
+            "encerramento":   t["encerramento"],
             "endereco_curso": ADDRESS_OPTIONS[t["endereco_id"]],
         })
     return options
@@ -347,7 +470,6 @@ TEMPLATE_WIZARD = r"""<!DOCTYPE html>
                 <!-- PASSO 3: ESCOLHER CURSO -->
                 <section class="wizard-panel" data-step="escolher">
                     <div class="step-card"><h2 class="panel-title">Escolha seu curso</h2>
-                        <p class="panel-subtitle" style="margin-bottom:10px;">Cursos dispon&#237;veis para inscri&#231;&#227;o nesta regional:</p>
                         <div class="step-grid step-grid--stacked">
                             <div class="form-group full"><label for="curso_id">Curso *</label><select id="curso_id" name="curso_id"><option value="">Selecione um curso</option>{% for curso in course_catalog %}<option value="{{ curso.id }}" {% if form_data.get('curso_id')==curso.id %}selected{% endif %}>{{ curso.nome }}</option>{% endfor %}</select><div class="balao-erro" id="curso_id-error" {% if not errors.get('curso_id') %}hidden{% endif %}>{{ errors.get('curso_id','') }}</div></div>
                             <div class="form-group full" id="local-group" style="display:none;"><label for="local_id_select">Local *</label><select id="local_id_select"><option value="">Selecione um local</option></select><div class="balao-erro" id="local_id-error" hidden></div></div>
