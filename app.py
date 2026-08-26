@@ -7,7 +7,6 @@ from urllib.parse import quote
 import requests
 from flask import Flask, redirect, render_template_string, request, session, url_for
 from gsheet_utils import append_to_sheet
-
 ALLOWED_EMAIL_PATTERN = re.compile(
     r"^[a-zA-Z0-9_.+-]+@((gmail|hotmail|outlook|yahoo)\.(com|com\.br))$",
     re.IGNORECASE,
@@ -24,15 +23,13 @@ VALID_DDDS = {
     "81","82","83","84","85","86","87","88","89",
     "91","92","93","94","95","96","97","98","99",
 }
-
 # =============================================================================
-# 1. LOCAIS
+# 1. LOCAIS  (INSTITUTO VELAUMAR removido)
 # =============================================================================
 LOCAL_OPTIONS = [
     {"id": "1",  "nome": "INSTITUTO AL\u00c9M DOS OLHOS - POLO 1"},
     {"id": "2",  "nome": "INSTITUI\u00c7\u00c3O COLETIVO OLHANDO PRA FRENTE"},
     {"id": "3",  "nome": "INSTITUTO AMIGOS DO BEM"},
-    {"id": "4",  "nome": "INSTITUTO VELAUMAR"},
     {"id": "5",  "nome": "CONSELHO COMUNIT\u00c1RIO DO PARQUE S\u00c3O JOS\u00c9"},
     {"id": "6",  "nome": "INSTITUTO LOURDES VIANA"},
     {"id": "7",  "nome": "INSTITUTO NOVO RENASCER"},
@@ -41,29 +38,25 @@ LOCAL_OPTIONS = [
     {"id": "10", "nome": "INSTITUTO VIVA IDOSO"},
     {"id": "11", "nome": "PROJETO AMIGOS DE DEUS"},
 ]
-
 # =============================================================================
-# 2. CATÁLOGO DE CURSOS
+# 2. CAT\u00c1LOGO DE CURSOS  (OFICINA DE DAN\u00c7A removida — sem turmas)
 # =============================================================================
 COURSE_CATALOG = [
     {"id": "1", "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
     {"id": "2", "nome": "MARKETING DIGITAL"},
-    {"id": "3", "nome": "OFICINA DE DAN\u00c7A"},
     {"id": "4", "nome": "DESIGNER DE UNHAS"},
     {"id": "5", "nome": "RECEPCIONISTA"},
     {"id": "6", "nome": "MANICURE"},
     {"id": "7", "nome": "EXTENS\u00c3O DE C\u00cdLIOS"},
     {"id": "8", "nome": "SOCIAL MEDIA"},
 ]
-
 # =============================================================================
-# 3. ENDEREÇOS
+# 3. ENDERE\u00c7OS  (endereco_id="4" removido — \u00f3rf\u00e3o)
 # =============================================================================
 ADDRESS_OPTIONS = {
     "1":  "\U0001f4cdRua Jorn. Ant\u00f4nio Pontes, n\u00ba 1138, bairro Cajazeiras - CEP.: 60.864-590",
     "2":  "\U0001f4cdRua B, n\u00ba 39, bairro Jangurussu - CEP.: 60.870-605",
     "3":  "\U0001f4cdRua G - Bairro Paupina (Conjunto dos escrit\u00f3rios). Fortaleza, CE - CEP.: 60873575",
-    "4":  "\U0001f4cdAvenida Tamandar\u00e9, n\u00ba 41, bairro Praia de Iracema - CEP.: 60.060-200",
     "5":  "\U0001f4cdRua Costa Freire, n\u00ba 2238, bairro Parangaba - Fortaleza, CE - CEP.: 60.730-255",
     "6":  "\U0001f4cdRua J\u00falia Vasconcelos, n\u00ba 199 - Tatuap\u00e9 - Fortaleza, CE - CEP.: 60125-150",
     "7":  "\U0001f4cdAvenida Ferreira dos Santos, n\u00ba 8b, bairro \u00c1lvaro Weyne - Fortaleza, CE - CEP.: 60.335-570",
@@ -72,12 +65,11 @@ ADDRESS_OPTIONS = {
     "10": "\U0001f4cdRua Nove, n\u00ba 803 - bairro Passar\u00e9 - Fortaleza, CE - CEP.: 60810-670",
     "11": "\U0001f4cdRua Humberto Lomeu, n\u00ba 2442 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
 }
-
 # =============================================================================
-# 4. TURMAS
+# 4. TURMAS  (301 e 302 — Oficina de Dan\u00e7a — canceladas e removidas)
 # =============================================================================
 TURMA_OPTIONS = [
-    # INTELIGÊNCIA ARTIFICIAL (curso_id=1)
+    # INTELIG\u00caNCIA ARTIFICIAL (curso_id=1)
     {
         "id": "101", "curso_id": "1", "local_id": "1",
         "turma_codigo": "26/INAT-001",
@@ -107,21 +99,6 @@ TURMA_OPTIONS = [
         "data_inicio": "08/09/2026", "encerramento": "01/10/2026",
         "endereco_id": "11",
     },
-    # OFICINA DE DANÇA (curso_id=3)
-    {
-        "id": "301", "curso_id": "3", "local_id": "4",
-        "turma_codigo": "26/OFDN-009",
-        "dias_aula": "Quarta", "horario": "18h at\u00e9 20h",
-        "data_inicio": "26/08/2026", "encerramento": "26/08/2026",
-        "endereco_id": "4",
-    },
-    {
-        "id": "302", "curso_id": "3", "local_id": "4",
-        "turma_codigo": "26/OFDN-010",
-        "dias_aula": "Quarta", "horario": "18h at\u00e9 20h",
-        "data_inicio": "02/09/2026", "encerramento": "02/09/2026",
-        "endereco_id": "4",
-    },
     # DESIGNER DE UNHAS (curso_id=4)
     {
         "id": "402", "curso_id": "4", "local_id": "5",
@@ -130,7 +107,7 @@ TURMA_OPTIONS = [
         "data_inicio": "02/09/2026", "encerramento": "08/09/2026",
         "endereco_id": "5",
     },
-    # RECEPCIONISTA (curso_id=5) — DATAS ATUALIZADAS
+    # RECEPCIONISTA (curso_id=5)
     {
         "id": "501", "curso_id": "5", "local_id": "7",
         "turma_codigo": "26/RECP-001",
@@ -153,7 +130,7 @@ TURMA_OPTIONS = [
         "data_inicio": "07/09/2026", "encerramento": "11/08/2026",
         "endereco_id": "10",
     },
-    # EXTENSÃO DE CÍLIOS (curso_id=7)
+    # EXTENS\u00c3O DE C\u00cdLIOS (curso_id=7)
     {
         "id": "701", "curso_id": "7", "local_id": "9",
         "turma_codigo": "26/EXTC-005",
@@ -170,9 +147,8 @@ TURMA_OPTIONS = [
         "endereco_id": "11",
     },
 ]
-
 # =============================================================================
-# 5. FUNÇÕES AUXILIARES
+# 5. FUN\u00c7\u00d5ES AUXILIARES
 # =============================================================================
 def build_course_options():
     local_by_id  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
@@ -195,23 +171,19 @@ def build_course_options():
             "endereco_curso": ADDRESS_OPTIONS[t["endereco_id"]],
         })
     return options
-
 COURSE_OPTIONS       = build_course_options()
 COURSE_OPTIONS_BY_ID = {opt["id"]: opt for opt in COURSE_OPTIONS}
 COURSE_CATALOG_BY_ID = {opt["id"]: opt for opt in COURSE_CATALOG}
 LOCAL_OPTIONS_BY_ID  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
 COURSE_INFO          = COURSE_OPTIONS[0] if COURSE_OPTIONS else None
-
 def build_whatsapp_share_url(home_url):
     message = (
         "Acabei de me inscrever em uma oportunidade de qualificacao profissional. "
         "Confira aqui: " + home_url
     )
     return f"https://wa.me/?text={quote(message)}"
-
 def get_course_option(option_id):
     return COURSE_OPTIONS_BY_ID.get(str(option_id or ""))
-
 def fill_form_data_from_option(form_data, option):
     form_data["local_id"]       = option["local_id"]
     form_data["curso_id"]       = option["curso_id"]
@@ -224,7 +196,6 @@ def fill_form_data_from_option(form_data, option):
     form_data["data_inicio"]    = option["data_inicio"]
     form_data["encerramento"]   = option["encerramento"]
     form_data["endereco_curso"] = option["endereco_curso"]
-
 def fill_form_data_from_selection(form_data):
     opcao_id = form_data.get("opcao_id")
     local_id = form_data.get("local_id")
@@ -399,7 +370,6 @@ TEMPLATE_WIZARD = r"""
                                 <div class="cursos-lista">
                                     <span class="curso-tag">&#129302; Intelig&#234;ncia Artificial</span>
                                     <span class="curso-tag">&#128241; Marketing Digital</span>
-                                    <span class="curso-tag">&#128131; Oficina de Dan&#231;a</span>
                                     <span class="curso-tag">&#128133; Designer de Unhas</span>
                                     <span class="curso-tag">&#128100; Recepcionista</span>
                                     <span class="curso-tag">&#128337; Manicure</span>
@@ -679,13 +649,11 @@ TEMPLATE_CONFIRMACAO = r"""
 </html>
 """
 
-
 # =============================================================================
 # FLASK APP
 # =============================================================================
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "chave-secreta-para-sessao")
-
 def get_default_form_data(source=None):
     form_data = {
         "nome":"","genero":"","cpf":"","nascimento":"",
@@ -705,7 +673,6 @@ def get_default_form_data(source=None):
                 form_data[key] = (value or "").strip()
         fill_form_data_from_selection(form_data)
     return form_data
-
 def cpf_valido(cpf):
     digits = re.sub(r"\D", "", cpf or "")
     if len(digits) != 11 or len(set(digits)) == 1: return False
@@ -715,20 +682,17 @@ def cpf_valido(cpf):
     total = sum(int(digits[i]) * (11 - i) for i in range(10))
     digit = (total * 10) % 11; digit = 0 if digit == 10 else digit
     return digit == int(digits[10])
-
 def idade_aceita(nascimento):
     try: dn = datetime.strptime(nascimento, "%d/%m/%Y")
     except ValueError: return False
     hoje = datetime.today(); idade = hoje.year - dn.year
     if (hoje.month, hoje.day) < (dn.month, dn.day): idade -= 1
     return 16 <= idade <= 90
-
 def whatsapp_valido(whatsapp):
     digits = re.sub(r"\D", "", whatsapp or "")
     if len(digits) != 11: return False
     if not re.fullmatch(r"\(\d{2}\) \d{5}-\d{4}", whatsapp or ""): return False
     return digits[:2] in VALID_DDDS
-
 def validate_form_data(form_data):
     errors = {}
     selected_curso  = form_data.get("curso_id")
@@ -756,12 +720,10 @@ def validate_form_data(form_data):
     if form_data["confirma_dados"] != "sim":
         errors["confirma_dados"] = "Confirme os dados para finalizar a inscri\u00e7\u00e3o."
     return errors
-
 def error_step(errors):
     if "confirma_dados" in errors: return "revisao"
     if "curso_id" in errors: return "escolher"
     return "dados"
-
 def render_wizard(form_data=None, errors=None, current_step="index"):
     current_form_data = form_data or get_default_form_data()
     selected_option   = get_course_option(current_form_data.get("opcao_id")) or COURSE_INFO
@@ -776,10 +738,8 @@ def render_wizard(form_data=None, errors=None, current_step="index"):
         form_data      = current_form_data,
         generos        = ["Feminino","Masculino","Outro","Prefiro n\u00e3o dizer"],
     )
-
 @app.route("/", methods=["GET"])
 def home(): return render_wizard()
-
 @app.route("/inscricao", methods=["GET","POST"])
 def inscricao_unica():
     if request.method == "GET": return redirect(url_for("home"))
@@ -804,12 +764,10 @@ def inscricao_unica():
         print("Envio para Supabase concluido:", response.status_code)
     except Exception as exc: print("Erro ao enviar para Supabase:", exc)
     return redirect(url_for("confirmacao"))
-
 @app.route("/curso",   methods=["GET","POST"])
 @app.route("/revisao", methods=["GET","POST"])
 @app.route("/wizard",  methods=["GET"])
 def legacy_routes(): return redirect(url_for("home"))
-
 @app.route("/confirmacao", methods=["GET"])
 def confirmacao():
     protocolo = session.get("protocolo")
@@ -820,7 +778,6 @@ def confirmacao():
         protocolo          = protocolo,
         whatsapp_share_url = build_whatsapp_share_url(home_url),
     )
-
 # =============================================================================
 # SUPABASE
 # =============================================================================
@@ -832,11 +789,9 @@ SUPABASE_API_KEY = os.environ.get(
     "SUPABASE_API_KEY",
     os.environ.get("FGM_FORTALEZA_API_KEY", "GGbPIn53S1IH1F4i6uBS5Ftoh1fNYk49"),
 )
-
 def normalize_phone_number(phone):
     digits = re.sub(r"[^\d]", "", phone or "")
     return f"55{digits}" if len(digits) == 11 else digits
-
 def send_registration_to_supabase(form_data):
     phone       = normalize_phone_number(form_data.get("whatsapp",""))
     data_inicio = form_data.get("data_inicio","")
@@ -870,7 +825,6 @@ def send_registration_to_supabase(form_data):
     if not response.ok:
         raise RuntimeError(f"Supabase retornou {response.status_code}: {response.text[:500]}")
     return response
-
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
