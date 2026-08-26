@@ -43,7 +43,7 @@ LOCAL_OPTIONS = [
 ]
 
 # =============================================================================
-# 2. CAT\u00c1LOGO DE CURSOS — agrupados por nome
+# 2. CATÁLOGO DE CURSOS
 # =============================================================================
 COURSE_CATALOG = [
     {"id": "1", "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
@@ -57,7 +57,7 @@ COURSE_CATALOG = [
 ]
 
 # =============================================================================
-# 3. ENDERE\u00c7OS
+# 3. ENDEREÇOS
 # =============================================================================
 ADDRESS_OPTIONS = {
     "1":  "\U0001f4cdRua Jorn. Ant\u00f4nio Pontes, n\u00ba 1138, bairro Cajazeiras - CEP.: 60.864-590",
@@ -74,7 +74,7 @@ ADDRESS_OPTIONS = {
 }
 
 # =============================================================================
-# 4. TURMAS — curso_id aponta para COURSE_CATALOG agrupado
+# 4. TURMAS
 # =============================================================================
 TURMA_OPTIONS = [
     # INTELIGÊNCIA ARTIFICIAL (curso_id=1)
@@ -130,12 +130,12 @@ TURMA_OPTIONS = [
         "data_inicio": "02/09/2026", "encerramento": "08/09/2026",
         "endereco_id": "5",
     },
-    # RECEPCIONISTA (curso_id=5)
+    # RECEPCIONISTA (curso_id=5) — DATAS ATUALIZADAS
     {
         "id": "501", "curso_id": "5", "local_id": "7",
         "turma_codigo": "26/RECP-001",
         "dias_aula": "Ter\u00e7a e Quinta", "horario": "18h30 at\u00e9 20h30",
-        "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
+        "data_inicio": "09/09/2026", "encerramento": "05/10/2026",
         "endereco_id": "7",
     },
     # MANICURE (curso_id=6)
@@ -244,13 +244,13 @@ def fill_form_data_from_selection(form_data):
     for key in ("local","curso","turma","dias_aula","horario",
                 "data_inicio","encerramento","endereco_curso","opcao_id"):
         form_data.setdefault(key, "")
-
-TEMPLATE_WIZARD = r"""<!DOCTYPE html>
+TEMPLATE_WIZARD = r"""
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Fortaleza - Regional IX</title>
+    <title>Fortaleza</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/assistant.css">
     <link href="https://fonts.googleapis.com/css2?family=Wise:wght@400;700;900&display=swap" rel="stylesheet">
@@ -373,7 +373,7 @@ TEMPLATE_WIZARD = r"""<!DOCTYPE html>
         <div class="header-logos">
             <img src="/static/logo-prefeitura.png" alt="Prefeitura" class="logo-prefeitura-topo">
             <div class="header-divider"></div>
-            <img src="/static/logoprojeto.jpeg" alt="Fortaleza Regional IX" class="logo-projeto-topo">
+            <img src="/static/logoprojeto.jpeg" alt="Fortaleza" class="logo-projeto-topo">
         </div>
     </header>
     <div class="wizard-page">
@@ -388,8 +388,6 @@ TEMPLATE_WIZARD = r"""<!DOCTYPE html>
         </div>
         <div class="wizard-shell">
             <form id="wizard-form" method="POST" action="{{ url_for('inscricao_unica') }}" autocomplete="off" novalidate>
-
-                <!-- PASSO 1: HERO -->
                 <section class="wizard-panel" data-step="index">
                     <div class="hero-grid"><div class="hero-card">
                         <span class="hero-pill">FORTALEZA</span>
@@ -440,8 +438,6 @@ TEMPLATE_WIZARD = r"""<!DOCTYPE html>
                         </div>
                     </div></div>
                 </section>
-
-                <!-- PASSO 2: DADOS -->
                 <section class="wizard-panel" data-step="dados">
                     <div class="step-card"><h2 class="panel-title">Dados pessoais</h2>
                         <div class="step-grid step-grid--stacked">
@@ -460,8 +456,6 @@ TEMPLATE_WIZARD = r"""<!DOCTYPE html>
                         </div>
                     </div>
                 </section>
-
-                <!-- PASSO 3: ESCOLHER CURSO -->
                 <section class="wizard-panel" data-step="escolher">
                     <div class="step-card"><h2 class="panel-title">Escolha seu curso</h2>
                         <div class="step-grid step-grid--stacked">
@@ -486,8 +480,6 @@ TEMPLATE_WIZARD = r"""<!DOCTYPE html>
                         </div>
                     </div>
                 </section>
-
-                <!-- PASSO 4: REVISÃO -->
                 <section class="wizard-panel" data-step="revisao">
                     <div class="step-card"><h2 class="panel-title">Confira seus dados para finaliza&#231;&#227;o</h2>
                         <p class="panel-subtitle">Confira os dados preenchidos e confirme sua participa&#231;&#227;o.</p>
@@ -528,7 +520,6 @@ TEMPLATE_WIZARD = r"""<!DOCTYPE html>
                         </div>
                     </div>
                 </section>
-
             </form>
         </div>
     </div>
@@ -558,7 +549,7 @@ TEMPLATE_WIZARD = r"""<!DOCTYPE html>
             localSelectEl.addEventListener('change',function(){setError('local_id','');var l=localSelectEl.value;if(l){atualizarCursosPorLocal(l,'','');}else{cursoGroup.style.display='none';turmaGroup.style.display='none';aplicarOpcao('');}syncReview();});
             courseSelect.addEventListener('change',function(){setError('curso_id','');var c=courseSelect.value;var l=localSelectEl.value;if(c&&l){atualizarHorariosPorCurso(l,c,'');}else{turmaGroup.style.display='none';aplicarOpcao('');}syncReview();});
             opcaoSelectEl.addEventListener('change',function(){setError('opcao_id','');aplicarOpcao(opcaoSelectEl.value);});
-            if(btnCopiarEndereco&&enderecoInput){btnCopiarEndereco.addEventListener('click',function(){navigator.clipboard.writeText(enderecoInput.value).then(function(){btnCopiarEndereco.textContent='COPIADO \u2705';}).catch(function(){enderecoInput.select();document.execCommand('copy');btnCopiarEndereco.textContent='COPIADO \u2705';});setTimeout(function(){btnCopiarEndereco.textContent='COPIAR &#128203;';},1200);});}
+            if(btnCopiarEndereco&&enderecoInput){btnCopiarEndereco.addEventListener('click',function(){navigator.clipboard.writeText(enderecoInput.value).then(function(){btnCopiarEndereco.textContent='COPIADO \u2705';}).catch(function(){enderecoInput.select();document.execCommand('copy');btnCopiarEndereco.textContent='COPIADO \u2705';});setTimeout(function(){btnCopiarEndereco.textContent='COPIAR \uD83D\uDCCB';},1200);});}
             function mostrarPasso(step){panels.forEach(function(p){p.classList.toggle('ativo',p.dataset.step===step);});labels.forEach(function(l){l.classList.toggle('ativo',l.dataset.stepLabel===step);});fill.style.width=(progressByStep[step]||25)+'%';window.scrollTo({top:0,behavior:'smooth'});}
             function syncReview(){reviewTargets.forEach(function(t){var key=t.dataset.review;if(key==='curso_nome'){t.textContent=cursoInput?cursoInput.value.trim():'';return;}if(key==='local_nome'){t.textContent=localInput?localInput.value.trim():'';return;}var f=document.getElementById(key);if(!f){t.textContent='';return;}if(f.tagName==='SELECT'){var s=f.options[f.selectedIndex];t.textContent=s?s.text.trim():'';}else{t.textContent=f.value.trim();}});}
             function validarCPF(cpf){var d=somenteDigitos(cpf);if(d.length!==11||/^(\d)\1+$/.test(d))return false;var s=0,g;for(var i=0;i<9;i++)s+=Number(d[i])*(10-i);g=(s*10)%11;if(g===10)g=0;if(g!==Number(d[9]))return false;s=0;for(var i=0;i<10;i++)s+=Number(d[i])*(11-i);g=(s*10)%11;if(g===10)g=0;return g===Number(d[10]);}
@@ -605,13 +596,13 @@ TEMPLATE_WIZARD = r"""<!DOCTYPE html>
 </body>
 </html>
 """
-
-TEMPLATE_CONFIRMACAO = r"""<!DOCTYPE html>
+TEMPLATE_CONFIRMACAO = r"""
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Fortaleza - Regional IX</title>
+    <title>Fortaleza</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/assistant.css">
     <link href="https://fonts.googleapis.com/css2?family=Wise:wght@400;700;900&display=swap" rel="stylesheet">
@@ -655,7 +646,7 @@ TEMPLATE_CONFIRMACAO = r"""<!DOCTYPE html>
         <div class="header-logos">
             <img src="/static/logo-prefeitura.png" alt="Prefeitura" class="logo-prefeitura-topo">
             <div class="header-divider"></div>
-            <img src="/static/logoprojeto.jpeg" alt="Fortaleza Regional IX" class="logo-projeto-topo">
+            <img src="/static/logoprojeto.jpeg" alt="Fortaleza" class="logo-projeto-topo">
         </div>
     </header>
     <div class="confirm-page">
