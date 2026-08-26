@@ -24,7 +24,7 @@ VALID_DDDS = {
     "91","92","93","94","95","96","97","98","99",
 }
 # =============================================================================
-# 1. LOCAIS  (INSTITUTO VELAUMAR removido)
+# 1. LOCAIS
 # =============================================================================
 LOCAL_OPTIONS = [
     {"id": "1",  "nome": "INSTITUTO AL\u00c9M DOS OLHOS - POLO 1"},
@@ -37,13 +37,15 @@ LOCAL_OPTIONS = [
     {"id": "9",  "nome": "INSTITUTO DOANDO QUE SE RECEBE"},
     {"id": "10", "nome": "INSTITUTO VIVA IDOSO"},
     {"id": "11", "nome": "PROJETO AMIGOS DE DEUS"},
+    {"id": "12", "nome": "REGIONAL IV - COMUNIDADE MATADOURO"},
 ]
 # =============================================================================
-# 2. CAT\u00c1LOGO DE CURSOS  (OFICINA DE DAN\u00c7A removida — sem turmas)
+# 2. CAT\u00c1LOGO DE CURSOS
 # =============================================================================
 COURSE_CATALOG = [
     {"id": "1", "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
     {"id": "2", "nome": "MARKETING DIGITAL"},
+    {"id": "3", "nome": "OFICINA DE DAN\u00c7A"},
     {"id": "4", "nome": "DESIGNER DE UNHAS"},
     {"id": "5", "nome": "RECEPCIONISTA"},
     {"id": "6", "nome": "MANICURE"},
@@ -51,7 +53,7 @@ COURSE_CATALOG = [
     {"id": "8", "nome": "SOCIAL MEDIA"},
 ]
 # =============================================================================
-# 3. ENDERE\u00c7OS  (endereco_id="4" removido — \u00f3rf\u00e3o)
+# 3. ENDERE\u00c7OS
 # =============================================================================
 ADDRESS_OPTIONS = {
     "1":  "\U0001f4cdRua Jorn. Ant\u00f4nio Pontes, n\u00ba 1138, bairro Cajazeiras - CEP.: 60.864-590",
@@ -64,9 +66,10 @@ ADDRESS_OPTIONS = {
     "9":  "\U0001f4cdRua Einstein, n\u00ba 1322 - bairro Vila Peri - Fortaleza, CE - CEP.: 60730-145",
     "10": "\U0001f4cdRua Nove, n\u00ba 803 - bairro Passar\u00e9 - Fortaleza, CE - CEP.: 60810-670",
     "11": "\U0001f4cdRua Humberto Lomeu, n\u00ba 2442 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
+    "12": "\U0001f4cdRua Jorge Duma, n\u00ba 2053 - bairro Jardim Am\u00e9rica - Fortaleza, CE - CEP.: 60410-426",
 }
 # =============================================================================
-# 4. TURMAS  (301 e 302 — Oficina de Dan\u00e7a — canceladas e removidas)
+# 4. TURMAS
 # =============================================================================
 TURMA_OPTIONS = [
     # INTELIG\u00caNCIA ARTIFICIAL (curso_id=1)
@@ -98,6 +101,28 @@ TURMA_OPTIONS = [
         "dias_aula": "Ter\u00e7a e Quinta", "horario": "14h at\u00e9 16h",
         "data_inicio": "08/09/2026", "encerramento": "01/10/2026",
         "endereco_id": "11",
+    },
+    # OFICINA DE DAN\u00c7A (curso_id=3) — Regional IV / Comunidade Matadouro
+    {
+        "id": "303", "curso_id": "3", "local_id": "12",
+        "turma_codigo": "26/OFDN-001",
+        "dias_aula": "Ter\u00e7a", "horario": "19h",
+        "data_inicio": "08/09/2026", "encerramento": "08/09/2026",
+        "endereco_id": "12",
+    },
+    {
+        "id": "304", "curso_id": "3", "local_id": "12",
+        "turma_codigo": "26/OFDN-002",
+        "dias_aula": "Ter\u00e7a", "horario": "19h",
+        "data_inicio": "15/09/2026", "encerramento": "15/09/2026",
+        "endereco_id": "12",
+    },
+    {
+        "id": "305", "curso_id": "3", "local_id": "12",
+        "turma_codigo": "26/OFDN-003",
+        "dias_aula": "Ter\u00e7a", "horario": "19h",
+        "data_inicio": "22/09/2026", "encerramento": "22/09/2026",
+        "endereco_id": "12",
     },
     # DESIGNER DE UNHAS (curso_id=4)
     {
@@ -370,6 +395,7 @@ TEMPLATE_WIZARD = r"""
                                 <div class="cursos-lista">
                                     <span class="curso-tag">&#129302; Intelig&#234;ncia Artificial</span>
                                     <span class="curso-tag">&#128241; Marketing Digital</span>
+                                    <span class="curso-tag">&#128131; Oficina de Dan&#231;a</span>
                                     <span class="curso-tag">&#128133; Designer de Unhas</span>
                                     <span class="curso-tag">&#128100; Recepcionista</span>
                                     <span class="curso-tag">&#128337; Manicure</span>
