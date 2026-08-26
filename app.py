@@ -38,6 +38,7 @@ LOCAL_OPTIONS = [
     {"id": "10", "nome": "INSTITUTO VIVA IDOSO"},
     {"id": "11", "nome": "PROJETO AMIGOS DE DEUS"},
     {"id": "12", "nome": "REGIONAL IV - COMUNIDADE MATADOURO"},
+    {"id": "13", "nome": "REGIONAL IV - INSTITUTO JEFS"},
 ]
 # =============================================================================
 # 2. CAT\u00c1LOGO DE CURSOS
@@ -51,6 +52,7 @@ COURSE_CATALOG = [
     {"id": "6", "nome": "MANICURE"},
     {"id": "7", "nome": "EXTENS\u00c3O DE C\u00cdLIOS"},
     {"id": "8", "nome": "SOCIAL MEDIA"},
+    {"id": "9", "nome": "TRANCISTA"},
 ]
 # =============================================================================
 # 3. ENDERE\u00c7OS
@@ -67,6 +69,7 @@ ADDRESS_OPTIONS = {
     "10": "\U0001f4cdRua Nove, n\u00ba 803 - bairro Passar\u00e9 - Fortaleza, CE - CEP.: 60810-670",
     "11": "\U0001f4cdRua Humberto Lomeu, n\u00ba 2442 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
     "12": "\U0001f4cdRua Jorge Duma, n\u00ba 2053 - bairro Jardim Am\u00e9rica - Fortaleza, CE - CEP.: 60410-426",
+    "13": "\U0001f4cdRua Santa Rosa, n\u00ba 551 - bairro Carlito Pamplona - Fortaleza, CE - CEP.: 60311-420",
 }
 # =============================================================================
 # 4. TURMAS
@@ -102,7 +105,7 @@ TURMA_OPTIONS = [
         "data_inicio": "08/09/2026", "encerramento": "01/10/2026",
         "endereco_id": "11",
     },
-    # OFICINA DE DAN\u00c7A (curso_id=3) — Regional IV / Comunidade Matadouro
+    # OFICINA DE DAN\u00c7A (curso_id=3)
     {
         "id": "303", "curso_id": "3", "local_id": "12",
         "turma_codigo": "26/OFDN-001",
@@ -170,6 +173,14 @@ TURMA_OPTIONS = [
         "dias_aula": "Segunda e Quarta", "horario": "14h at\u00e9 16h",
         "data_inicio": "09/09/2026", "encerramento": "30/09/2026",
         "endereco_id": "11",
+    },
+    # TRANCISTA (curso_id=9) \u2014 Regional IV / Instituto JEFS
+    {
+        "id": "901", "curso_id": "9", "local_id": "13",
+        "turma_codigo": "26/TRNC-004",
+        "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h",
+        "data_inicio": "14/09/2026", "encerramento": "18/09/2026",
+        "endereco_id": "13",
     },
 ]
 # =============================================================================
@@ -401,6 +412,7 @@ TEMPLATE_WIZARD = r"""
                                     <span class="curso-tag">&#128337; Manicure</span>
                                     <span class="curso-tag">&#128064; Extens&#227;o de C&#237;lios</span>
                                     <span class="curso-tag">&#128202; Social Media</span>
+                                    <span class="curso-tag">&#9986;&#65039; Trancista</span>
                                 </div>
                             </div>
                             <div class="hero-highlight">
