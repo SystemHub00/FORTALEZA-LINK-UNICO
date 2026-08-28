@@ -35,17 +35,23 @@ LOCAL_OPTIONS = [
     {"id": "11", "nome": "PROJETO AMIGOS DE DEUS"},
     {"id": "12", "nome": "REGIONAL IV - COMUNIDADE MATADOURO"},
     {"id": "13", "nome": "REGIONAL I - INSTITUTO JEFS"},
+    # Novos locais
+    {"id": "14", "nome": "REGIONAL II - INSTITUTO ESCOLHI AMAR"},
+    {"id": "15", "nome": "REGIONAL I - INSTITUTO VIVA AGAP\u00ca"},
+    {"id": "16", "nome": "IEQ JARDIM GUANABARA"},
+    {"id": "17", "nome": "REGIONAL II - INSTITUTO LOURDES VIANA"},
 ]
 COURSE_CATALOG = [
-    {"id": "1", "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
-    {"id": "2", "nome": "MARKETING DIGITAL"},
-    {"id": "3", "nome": "OFICINA DE DAN\u00c7A"},
-    {"id": "4", "nome": "DESIGNER DE UNHAS"},
-    {"id": "5", "nome": "RECEPCIONISTA"},
-    {"id": "6", "nome": "MANICURE"},
-    {"id": "7", "nome": "EXTENS\u00c3O DE C\u00cdLIOS"},
-    {"id": "8", "nome": "SOCIAL MEDIA"},
-    {"id": "9", "nome": "TRANCISTA"},
+    {"id": "1",  "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
+    {"id": "2",  "nome": "MARKETING DIGITAL"},
+    {"id": "3",  "nome": "OFICINA DE DAN\u00c7A"},
+    {"id": "4",  "nome": "DESIGNER DE UNHAS"},
+    {"id": "5",  "nome": "RECEPCIONISTA"},
+    {"id": "6",  "nome": "MANICURE"},
+    {"id": "7",  "nome": "EXTENS\u00c3O DE C\u00cdLIOS"},
+    {"id": "8",  "nome": "SOCIAL MEDIA"},
+    {"id": "9",  "nome": "TRANCISTA"},
+    {"id": "10", "nome": "AUXILIAR ADMINISTRATIVO"},
 ]
 ADDRESS_OPTIONS = {
     "1":  "\U0001f4cdRua Jorn. Ant\u00f4nio Pontes, n\u00ba 1138, bairro Cajazeiras - CEP.: 60.864-590",
@@ -59,8 +65,13 @@ ADDRESS_OPTIONS = {
     "11": "\U0001f4cdRua Humberto Lomeu, n\u00ba 2442 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
     "12": "\U0001f4cdRua Jorge Duma, n\u00ba 2053 - bairro Jardim Am\u00e9rica - Fortaleza, CE - CEP.: 60410-426",
     "13": "\U0001f4cdRua Santa Rosa, n\u00ba 551 - bairro Carlito Pamplona - Fortaleza, CE - CEP.: 60311-420",
+    # Novos endereços
+    "14": "\U0001f4cdRua Ros\u00e1rio, n\u00ba 38 - Bairro Aldeota. Fortaleza, CE - CEP.: 60.135-310",
+    "15": "\U0001f4cdRua Pedro Sampaio, n\u00ba 453 - bairro Vila Velha - Fortaleza, CE - CEP.: 60346-285",
+    "16": "\U0001f4cdRua Cari\u00fas, n\u00ba 669, bairro Jardim Guanabara - Fortaleza, CE - CEP.: 60.346-270",
 }
 TURMA_OPTIONS = [
+    # Turmas existentes
     {"id":"101","curso_id":"1","local_id":"1","turma_codigo":"26/INAT-001",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"15h at\u00e9 17h",
      "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"1"},
@@ -88,7 +99,6 @@ TURMA_OPTIONS = [
     {"id":"501","curso_id":"5","local_id":"7","turma_codigo":"26/RECP-001",
      "dias_aula":"Segunda e Quarta","horario":"18h30 at\u00e9 20h30",
      "data_inicio":"09/09/2026","encerramento":"05/10/2026","endereco_id":"7"},
-    # MANICURE — datas atualizadas ***
     {"id":"601","curso_id":"6","local_id":"8","turma_codigo":"26/MNCR-008",
      "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h30",
      "data_inicio":"09/09/2026","encerramento":"15/09/2026","endereco_id":"8"},
@@ -101,6 +111,25 @@ TURMA_OPTIONS = [
     {"id":"901","curso_id":"9","local_id":"13","turma_codigo":"26/TRNC-004",
      "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h",
      "data_inicio":"14/09/2026","encerramento":"18/09/2026","endereco_id":"13"},
+    # === NOVAS TURMAS ===
+    {"id":"802","curso_id":"8","local_id":"14","turma_codigo":"26/SOMD-009",
+     "dias_aula":"Segunda e Quarta","horario":"18h30 at\u00e9 20h30",
+     "data_inicio":"21/09/2026","encerramento":"14/10/2026","endereco_id":"14"},
+    {"id":"203","curso_id":"2","local_id":"15","turma_codigo":"26/MARK-007",
+     "dias_aula":"Ter\u00e7a e Quinta","horario":"18h30 at\u00e9 20h30",
+     "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"15"},
+    {"id":"1001","curso_id":"10","local_id":"17","turma_codigo":"26/ADMN-004",
+     "dias_aula":"Ter\u00e7a e Quinta","horario":"18h30 at\u00e9 20h30",
+     "data_inicio":"06/10/2026","encerramento":"29/10/2026","endereco_id":"6"},
+    {"id":"602","curso_id":"6","local_id":"15","turma_codigo":"26/MNCR-009",
+     "dias_aula":"Segunda a Sexta","horario":"13h30 at\u00e9 17h30",
+     "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"15"},
+    {"id":"306","curso_id":"3","local_id":"16","turma_codigo":"26/OFDN-006",
+     "dias_aula":"S\u00e1bado","horario":"18h",
+     "data_inicio":"05/09/2026","encerramento":"05/09/2026","endereco_id":"16"},
+    {"id":"307","curso_id":"3","local_id":"16","turma_codigo":"26/OFDN-007",
+     "dias_aula":"S\u00e1bado","horario":"18h",
+     "data_inicio":"12/09/2026","encerramento":"12/09/2026","endereco_id":"16"},
 ]
 def build_course_options():
     local_by_id  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
@@ -323,6 +352,7 @@ TEMPLATE_WIZARD = r"""
                                     <span class="curso-tag">&#128064; Extens&#227;o de C&#237;lios</span>
                                     <span class="curso-tag">&#128202; Social Media</span>
                                     <span class="curso-tag">&#9986;&#65039; Trancista</span>
+                                    <span class="curso-tag">&#128203; Auxiliar Administrativo</span>
                                 </div>
                             </div>
                             <div class="hero-highlight">
