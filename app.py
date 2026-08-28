@@ -86,7 +86,7 @@ TURMA_OPTIONS = [
      "dias_aula":"Segunda a Sexta","horario":"18h30 at\u00e9 20h30",
      "data_inicio":"02/09/2026","encerramento":"08/09/2026","endereco_id":"5"},
     {"id":"501","curso_id":"5","local_id":"7","turma_codigo":"26/RECP-001",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"18h30 at\u00e9 20h30",
+     "dias_aula":"Segunda e Quarta","horario":"18h30 at\u00e9 20h30",
      "data_inicio":"09/09/2026","encerramento":"05/10/2026","endereco_id":"7"},
     # MANICURE — datas atualizadas ***
     {"id":"601","curso_id":"6","local_id":"8","turma_codigo":"26/MNCR-008",
