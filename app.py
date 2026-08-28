@@ -24,7 +24,7 @@ VALID_DDDS = {
     "91","92","93","94","95","96","97","98","99",
 }
 # =============================================================================
-# 1. LOCAIS
+# 1. LOCAIS  (Instituto Viva Idoso removido — turma cancelada)
 # =============================================================================
 LOCAL_OPTIONS = [
     {"id": "1",  "nome": "INSTITUTO AL\u00c9M DOS OLHOS - POLO 1"},
@@ -35,10 +35,9 @@ LOCAL_OPTIONS = [
     {"id": "7",  "nome": "INSTITUTO NOVO RENASCER"},
     {"id": "8",  "nome": "ASSOCIA\u00c7\u00c3O FUTURO DA CRIAN\u00c7A"},
     {"id": "9",  "nome": "INSTITUTO DOANDO QUE SE RECEBE"},
-    {"id": "10", "nome": "INSTITUTO VIVA IDOSO"},
     {"id": "11", "nome": "PROJETO AMIGOS DE DEUS"},
     {"id": "12", "nome": "REGIONAL IV - COMUNIDADE MATADOURO"},
-    {"id": "13", "nome": "REGIONAL IV - INSTITUTO JEFS"},
+    {"id": "13", "nome": "REGIONAL I - INSTITUTO JEFS"},
 ]
 # =============================================================================
 # 2. CAT\u00c1LOGO DE CURSOS
@@ -66,122 +65,62 @@ ADDRESS_OPTIONS = {
     "7":  "\U0001f4cdAvenida Ferreira dos Santos, n\u00ba 8b, bairro \u00c1lvaro Weyne - Fortaleza, CE - CEP.: 60.335-570",
     "8":  "\U0001f4cdRua Parambu, n\u00ba 560, bairro Vila Velha - Fortaleza, CE - CEP.: 60.347-160",
     "9":  "\U0001f4cdRua Einstein, n\u00ba 1322 - bairro Vila Peri - Fortaleza, CE - CEP.: 60730-145",
-    "10": "\U0001f4cdRua Nove, n\u00ba 803 - bairro Passar\u00e9 - Fortaleza, CE - CEP.: 60810-670",
     "11": "\U0001f4cdRua Humberto Lomeu, n\u00ba 2442 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
     "12": "\U0001f4cdRua Jorge Duma, n\u00ba 2053 - bairro Jardim Am\u00e9rica - Fortaleza, CE - CEP.: 60410-426",
     "13": "\U0001f4cdRua Santa Rosa, n\u00ba 551 - bairro Carlito Pamplona - Fortaleza, CE - CEP.: 60311-420",
 }
 # =============================================================================
-# 4. TURMAS
+# 4. TURMAS  (turma 602 / Instituto Viva Idoso removida — cancelada)
 # =============================================================================
 TURMA_OPTIONS = [
     # INTELIG\u00caNCIA ARTIFICIAL (curso_id=1)
-    {
-        "id": "101", "curso_id": "1", "local_id": "1",
-        "turma_codigo": "26/INAT-001",
-        "dias_aula": "Ter\u00e7a e Quinta", "horario": "15h at\u00e9 17h",
-        "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
-        "endereco_id": "1",
-    },
-    {
-        "id": "102", "curso_id": "1", "local_id": "6",
-        "turma_codigo": "26/INAT-004",
-        "dias_aula": "Ter\u00e7a e Quinta", "horario": "18h30 at\u00e9 20h30",
-        "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
-        "endereco_id": "6",
-    },
+    {"id":"101","curso_id":"1","local_id":"1","turma_codigo":"26/INAT-001",
+     "dias_aula":"Ter\u00e7a e Quinta","horario":"15h at\u00e9 17h",
+     "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"1"},
+    {"id":"102","curso_id":"1","local_id":"6","turma_codigo":"26/INAT-004",
+     "dias_aula":"Ter\u00e7a e Quinta","horario":"18h30 at\u00e9 20h30",
+     "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"6"},
     # MARKETING DIGITAL (curso_id=2)
-    {
-        "id": "201", "curso_id": "2", "local_id": "3",
-        "turma_codigo": "26/MARK-004",
-        "dias_aula": "Ter\u00e7a e Quinta", "horario": "09h at\u00e9 11h",
-        "data_inicio": "01/09/2026", "encerramento": "24/09/2026",
-        "endereco_id": "3",
-    },
-    {
-        "id": "202", "curso_id": "2", "local_id": "11",
-        "turma_codigo": "26/MARK-006",
-        "dias_aula": "Ter\u00e7a e Quinta", "horario": "14h at\u00e9 16h",
-        "data_inicio": "08/09/2026", "encerramento": "01/10/2026",
-        "endereco_id": "11",
-    },
+    {"id":"201","curso_id":"2","local_id":"3","turma_codigo":"26/MARK-004",
+     "dias_aula":"Ter\u00e7a e Quinta","horario":"09h at\u00e9 11h",
+     "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"3"},
+    {"id":"202","curso_id":"2","local_id":"11","turma_codigo":"26/MARK-006",
+     "dias_aula":"Ter\u00e7a e Quinta","horario":"14h at\u00e9 16h",
+     "data_inicio":"08/09/2026","encerramento":"01/10/2026","endereco_id":"11"},
     # OFICINA DE DAN\u00c7A (curso_id=3)
-    {
-        "id": "303", "curso_id": "3", "local_id": "12",
-        "turma_codigo": "26/OFDN-001",
-        "dias_aula": "Ter\u00e7a", "horario": "19h",
-        "data_inicio": "08/09/2026", "encerramento": "08/09/2026",
-        "endereco_id": "12",
-    },
-    {
-        "id": "304", "curso_id": "3", "local_id": "12",
-        "turma_codigo": "26/OFDN-002",
-        "dias_aula": "Ter\u00e7a", "horario": "19h",
-        "data_inicio": "15/09/2026", "encerramento": "15/09/2026",
-        "endereco_id": "12",
-    },
-    {
-        "id": "305", "curso_id": "3", "local_id": "12",
-        "turma_codigo": "26/OFDN-003",
-        "dias_aula": "Ter\u00e7a", "horario": "19h",
-        "data_inicio": "22/09/2026", "encerramento": "22/09/2026",
-        "endereco_id": "12",
-    },
+    {"id":"303","curso_id":"3","local_id":"12","turma_codigo":"26/OFDN-001",
+     "dias_aula":"Ter\u00e7a","horario":"19h",
+     "data_inicio":"08/09/2026","encerramento":"08/09/2026","endereco_id":"12"},
+    {"id":"304","curso_id":"3","local_id":"12","turma_codigo":"26/OFDN-002",
+     "dias_aula":"Ter\u00e7a","horario":"19h",
+     "data_inicio":"15/09/2026","encerramento":"15/09/2026","endereco_id":"12"},
+    {"id":"305","curso_id":"3","local_id":"12","turma_codigo":"26/OFDN-003",
+     "dias_aula":"Ter\u00e7a","horario":"19h",
+     "data_inicio":"22/09/2026","encerramento":"22/09/2026","endereco_id":"12"},
     # DESIGNER DE UNHAS (curso_id=4)
-    {
-        "id": "402", "curso_id": "4", "local_id": "5",
-        "turma_codigo": "26/DSUN-005",
-        "dias_aula": "Segunda a Sexta", "horario": "18h30 at\u00e9 20h30",
-        "data_inicio": "02/09/2026", "encerramento": "08/09/2026",
-        "endereco_id": "5",
-    },
+    {"id":"402","curso_id":"4","local_id":"5","turma_codigo":"26/DSUN-005",
+     "dias_aula":"Segunda a Sexta","horario":"18h30 at\u00e9 20h30",
+     "data_inicio":"02/09/2026","encerramento":"08/09/2026","endereco_id":"5"},
     # RECEPCIONISTA (curso_id=5)
-    {
-        "id": "501", "curso_id": "5", "local_id": "7",
-        "turma_codigo": "26/RECP-001",
-        "dias_aula": "Ter\u00e7a e Quinta", "horario": "18h30 at\u00e9 20h30",
-        "data_inicio": "09/09/2026", "encerramento": "05/10/2026",
-        "endereco_id": "7",
-    },
-    # MANICURE (curso_id=6)
-    {
-        "id": "601", "curso_id": "6", "local_id": "8",
-        "turma_codigo": "26/MNCR-008",
-        "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h30",
-        "data_inicio": "31/08/2026", "encerramento": "04/09/2026",
-        "endereco_id": "8",
-    },
-    {
-        "id": "602", "curso_id": "6", "local_id": "10",
-        "turma_codigo": "26/MNCR-007",
-        "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h30",
-        "data_inicio": "07/09/2026", "encerramento": "11/08/2026",
-        "endereco_id": "10",
-    },
+    {"id":"501","curso_id":"5","local_id":"7","turma_codigo":"26/RECP-001",
+     "dias_aula":"Ter\u00e7a e Quinta","horario":"18h30 at\u00e9 20h30",
+     "data_inicio":"09/09/2026","encerramento":"05/10/2026","endereco_id":"7"},
+    # MANICURE (curso_id=6)  — apenas turma 601; turma 602 (Viva Idoso) removida
+    {"id":"601","curso_id":"6","local_id":"8","turma_codigo":"26/MNCR-008",
+     "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h30",
+     "data_inicio":"31/08/2026","encerramento":"04/09/2026","endereco_id":"8"},
     # EXTENS\u00c3O DE C\u00cdLIOS (curso_id=7)
-    {
-        "id": "701", "curso_id": "7", "local_id": "9",
-        "turma_codigo": "26/EXTC-005",
-        "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h30",
-        "data_inicio": "31/08/2026", "encerramento": "04/09/2026",
-        "endereco_id": "9",
-    },
+    {"id":"701","curso_id":"7","local_id":"9","turma_codigo":"26/EXTC-005",
+     "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h30",
+     "data_inicio":"31/08/2026","encerramento":"04/09/2026","endereco_id":"9"},
     # SOCIAL MEDIA (curso_id=8)
-    {
-        "id": "801", "curso_id": "8", "local_id": "11",
-        "turma_codigo": "26/SOMD-008",
-        "dias_aula": "Segunda e Quarta", "horario": "14h at\u00e9 16h",
-        "data_inicio": "09/09/2026", "encerramento": "30/09/2026",
-        "endereco_id": "11",
-    },
-    # TRANCISTA (curso_id=9) \u2014 Regional IV / Instituto JEFS
-    {
-        "id": "901", "curso_id": "9", "local_id": "13",
-        "turma_codigo": "26/TRNC-004",
-        "dias_aula": "Segunda a Sexta", "horario": "13h at\u00e9 17h",
-        "data_inicio": "14/09/2026", "encerramento": "18/09/2026",
-        "endereco_id": "13",
-    },
+    {"id":"801","curso_id":"8","local_id":"11","turma_codigo":"26/SOMD-008",
+     "dias_aula":"Segunda e Quarta","horario":"14h at\u00e9 16h",
+     "data_inicio":"09/09/2026","encerramento":"30/09/2026","endereco_id":"11"},
+    # TRANCISTA (curso_id=9) — Regional I / Instituto JEFS
+    {"id":"901","curso_id":"9","local_id":"13","turma_codigo":"26/TRNC-004",
+     "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h",
+     "data_inicio":"14/09/2026","encerramento":"18/09/2026","endereco_id":"13"},
 ]
 # =============================================================================
 # 5. FUN\u00c7\u00d5ES AUXILIARES
@@ -686,7 +625,6 @@ TEMPLATE_CONFIRMACAO = r"""
 </body>
 </html>
 """
-
 # =============================================================================
 # FLASK APP
 # =============================================================================
