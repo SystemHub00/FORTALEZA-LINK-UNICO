@@ -23,9 +23,6 @@ VALID_DDDS = {
     "81","82","83","84","85","86","87","88","89",
     "91","92","93","94","95","96","97","98","99",
 }
-# =============================================================================
-# 1. LOCAIS  (Instituto Viva Idoso removido — turma cancelada)
-# =============================================================================
 LOCAL_OPTIONS = [
     {"id": "1",  "nome": "INSTITUTO AL\u00c9M DOS OLHOS - POLO 1"},
     {"id": "2",  "nome": "INSTITUI\u00c7\u00c3O COLETIVO OLHANDO PRA FRENTE"},
@@ -39,9 +36,6 @@ LOCAL_OPTIONS = [
     {"id": "12", "nome": "REGIONAL IV - COMUNIDADE MATADOURO"},
     {"id": "13", "nome": "REGIONAL I - INSTITUTO JEFS"},
 ]
-# =============================================================================
-# 2. CAT\u00c1LOGO DE CURSOS
-# =============================================================================
 COURSE_CATALOG = [
     {"id": "1", "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
     {"id": "2", "nome": "MARKETING DIGITAL"},
@@ -53,9 +47,6 @@ COURSE_CATALOG = [
     {"id": "8", "nome": "SOCIAL MEDIA"},
     {"id": "9", "nome": "TRANCISTA"},
 ]
-# =============================================================================
-# 3. ENDERE\u00c7OS
-# =============================================================================
 ADDRESS_OPTIONS = {
     "1":  "\U0001f4cdRua Jorn. Ant\u00f4nio Pontes, n\u00ba 1138, bairro Cajazeiras - CEP.: 60.864-590",
     "2":  "\U0001f4cdRua B, n\u00ba 39, bairro Jangurussu - CEP.: 60.870-605",
@@ -69,25 +60,19 @@ ADDRESS_OPTIONS = {
     "12": "\U0001f4cdRua Jorge Duma, n\u00ba 2053 - bairro Jardim Am\u00e9rica - Fortaleza, CE - CEP.: 60410-426",
     "13": "\U0001f4cdRua Santa Rosa, n\u00ba 551 - bairro Carlito Pamplona - Fortaleza, CE - CEP.: 60311-420",
 }
-# =============================================================================
-# 4. TURMAS  (turma 602 / Instituto Viva Idoso removida — cancelada)
-# =============================================================================
 TURMA_OPTIONS = [
-    # INTELIG\u00caNCIA ARTIFICIAL (curso_id=1)
     {"id":"101","curso_id":"1","local_id":"1","turma_codigo":"26/INAT-001",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"15h at\u00e9 17h",
      "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"1"},
     {"id":"102","curso_id":"1","local_id":"6","turma_codigo":"26/INAT-004",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"18h30 at\u00e9 20h30",
      "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"6"},
-    # MARKETING DIGITAL (curso_id=2)
     {"id":"201","curso_id":"2","local_id":"3","turma_codigo":"26/MARK-004",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"09h at\u00e9 11h",
      "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"3"},
     {"id":"202","curso_id":"2","local_id":"11","turma_codigo":"26/MARK-006",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"14h at\u00e9 16h",
      "data_inicio":"08/09/2026","encerramento":"01/10/2026","endereco_id":"11"},
-    # OFICINA DE DAN\u00c7A (curso_id=3)
     {"id":"303","curso_id":"3","local_id":"12","turma_codigo":"26/OFDN-001",
      "dias_aula":"Ter\u00e7a","horario":"19h",
      "data_inicio":"08/09/2026","encerramento":"08/09/2026","endereco_id":"12"},
@@ -97,34 +82,26 @@ TURMA_OPTIONS = [
     {"id":"305","curso_id":"3","local_id":"12","turma_codigo":"26/OFDN-003",
      "dias_aula":"Ter\u00e7a","horario":"19h",
      "data_inicio":"22/09/2026","encerramento":"22/09/2026","endereco_id":"12"},
-    # DESIGNER DE UNHAS (curso_id=4)
     {"id":"402","curso_id":"4","local_id":"5","turma_codigo":"26/DSUN-005",
      "dias_aula":"Segunda a Sexta","horario":"18h30 at\u00e9 20h30",
      "data_inicio":"02/09/2026","encerramento":"08/09/2026","endereco_id":"5"},
-    # RECEPCIONISTA (curso_id=5)
     {"id":"501","curso_id":"5","local_id":"7","turma_codigo":"26/RECP-001",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"18h30 at\u00e9 20h30",
      "data_inicio":"09/09/2026","encerramento":"05/10/2026","endereco_id":"7"},
-    # MANICURE (curso_id=6)  — apenas turma 601; turma 602 (Viva Idoso) removida
+    # MANICURE — datas atualizadas ***
     {"id":"601","curso_id":"6","local_id":"8","turma_codigo":"26/MNCR-008",
      "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h30",
-     "data_inicio":"31/08/2026","encerramento":"04/09/2026","endereco_id":"8"},
-    # EXTENS\u00c3O DE C\u00cdLIOS (curso_id=7)
+     "data_inicio":"09/09/2026","encerramento":"15/09/2026","endereco_id":"8"},
     {"id":"701","curso_id":"7","local_id":"9","turma_codigo":"26/EXTC-005",
      "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h30",
      "data_inicio":"31/08/2026","encerramento":"04/09/2026","endereco_id":"9"},
-    # SOCIAL MEDIA (curso_id=8)
     {"id":"801","curso_id":"8","local_id":"11","turma_codigo":"26/SOMD-008",
      "dias_aula":"Segunda e Quarta","horario":"14h at\u00e9 16h",
      "data_inicio":"09/09/2026","encerramento":"30/09/2026","endereco_id":"11"},
-    # TRANCISTA (curso_id=9) — Regional I / Instituto JEFS
     {"id":"901","curso_id":"9","local_id":"13","turma_codigo":"26/TRNC-004",
      "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h",
      "data_inicio":"14/09/2026","encerramento":"18/09/2026","endereco_id":"13"},
 ]
-# =============================================================================
-# 5. FUN\u00c7\u00d5ES AUXILIARES
-# =============================================================================
 def build_course_options():
     local_by_id  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
     course_by_id = {opt["id"]: opt for opt in COURSE_CATALOG}
@@ -152,10 +129,7 @@ COURSE_CATALOG_BY_ID = {opt["id"]: opt for opt in COURSE_CATALOG}
 LOCAL_OPTIONS_BY_ID  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
 COURSE_INFO          = COURSE_OPTIONS[0] if COURSE_OPTIONS else None
 def build_whatsapp_share_url(home_url):
-    message = (
-        "Acabei de me inscrever em uma oportunidade de qualificacao profissional. "
-        "Confira aqui: " + home_url
-    )
+    message = ("Acabei de me inscrever em uma oportunidade de qualificacao profissional. Confira aqui: " + home_url)
     return f"https://wa.me/?text={quote(message)}"
 def get_course_option(option_id):
     return COURSE_OPTIONS_BY_ID.get(str(option_id or ""))
@@ -181,14 +155,11 @@ def fill_form_data_from_selection(form_data):
             fill_form_data_from_option(form_data, matched)
             return
     if local_id and curso_id:
-        matched = next(
-            (o for o in COURSE_OPTIONS
-             if o["local_id"] == str(local_id) and o["curso_id"] == str(curso_id)), None)
+        matched = next((o for o in COURSE_OPTIONS if o["local_id"]==str(local_id) and o["curso_id"]==str(curso_id)), None)
         if matched:
             fill_form_data_from_option(form_data, matched)
             return
-    for key in ("local","curso","turma","dias_aula","horario",
-                "data_inicio","encerramento","endereco_curso","opcao_id"):
+    for key in ("local","curso","turma","dias_aula","horario","data_inicio","encerramento","endereco_curso","opcao_id"):
         form_data.setdefault(key, "")
 TEMPLATE_WIZARD = r"""
 <!DOCTYPE html>
@@ -754,17 +725,8 @@ def confirmacao():
         protocolo          = protocolo,
         whatsapp_share_url = build_whatsapp_share_url(home_url),
     )
-# =============================================================================
-# SUPABASE
-# =============================================================================
-SUPABASE_FUNCTION_URL = os.environ.get(
-    "SUPABASE_FUNCTION_URL",
-    "https://egpyhfzatabyftwajoad.supabase.co/functions/v1/fgm-fortaleza-register",
-)
-SUPABASE_API_KEY = os.environ.get(
-    "SUPABASE_API_KEY",
-    os.environ.get("FGM_FORTALEZA_API_KEY", "GGbPIn53S1IH1F4i6uBS5Ftoh1fNYk49"),
-)
+SUPABASE_FUNCTION_URL = os.environ.get("SUPABASE_FUNCTION_URL","https://egpyhfzatabyftwajoad.supabase.co/functions/v1/fgm-fortaleza-register")
+SUPABASE_API_KEY = os.environ.get("SUPABASE_API_KEY",os.environ.get("FGM_FORTALEZA_API_KEY","GGbPIn53S1IH1F4i6uBS5Ftoh1fNYk49"))
 def normalize_phone_number(phone):
     digits = re.sub(r"[^\d]", "", phone or "")
     return f"55{digits}" if len(digits) == 11 else digits
