@@ -59,7 +59,7 @@ ADDRESS_OPTIONS = {
     "3":  "\U0001f4cdRua G - Bairro Paupina (Conjunto dos escrit\u00f3rios). Fortaleza, CE - CEP.: 60873575",
     "5":  "\U0001f4cdRua Costa Freire, n\u00ba 2238, bairro Parangaba - Fortaleza, CE - CEP.: 60.730-255",
     "6":  "\U0001f4cdRua J\u00falia Vasconcelos, n\u00ba 199 - Tatuap\u00e9 - Fortaleza, CE - CEP.: 60125-150",
-    "7":  "\U0001f4cdAvenida Ferreira dos Santos, n\u00ba 8b, bairro \u00c1lvaro Weyne - Fortaleza, CE - CEP.: 60.335-570",
+    "7":  "\U0001f4cdTravessa Ferreira dos Santos, n\u00ba 8b, bairro \u00c1lvaro Weyne - Fortaleza, CE - CEP.: 60.335-570",
     "8":  "\U0001f4cdRua Parambu, n\u00ba 560, bairro Vila Velha - Fortaleza, CE - CEP.: 60.347-160",
     "9":  "\U0001f4cdRua Einstein, n\u00ba 1322 - bairro Vila Peri - Fortaleza, CE - CEP.: 60730-145",
     "11": "\U0001f4cdRua Humberto Lomeu, n\u00ba 2442 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
