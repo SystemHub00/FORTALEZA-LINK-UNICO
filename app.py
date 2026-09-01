@@ -35,11 +35,12 @@ LOCAL_OPTIONS = [
     {"id": "11", "nome": "PROJETO AMIGOS DE DEUS"},
     {"id": "12", "nome": "REGIONAL IV - COMUNIDADE MATADOURO"},
     {"id": "13", "nome": "REGIONAL I - INSTITUTO JEFS"},
-    # Novos locais
     {"id": "14", "nome": "REGIONAL II - INSTITUTO ESCOLHI AMAR"},
     {"id": "15", "nome": "REGIONAL I - INSTITUTO VIVA AGAP\u00ca"},
     {"id": "16", "nome": "IEQ JARDIM GUANABARA"},
     {"id": "17", "nome": "REGIONAL II - INSTITUTO LOURDES VIANA"},
+    # Nova turma 803
+    {"id": "18", "nome": "REGIONAL IV - INSTITUTO VIVA IDOSO"},
 ]
 COURSE_CATALOG = [
     {"id": "1",  "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
@@ -65,13 +66,13 @@ ADDRESS_OPTIONS = {
     "11": "\U0001f4cdRua Humberto Lomeu, n\u00ba 2442 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
     "12": "\U0001f4cdRua Jorge Duma, n\u00ba 2053 - bairro Jardim Am\u00e9rica - Fortaleza, CE - CEP.: 60410-426",
     "13": "\U0001f4cdRua Santa Rosa, n\u00ba 551 - bairro Carlito Pamplona - Fortaleza, CE - CEP.: 60311-420",
-    # Novos endereços
     "14": "\U0001f4cdRua Ros\u00e1rio, n\u00ba 38 - Bairro Aldeota. Fortaleza, CE - CEP.: 60.135-310",
     "15": "\U0001f4cdRua Pedro Sampaio, n\u00ba 453 - bairro Vila Velha - Fortaleza, CE - CEP.: 60346-285",
     "16": "\U0001f4cdRua Cari\u00fas, n\u00ba 669, bairro Jardim Guanabara - Fortaleza, CE - CEP.: 60.346-270",
+    # Nova turma 803
+    "18": "\U0001f4cdRua Nove, n\u00ba 803, bairro Passar\u00e9 - Fortaleza, CE - CEP.: 60.810-670",
 }
 TURMA_OPTIONS = [
-    # Turmas existentes
     {"id":"101","curso_id":"1","local_id":"1","turma_codigo":"26/INAT-001",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"15h at\u00e9 17h",
      "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"1"},
@@ -111,7 +112,6 @@ TURMA_OPTIONS = [
     {"id":"901","curso_id":"9","local_id":"13","turma_codigo":"26/TRNC-004",
      "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h",
      "data_inicio":"14/09/2026","encerramento":"18/09/2026","endereco_id":"13"},
-    # === NOVAS TURMAS ===
     {"id":"802","curso_id":"8","local_id":"14","turma_codigo":"26/SOMD-009",
      "dias_aula":"Segunda e Quarta","horario":"18h30 at\u00e9 20h30",
      "data_inicio":"21/09/2026","encerramento":"14/10/2026","endereco_id":"14"},
@@ -130,6 +130,10 @@ TURMA_OPTIONS = [
     {"id":"307","curso_id":"3","local_id":"16","turma_codigo":"26/OFDN-007",
      "dias_aula":"S\u00e1bado","horario":"18h",
      "data_inicio":"12/09/2026","encerramento":"12/09/2026","endereco_id":"16"},
+    # === NOVA TURMA ===
+    {"id":"803","curso_id":"8","local_id":"18","turma_codigo":"26/SOMD-010",
+     "dias_aula":"Ter\u00e7a e Quinta","horario":"14h30 at\u00e9 16h30",
+     "data_inicio":"22/09/2026","encerramento":"15/10/2026","endereco_id":"18"},
 ]
 def build_course_options():
     local_by_id  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
@@ -626,6 +630,7 @@ TEMPLATE_CONFIRMACAO = r"""
 </body>
 </html>
 """
+
 # =============================================================================
 # FLASK APP
 # =============================================================================
