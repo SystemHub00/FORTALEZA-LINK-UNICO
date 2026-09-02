@@ -41,6 +41,7 @@ LOCAL_OPTIONS = [
     {"id": "17", "nome": "REGIONAL II - INSTITUTO LOURDES VIANA"},
     # Nova turma 803
     {"id": "18", "nome": "REGIONAL IV - INSTITUTO VIVA IDOSO"},
+    {"id": "19", "nome": "REGIONAL V - PROJETO AMIGOS DE DEUS"},
 ]
 COURSE_CATALOG = [
     {"id": "1",  "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
@@ -71,6 +72,7 @@ ADDRESS_OPTIONS = {
     "16": "\U0001f4cdRua Cari\u00fas, n\u00ba 669, bairro Jardim Guanabara - Fortaleza, CE - CEP.: 60.346-270",
     # Nova turma 803
     "18": "\U0001f4cdRua Nove, n\u00ba 803, bairro Passar\u00e9 - Fortaleza, CE - CEP.: 60.810-670",
+    "19": "\U0001f4cdRua Londrina, n\u00ba 1972 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-485",
 }
 TURMA_OPTIONS = [
     {"id":"101","curso_id":"1","local_id":"1","turma_codigo":"26/INAT-001",
@@ -134,6 +136,13 @@ TURMA_OPTIONS = [
     {"id":"803","curso_id":"8","local_id":"18","turma_codigo":"26/SOMD-010",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"14h30 at\u00e9 16h30",
      "data_inicio":"22/09/2026","encerramento":"15/10/2026","endereco_id":"18"},
+    # === NOVAS TURMAS (IA Regional V) ===
+    {"id":"103","curso_id":"1","local_id":"19","turma_codigo":"26/INAT-005",
+     "dias_aula":"Ter\u00e7a e Quinta","horario":"08h at\u00e9 10h",
+     "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"19"},
+    {"id":"104","curso_id":"1","local_id":"19","turma_codigo":"26/INAT-006",
+     "dias_aula":"Ter\u00e7a e Quinta","horario":"14h at\u00e9 16h",
+     "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"19"},
 ]
 def build_course_options():
     local_by_id  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
