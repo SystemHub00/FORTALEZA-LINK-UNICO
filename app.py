@@ -39,7 +39,6 @@ LOCAL_OPTIONS = [
     {"id": "15", "nome": "REGIONAL I - INSTITUTO VIVA AGAP\u00ca"},
     {"id": "16", "nome": "IEQ JARDIM GUANABARA"},
     {"id": "17", "nome": "REGIONAL II - INSTITUTO LOURDES VIANA"},
-    # Nova turma 803
     {"id": "18", "nome": "REGIONAL IV - INSTITUTO VIVA IDOSO"},
     {"id": "19", "nome": "REGIONAL V - PROJETO AMIGOS DE DEUS"},
 ]
@@ -70,7 +69,6 @@ ADDRESS_OPTIONS = {
     "14": "\U0001f4cdRua Ros\u00e1rio, n\u00ba 38 - Bairro Aldeota. Fortaleza, CE - CEP.: 60.135-310",
     "15": "\U0001f4cdRua Pedro Sampaio, n\u00ba 453 - bairro Vila Velha - Fortaleza, CE - CEP.: 60346-285",
     "16": "\U0001f4cdRua Cari\u00fas, n\u00ba 669, bairro Jardim Guanabara - Fortaleza, CE - CEP.: 60.346-270",
-    # Nova turma 803
     "18": "\U0001f4cdRua Nove, n\u00ba 803, bairro Passar\u00e9 - Fortaleza, CE - CEP.: 60.810-670",
     "19": "\U0001f4cdRua Londrina, n\u00ba 1972 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-485",
 }
@@ -132,11 +130,9 @@ TURMA_OPTIONS = [
     {"id":"307","curso_id":"3","local_id":"16","turma_codigo":"26/OFDN-007",
      "dias_aula":"S\u00e1bado","horario":"18h",
      "data_inicio":"12/09/2026","encerramento":"12/09/2026","endereco_id":"16"},
-    # === NOVA TURMA ===
     {"id":"803","curso_id":"8","local_id":"18","turma_codigo":"26/SOMD-010",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"14h30 at\u00e9 16h30",
      "data_inicio":"22/09/2026","encerramento":"15/10/2026","endereco_id":"18"},
-    # === NOVAS TURMAS (IA Regional V) ===
     {"id":"103","curso_id":"1","local_id":"19","turma_codigo":"26/INAT-005",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"08h at\u00e9 10h",
      "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"19"},
@@ -204,11 +200,29 @@ def fill_form_data_from_selection(form_data):
     for key in ("local","curso","turma","dias_aula","horario","data_inicio","encerramento","endereco_curso","opcao_id"):
         form_data.setdefault(key, "")
 TEMPLATE_WIZARD = r"""
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1836967410803054');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1836967410803054&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     <title>Fortaleza</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/assistant.css">
@@ -556,13 +570,32 @@ TEMPLATE_WIZARD = r"""
     </script>
 </body>
 </html>
+
 """
 TEMPLATE_CONFIRMACAO = r"""
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1836967410803054');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1836967410803054&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     <title>Fortaleza</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/assistant.css">
@@ -638,11 +671,9 @@ TEMPLATE_CONFIRMACAO = r"""
     </div>
 </body>
 </html>
+
 """
 
-# =============================================================================
-# FLASK APP
-# =============================================================================
 app = Flask(__name__)
 app.secret_key = os.environ.get("FLASK_SECRET_KEY", "chave-secreta-para-sessao")
 def get_default_form_data(source=None):
