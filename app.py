@@ -63,7 +63,8 @@ ADDRESS_OPTIONS = {
     "7":  "\U0001f4cdTravessa Ferreira dos Santos, n\u00ba 8b, bairro \u00c1lvaro Weyne - Fortaleza, CE - CEP.: 60.335-570",
     "8":  "\U0001f4cdRua Parambu, n\u00ba 560, bairro Vila Velha - Fortaleza, CE - CEP.: 60.347-160",
     "9":  "\U0001f4cdRua Einstein, n\u00ba 1322 - bairro Vila Peri - Fortaleza, CE - CEP.: 60730-145",
-    "11": "\U0001f4cdRua Humberto Lomeu, n\u00ba 2442 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
+    # PATCH: endereço atualizado (n° 2074)
+    "11": "\U0001f4cdRua Humberto Lomeu, n\u00ba 2074 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
     "12": "\U0001f4cdRua Jorge Duma, n\u00ba 2053 - bairro Jardim Am\u00e9rica - Fortaleza, CE - CEP.: 60410-426",
     "13": "\U0001f4cdRua Santa Rosa, n\u00ba 551 - bairro Carlito Pamplona - Fortaleza, CE - CEP.: 60311-420",
     "14": "\U0001f4cdRua Ros\u00e1rio, n\u00ba 38 - Bairro Aldeota. Fortaleza, CE - CEP.: 60.135-310",
@@ -76,9 +77,10 @@ TURMA_OPTIONS = [
     {"id":"101","curso_id":"1","local_id":"1","turma_codigo":"26/INAT-001",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"15h at\u00e9 17h",
      "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"1"},
+    # PATCH: datas IA - Instituto Lourdes Viana atualizadas
     {"id":"102","curso_id":"1","local_id":"6","turma_codigo":"26/INAT-004",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"18h30 at\u00e9 20h30",
-     "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"6"},
+     "data_inicio":"08/09/2026","encerramento":"01/10/2026","endereco_id":"6"},
     {"id":"201","curso_id":"2","local_id":"3","turma_codigo":"26/MARK-004",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"09h at\u00e9 11h",
      "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"3"},
@@ -200,6 +202,7 @@ def fill_form_data_from_selection(form_data):
     for key in ("local","curso","turma","dias_aula","horario","data_inicio","encerramento","endereco_curso","opcao_id"):
         form_data.setdefault(key, "")
 TEMPLATE_WIZARD = r"""
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -571,8 +574,10 @@ TEMPLATE_WIZARD = r"""
 </body>
 </html>
 
+
 """
 TEMPLATE_CONFIRMACAO = r"""
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -671,6 +676,7 @@ TEMPLATE_CONFIRMACAO = r"""
     </div>
 </body>
 </html>
+
 
 """
 
