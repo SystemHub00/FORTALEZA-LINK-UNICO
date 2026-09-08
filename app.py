@@ -32,7 +32,7 @@ LOCAL_OPTIONS = [
     {"id": "7",  "nome": "INSTITUTO NOVO RENASCER"},
     {"id": "8",  "nome": "ASSOCIA\u00c7\u00c3O FUTURO DA CRIAN\u00c7A"},
     {"id": "9",  "nome": "INSTITUTO DOANDO QUE SE RECEBE"},
-    {"id": "11", "nome": "PROJETO AMIGOS DE DEUS"},
+    {"id": "11", "nome": "REGIONAL V - PROJETO AMIGOS DE DEUS (Projeto Tia Katia)"},
     {"id": "12", "nome": "REGIONAL IV - COMUNIDADE MATADOURO"},
     {"id": "13", "nome": "REGIONAL I - INSTITUTO JEFS"},
     {"id": "14", "nome": "REGIONAL II - INSTITUTO ESCOLHI AMAR"},
@@ -40,7 +40,7 @@ LOCAL_OPTIONS = [
     {"id": "16", "nome": "IEQ JARDIM GUANABARA"},
     {"id": "17", "nome": "REGIONAL II - INSTITUTO LOURDES VIANA"},
     {"id": "18", "nome": "REGIONAL IV - INSTITUTO VIVA IDOSO"},
-    {"id": "19", "nome": "REGIONAL V - PROJETO AMIGOS DE DEUS"},
+    {"id": "19", "nome": "REGIONAL V - PROJETO AMIGOS DE DEUS (Colégio Pequeno Aprendiz)"},
 ]
 COURSE_CATALOG = [
     {"id": "1",  "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
