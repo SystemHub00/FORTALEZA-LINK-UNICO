@@ -475,7 +475,7 @@ TEMPLATE_WIZARD = r"""
                                 <div class="review-item"><strong>Encerramento</strong><span data-review="encerramento"></span></div>
                                 <div class="review-item"><strong>Endere&#231;o</strong><span data-review="endereco_curso"></span></div>
                             </div></div>
-                            <div class="review-box full"><div class="form-group"><label for="como_conheceu">Como conheceu (opcional)</label><select id="como_conheceu" name="como_conheceu"><option value="">Selecione</option>{% for op in como_conheceu_opcoes %}<option value="{{ op }}" {% if form_data.get('como_conheceu')==op %}selected{% endif %}>{{ op }}</option>{% endfor %}</select></div></div>
+                            <div class="review-box full"><div class="form-group"><label for="como_conheceu">Como conheceu (opcional)</label><select id="como_conheceu" name="como_conheceu"><option value="">Selecione</option>{% for op in como_conheceu_opcoes %}<option value="{{ op }}" {% if form_data.get('como_conheceu')==op %}selected{% endif %}>{{ op }}</option>{% endfor %}</select><div id="como_conheceu_outro_group" style="display:none;margin-top:6px;"><input type="text" id="como_conheceu_outro" name="como_conheceu_outro" maxlength="120" placeholder="Descreva como conheceu" value="{{ form_data.get('como_conheceu_outro','') }}"></div></div></div>
                             <div class="review-box full">
                                 <div style="margin-bottom:10px;color:#8b0000;font-size:0.98rem;text-align:left;"><strong>Elegibilidade:</strong> Este curso &#233; destinado a pessoas interessadas em qualifica&#231;&#227;o profissional.</div>
                                 <label class="review-check" for="confirma_dados">
@@ -556,6 +556,10 @@ TEMPLATE_WIZARD = r"""
             emailInput.addEventListener('input',function(){if(emailInput.value.trim())vEmail();else setError('email','');syncReview();});
             confirmaDadosInput.addEventListener('change',function(){if(confirmaDadosInput.checked)setError('confirma_dados','');});
             ['nome','genero','whatsapp','cep','bairro','email','curso_id','como_conheceu'].forEach(function(id){var f=document.getElementById(id);if(f){f.addEventListener('input',syncReview);f.addEventListener('change',syncReview);}});
+            var comoConheceuSel=document.getElementById('como_conheceu'),comoConheceuOutroGrp=document.getElementById('como_conheceu_outro_group'),comoConheceuOutroInput=document.getElementById('como_conheceu_outro');
+            function toggleOutroField(){if(comoConheceuSel&&comoConheceuOutroGrp){var show=comoConheceuSel.value==='Outros';comoConheceuOutroGrp.style.display=show?'':'none';if(!show&&comoConheceuOutroInput)comoConheceuOutroInput.value='';}}
+            if(comoConheceuSel){comoConheceuSel.addEventListener('change',function(){toggleOutroField();syncReview();});toggleOutroField();}
+            if(comoConheceuOutroInput){comoConheceuOutroInput.addEventListener('input',syncReview);}
             function initBenefitsSlider(slider){var slides=Array.from(slider.querySelectorAll('.benefit-slide')),dotsHost=slider.querySelector('[data-benefits-dots]'),prevBtn=slider.querySelector('[data-benefits-prev]'),nextBtn=slider.querySelector('[data-benefits-next]');if(!slides.length||!dotsHost||!prevBtn||!nextBtn)return;var cur=Math.max(slides.findIndex(function(s){return s.classList.contains('ativo');}),0),timer;var dots=slides.map(function(_,i){var dot=document.createElement('button');dot.type='button';dot.className='benefits-dot';dot.setAttribute('aria-label','Benef\u00edcio '+(i+1));dot.addEventListener('click',function(){show(i);restart();});dotsHost.appendChild(dot);return dot;});function show(i){cur=(i+slides.length)%slides.length;slides.forEach(function(s,j){s.classList.toggle('ativo',j===cur);});dots.forEach(function(d,j){d.classList.toggle('ativo',j===cur);});}function restart(){clearInterval(timer);timer=setInterval(function(){show(cur+1);},3200);}prevBtn.addEventListener('click',function(){show(cur-1);restart();});nextBtn.addEventListener('click',function(){show(cur+1);restart();});slider.addEventListener('mouseenter',function(){clearInterval(timer);});slider.addEventListener('mouseleave',restart);show(cur);restart();}
             var initCursoId='{{ form_data.get("curso_id","") }}',initLocalId='{{ form_data.get("local_id","") }}',initOpcaoId='{{ form_data.get("opcao_id","") }}';
             if(initLocalId){localSelectEl.value=initLocalId;atualizarCursosPorLocal(initLocalId,initCursoId,initOpcaoId);}else{cursoGroup.style.display='none';turmaGroup.style.display='none';}
@@ -690,6 +694,11 @@ def get_default_form_data(source=None):
             else:
                 form_data[key] = (value or "").strip()
         fill_form_data_from_selection(form_data)
+        # Se "Outros" selecionado, usar o texto digitado
+        if form_data.get("como_conheceu") == "Outros":
+            outro = (source.get("como_conheceu_outro") or "").strip()
+            if outro:
+                form_data["como_conheceu"] = f"Outros: {outro}"
     return form_data
 def cpf_valido(cpf):
     digits = re.sub(r"\D", "", cpf or "")
