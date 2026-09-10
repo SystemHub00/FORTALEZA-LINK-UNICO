@@ -124,7 +124,6 @@ TURMA_OPTIONS = [
     {"id":"104","curso_id":"1","local_id":"19","turma_codigo":"26/INAT-006",
      "dias_aula":"Ter\u00e7a e Quinta","horario":"14h at\u00e9 16h",
      "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"19"},
-    # NOVAS TURMAS — CRECHE NOVO MUNDO PIONEIRO (local 20)
     {"id":"204","curso_id":"2","local_id":"20","turma_codigo":"26/MARK-008",
      "dias_aula":"Ter\u00e7a e Sexta","horario":"16h30 at\u00e9 18h30",
      "data_inicio":"22/09/2026","encerramento":"16/10/2026","endereco_id":"20"},
@@ -134,12 +133,11 @@ TURMA_OPTIONS = [
     {"id":"105","curso_id":"1","local_id":"20","turma_codigo":"26/INAT-007",
      "dias_aula":"Quarta e Quinta","horario":"08h at\u00e9 10h",
      "data_inicio":"23/09/2026","encerramento":"15/10/2026","endereco_id":"20"},
-    # NOVA TURMA — ASSOCIAÇÃO ORQUÍDEAS DO PARQUE SANTANA (local 21)
     {"id":"403","curso_id":"4","local_id":"21","turma_codigo":"26/DSUN-006",
      "dias_aula":"18h30 at\u00e9 21h","horario":"18h30 at\u00e9 21h",
      "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"21"},
 ]
-
+COMO_CONHECEU_OPCOES = ["Facebook", "Instagram", "Whatsapp", "Outros"]
 def build_course_options():
     local_by_id  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
     course_by_id = {opt["id"]: opt for opt in COURSE_CATALOG}
@@ -200,9 +198,6 @@ def fill_form_data_from_selection(form_data):
     for key in ("local","curso","turma","dias_aula","horario","data_inicio","encerramento","endereco_curso","opcao_id"):
         form_data.setdefault(key, "")
 TEMPLATE_WIZARD = r"""
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -480,7 +475,7 @@ TEMPLATE_WIZARD = r"""
                                 <div class="review-item"><strong>Encerramento</strong><span data-review="encerramento"></span></div>
                                 <div class="review-item"><strong>Endere&#231;o</strong><span data-review="endereco_curso"></span></div>
                             </div></div>
-                            <div class="review-box full"><div class="form-group"><label for="como_conheceu">Como conheceu (opcional)</label><input type="text" id="como_conheceu" name="como_conheceu" maxlength="120" placeholder="Digite como conheceu o projeto" value="{{ form_data.get('como_conheceu','') }}"></div></div>
+                            <div class="review-box full"><div class="form-group"><label for="como_conheceu">Como conheceu (opcional)</label><select id="como_conheceu" name="como_conheceu"><option value="">Selecione</option>{% for op in como_conheceu_opcoes %}<option value="{{ op }}" {% if form_data.get('como_conheceu')==op %}selected{% endif %}>{{ op }}</option>{% endfor %}</select></div></div>
                             <div class="review-box full">
                                 <div style="margin-bottom:10px;color:#8b0000;font-size:0.98rem;text-align:left;"><strong>Elegibilidade:</strong> Este curso &#233; destinado a pessoas interessadas em qualifica&#231;&#227;o profissional.</div>
                                 <label class="review-check" for="confirma_dados">
@@ -573,13 +568,8 @@ TEMPLATE_WIZARD = r"""
 </body>
 </html>
 
-
-
 """
 TEMPLATE_CONFIRMACAO = r"""
-
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -678,8 +668,6 @@ TEMPLATE_CONFIRMACAO = r"""
 </body>
 </html>
 
-
-
 """
 
 app = Flask(__name__)
@@ -759,14 +747,15 @@ def render_wizard(form_data=None, errors=None, current_step="index"):
     selected_option   = get_course_option(current_form_data.get("opcao_id")) or COURSE_INFO
     return render_template_string(
         TEMPLATE_WIZARD,
-        course_info    = selected_option,
-        local_options  = LOCAL_OPTIONS,
-        course_catalog = COURSE_CATALOG,
-        course_options = COURSE_OPTIONS,
-        current_step   = current_step,
-        errors         = errors or {},
-        form_data      = current_form_data,
-        generos        = ["Feminino","Masculino","Outro","Prefiro n\u00e3o dizer"],
+        course_info          = selected_option,
+        local_options        = LOCAL_OPTIONS,
+        course_catalog       = COURSE_CATALOG,
+        course_options       = COURSE_OPTIONS,
+        como_conheceu_opcoes = COMO_CONHECEU_OPCOES,
+        current_step         = current_step,
+        errors               = errors or {},
+        form_data            = current_form_data,
+        generos              = ["Feminino","Masculino","Outro","Prefiro n\u00e3o dizer"],
     )
 @app.route("/", methods=["GET"])
 def home(): return render_wizard()
@@ -825,7 +814,6 @@ def send_registration_to_supabase(form_data):
         "curso":          form_data.get("curso",""),
         "turma":          form_data.get("turma",""),
         "nomelocal":      form_data.get("local",""),
-        "endere\u00e7o": endereco,
         "endereco":       endereco,
         "inicioaula":     inicioaula,
         "local":          form_data.get("local",""),
@@ -846,6 +834,6 @@ def send_registration_to_supabase(form_data):
     if not response.ok:
         raise RuntimeError(f"Supabase retornou {response.status_code}: {response.text[:500]}")
     return response
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+if __name__=="__main__":
+    port=int(os.environ.get("PORT",5000))
+    app.run(host="0.0.0.0",port=port)
