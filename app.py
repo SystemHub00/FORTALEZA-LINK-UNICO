@@ -53,6 +53,7 @@ COURSE_CATALOG = [
     {"id": "8",  "nome": "SOCIAL MEDIA"},
     {"id": "9",  "nome": "TRANCISTA"},
     {"id": "10", "nome": "AUXILIAR ADMINISTRATIVO"},
+    {"id": "11", "nome": "DESIGNER DE SOBRANCELHAS"},
 ]
 ADDRESS_OPTIONS = {
     "1":  "\U0001f4cdRua Jorn. Ant\u00f4nio Pontes, n\u00ba 1138, bairro Cajazeiras - CEP.: 60.864-590",
@@ -136,6 +137,13 @@ TURMA_OPTIONS = [
     {"id":"403","curso_id":"4","local_id":"21","turma_codigo":"26/DSUN-006",
      "dias_aula":"18h30 at\u00e9 21h","horario":"18h30 at\u00e9 21h",
      "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"21"},
+    # NOVAS TURMAS
+    {"id":"603","curso_id":"6","local_id":"5","turma_codigo":"26/MNCR-010",
+     "dias_aula":"Segunda a Sexta","horario":"18h30 at\u00e9 21h",
+     "data_inicio":"28/09/2026","encerramento":"02/10/2026","endereco_id":"5"},
+    {"id":"1101","curso_id":"11","local_id":"5","turma_codigo":"26/DSBR-012",
+     "dias_aula":"Segunda a Sexta","horario":"18h30 at\u00e9 21h",
+     "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"5"},
 ]
 COMO_CONHECEU_OPCOES = ["Facebook", "Instagram", "Whatsapp", "Outros"]
 def build_course_options():
@@ -198,6 +206,7 @@ def fill_form_data_from_selection(form_data):
     for key in ("local","curso","turma","dias_aula","horario","data_inicio","encerramento","endereco_curso","opcao_id"):
         form_data.setdefault(key, "")
 TEMPLATE_WIZARD = r"""
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -377,6 +386,7 @@ TEMPLATE_WIZARD = r"""
                                     <span class="curso-tag">&#128202; Social Media</span>
                                     <span class="curso-tag">&#9986;&#65039; Trancista</span>
                                     <span class="curso-tag">&#128203; Auxiliar Administrativo</span>
+                                    <span class="curso-tag">&#128133; Designer de Sobrancelhas</span>
                                 </div>
                             </div>
                             <div class="hero-highlight">
@@ -572,8 +582,10 @@ TEMPLATE_WIZARD = r"""
 </body>
 </html>
 
+
 """
 TEMPLATE_CONFIRMACAO = r"""
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -672,6 +684,7 @@ TEMPLATE_CONFIRMACAO = r"""
 </body>
 </html>
 
+
 """
 
 app = Flask(__name__)
@@ -694,7 +707,6 @@ def get_default_form_data(source=None):
             else:
                 form_data[key] = (value or "").strip()
         fill_form_data_from_selection(form_data)
-        # Se "Outros" selecionado, usar o texto digitado
         if form_data.get("como_conheceu") == "Outros":
             outro = (source.get("como_conheceu_outro") or "").strip()
             if outro:
