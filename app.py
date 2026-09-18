@@ -41,8 +41,6 @@ LOCAL_OPTIONS = [
     {"id": "19", "nome": "REGIONAL V - PROJETO AMIGOS DE DEUS (Col\u00e9gio Pequeno Aprendiz)"},
     {"id": "20", "nome": "REGIONAL V - CRECHE NOVO MUNDO PIONEIRO"},
     {"id": "21", "nome": "REGIONAL X - ASSOCIA\u00c7\u00c3O MOVIMENTO ORQ\u00daIDEAS DO PARQUE SANTANA"},
-    {"id": "22", "nome": "REGIONAL II - SINE MUNICIPAL ALDEOTA"},
-    {"id": "23", "nome": "REGIONAL III - SINE MUNICIPAL PARQUEL\u00c2NDIA"},
 ]
 COURSE_CATALOG = [
     {"id": "1",  "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
@@ -74,8 +72,6 @@ ADDRESS_OPTIONS = {
     "19": "\U0001f4cdRua Londrina, n\u00ba 1972 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-485",
     "20": "\U0001f4cdRua Pereira Barbosa, n\u00ba 1460 - bairro Siqueira - Fortaleza, CE - CEP.: 60732-382",
     "21": "\U0001f4cdRua 05, n\u00b0 1440, casa B - bairro Mondubim - Comunidade Parque Santana - Fortaleza, CE - CEP.: 60767-650",
-    "22": "\U0001f4cdAvenida Santos Dumont, n\u00ba 2500, bairro Aldeota - Fortaleza, CE - CEP.: 60.150-161 (Estrada pela Rua Tib\u00farcio Cavalcante)",
-    "23": "\U0001f4cdRua Dom Lino, n\u00ba 546, bairro Parquel\u00e2ndia - Fortaleza, CE - CEP.: 60.450-285",
 }
 TURMA_OPTIONS = [
     {"id":"101","curso_id":"1","local_id":"1","turma_codigo":"26/INAT-001",
@@ -147,19 +143,6 @@ TURMA_OPTIONS = [
     {"id":"1101","curso_id":"11","local_id":"5","turma_codigo":"26/DSBR-012",
      "dias_aula":"Segunda a Sexta","horario":"18h30 at\u00e9 21h",
      "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"5"},
-    # NOVAS TURMAS
-    {"id":"1003","curso_id":"10","local_id":"22","turma_codigo":"26/ADMN-006",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"14h at\u00e9 16h",
-     "data_inicio":"29/09/2026","encerramento":"22/10/2026","endereco_id":"22"},
-    {"id":"106","curso_id":"1","local_id":"22","turma_codigo":"26/INAT-008",
-     "dias_aula":"Segunda e Quarta","horario":"18h at\u00e9 20h",
-     "data_inicio":"05/10/2026","encerramento":"28/10/2026","endereco_id":"22"},
-    {"id":"502","curso_id":"5","local_id":"23","turma_codigo":"26/RECP-002",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"09h at\u00e9 12h",
-     "data_inicio":"29/09/2026","encerramento":"13/10/2026","endereco_id":"23"},
-    {"id":"205","curso_id":"2","local_id":"23","turma_codigo":"26/MARK-009",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"13h30 at\u00e9 16h30",
-     "data_inicio":"29/09/2026","encerramento":"13/10/2026","endereco_id":"23"},
 ]
 COMO_CONHECEU_OPCOES = ["Facebook", "Instagram", "Whatsapp", "Outros"]
 def build_course_options():
