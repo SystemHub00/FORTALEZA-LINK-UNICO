@@ -11,7 +11,7 @@ ALLOWED_EMAIL_PATTERN = re.compile(
     r"^[a-zA-Z0-9_.+-]+@((gmail|hotmail|outlook|yahoo)\.(com|com\.br))$",
     re.IGNORECASE,
 )
-NAME_PATTERN = re.compile(r"[A-Za-z\u00C0-\u00FF '\u00b4`^~.-]+")
+NAME_PATTERN = re.compile(r"[A-Za-zÀ-ÿ '´`^~.-]+")
 VALID_DDDS = {
     "11","12","13","14","15","16","17","18","19",
     "21","22","24","27","28",
@@ -24,124 +24,128 @@ VALID_DDDS = {
     "91","92","93","94","95","96","97","98","99",
 }
 LOCAL_OPTIONS = [
-    {"id": "1",  "nome": "INSTITUTO AL\u00c9M DOS OLHOS - POLO 1"},
-    {"id": "2",  "nome": "INSTITUI\u00c7\u00c3O COLETIVO OLHANDO PRA FRENTE"},
-    {"id": "5",  "nome": "CONSELHO COMUNIT\u00c1RIO DO PARQUE S\u00c3O JOS\u00c9"},
+    {"id": "1",  "nome": "INSTITUTO ALÉM DOS OLHOS - POLO 1"},
+    {"id": "2",  "nome": "INSTITUIÇÃO COLETIVO OLHANDO PRA FRENTE"},
+    {"id": "5",  "nome": "CONSELHO COMUNITÁRIO DO PARQUE SÃO JOSÉ"},
     {"id": "6",  "nome": "INSTITUTO LOURDES VIANA"},
     {"id": "7",  "nome": "INSTITUTO NOVO RENASCER"},
-    {"id": "8",  "nome": "ASSOCIA\u00c7\u00c3O FUTURO DA CRIAN\u00c7A"},
+    {"id": "8",  "nome": "ASSOCIAÇÃO FUTURO DA CRIANÇA"},
     {"id": "9",  "nome": "INSTITUTO DOANDO QUE SE RECEBE"},
     {"id": "11", "nome": "REGIONAL V - PROJETO AMIGOS DE DEUS (Projeto Tia Katia)"},
     {"id": "13", "nome": "REGIONAL I - INSTITUTO JEFS"},
     {"id": "14", "nome": "REGIONAL II - INSTITUTO ESCOLHI AMAR"},
-    {"id": "15", "nome": "REGIONAL I - INSTITUTO VIVA AGAP\u00ca"},
+    {"id": "15", "nome": "REGIONAL I - INSTITUTO VIVA AGAPÊ"},
     {"id": "16", "nome": "IEQ JARDIM GUANABARA"},
     {"id": "17", "nome": "REGIONAL II - INSTITUTO LOURDES VIANA"},
     {"id": "18", "nome": "REGIONAL IV - INSTITUTO VIVA IDOSO"},
-    {"id": "19", "nome": "REGIONAL V - PROJETO AMIGOS DE DEUS (Col\u00e9gio Pequeno Aprendiz)"},
+    {"id": "19", "nome": "REGIONAL V - PROJETO AMIGOS DE DEUS (Colégio Pequeno Aprendiz)"},
     {"id": "20", "nome": "REGIONAL V - CRECHE NOVO MUNDO PIONEIRO"},
-    {"id": "21", "nome": "REGIONAL X - ASSOCIA\u00c7\u00c3O MOVIMENTO ORQ\u00daIDEAS DO PARQUE SANTANA"},
+    {"id": "21", "nome": "REGIONAL X - ASSOCIAÇÃO MOVIMENTO ORQÚIDEAS DO PARQUE SANTANA"},
 ]
 COURSE_CATALOG = [
-    {"id": "1",  "nome": "INTELIG\u00caNCIA ARTIFICIAL"},
+    {"id": "1",  "nome": "INTELIGÊNCIA ARTIFICIAL"},
     {"id": "2",  "nome": "MARKETING DIGITAL"},
-    {"id": "3",  "nome": "OFICINA DE DAN\u00c7A"},
+    {"id": "3",  "nome": "OFICINA DE DANÇA"},
     {"id": "4",  "nome": "DESIGNER DE UNHAS"},
     {"id": "5",  "nome": "RECEPCIONISTA"},
     {"id": "6",  "nome": "MANICURE"},
-    {"id": "7",  "nome": "EXTENS\u00c3O DE C\u00cdLIOS"},
+    {"id": "7",  "nome": "EXTENSÃO DE CÍLIOS"},
     {"id": "8",  "nome": "SOCIAL MEDIA"},
     {"id": "9",  "nome": "TRANCISTA"},
     {"id": "10", "nome": "AUXILIAR ADMINISTRATIVO"},
     {"id": "11", "nome": "DESIGNER DE SOBRANCELHAS"},
 ]
 ADDRESS_OPTIONS = {
-    "1":  "\U0001f4cdRua Jorn. Ant\u00f4nio Pontes, n\u00ba 1138, bairro Cajazeiras - CEP.: 60.864-590",
-    "2":  "\U0001f4cdRua B, n\u00ba 39, bairro Jangurussu - CEP.: 60.870-605",
-    "5":  "\U0001f4cdRua Costa Freire, n\u00ba 2238, bairro Parangaba - Fortaleza, CE - CEP.: 60.730-255",
-    "6":  "\U0001f4cdRua J\u00falia Vasconcelos, n\u00ba 199 - Tatuap\u00e9 - Fortaleza, CE - CEP.: 60125-150",
-    "7":  "\U0001f4cdTravessa Ferreira dos Santos, n\u00ba 8b, bairro \u00c1lvaro Weyne - Fortaleza, CE - CEP.: 60.335-570",
-    "8":  "\U0001f4cdRua Parambu, n\u00ba 560, bairro Vila Velha - Fortaleza, CE - CEP.: 60.347-160",
-    "9":  "\U0001f4cdRua Einstein, n\u00ba 1322 - bairro Vila Peri - Fortaleza, CE - CEP.: 60730-145",
-    "11": "\U0001f4cdRua Humberto Lomeu, n\u00ba 2074 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
-    "13": "\U0001f4cdRua Santa Rosa, n\u00ba 551 - bairro Carlito Pamplona - Fortaleza, CE - CEP.: 60311-420",
-    "14": "\U0001f4cdRua Ros\u00e1rio, n\u00ba 38 - Bairro Aldeota. Fortaleza, CE - CEP.: 60.135-310",
-    "15": "\U0001f4cdRua Pedro Sampaio, n\u00ba 453 - bairro Vila Velha - Fortaleza, CE - CEP.: 60346-285",
-    "16": "\U0001f4cdRua Cari\u00fas, n\u00ba 669, bairro Jardim Guanabara - Fortaleza, CE - CEP.: 60.346-270",
-    "18": "\U0001f4cdRua Nove, n\u00ba 803, bairro Passar\u00e9 - Fortaleza, CE - CEP.: 60.810-670",
-    "19": "\U0001f4cdRua Londrina, n\u00ba 1972 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-485",
-    "20": "\U0001f4cdRua Pereira Barbosa, n\u00ba 1460 - bairro Siqueira - Fortaleza, CE - CEP.: 60732-382",
-    "21": "\U0001f4cdRua 05, n\u00b0 1440, casa B - bairro Mondubim - Comunidade Parque Santana - Fortaleza, CE - CEP.: 60767-650",
+    "1":  "\U0001f4cdRua Jorn. Antônio Pontes, nº 1138, bairro Cajazeiras - CEP.: 60.864-590",
+    "2":  "\U0001f4cdRua B, nº 39, bairro Jangurussu - CEP.: 60.870-605",
+    "5":  "\U0001f4cdRua Costa Freire, nº 2238, bairro Parangaba - Fortaleza, CE - CEP.: 60.730-255",
+    "6":  "\U0001f4cdRua Júlia Vasconcelos, nº 199 - Tatuapé - Fortaleza, CE - CEP.: 60125-150",
+    "7":  "\U0001f4cdTravessa Ferreira dos Santos, nº 8b, bairro Álvaro Weyne - Fortaleza, CE - CEP.: 60.335-570",
+    "8":  "\U0001f4cdRua Parambu, nº 560, bairro Vila Velha - Fortaleza, CE - CEP.: 60.347-160",
+    "9":  "\U0001f4cdRua Einstein, nº 1322 - bairro Vila Peri - Fortaleza, CE - CEP.: 60730-145",
+    "11": "\U0001f4cdRua Humberto Lomeu, nº 2074 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
+    "13": "\U0001f4cdRua Santa Rosa, nº 551 - bairro Carlito Pamplona - Fortaleza, CE - CEP.: 60311-420",
+    "14": "\U0001f4cdRua Rosário, nº 38 - Bairro Aldeota. Fortaleza, CE - CEP.: 60.135-310",
+    "15": "\U0001f4cdRua Pedro Sampaio, nº 453 - bairro Vila Velha - Fortaleza, CE - CEP.: 60346-285",
+    "16": "\U0001f4cdRua Cariús, nº 669, bairro Jardim Guanabara - Fortaleza, CE - CEP.: 60.346-270",
+    "18": "\U0001f4cdRua Nove, nº 803, bairro Passaré - Fortaleza, CE - CEP.: 60.810-670",
+    "19": "\U0001f4cdRua Londrina, nº 1972 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-485",
+    "20": "\U0001f4cdRua Pereira Barbosa, nº 1460 - bairro Siqueira - Fortaleza, CE - CEP.: 60732-382",
+    "21": "\U0001f4cdRua 05, n° 1440, casa B - bairro Mondubim - Comunidade Parque Santana - Fortaleza, CE - CEP.: 60767-650",
 }
 TURMA_OPTIONS = [
     {"id":"101","curso_id":"1","local_id":"1","turma_codigo":"26/INAT-001",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"15h at\u00e9 17h",
+     "dias_aula":"Terça e Quinta","horario":"15h até 17h",
      "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"1"},
     {"id":"102","curso_id":"1","local_id":"6","turma_codigo":"26/INAT-004",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"18h30 at\u00e9 20h30",
+     "dias_aula":"Terça e Quinta","horario":"18h30 até 20h30",
      "data_inicio":"08/09/2026","encerramento":"01/10/2026","endereco_id":"6"},
     {"id":"202","curso_id":"2","local_id":"11","turma_codigo":"26/MARK-006",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"14h at\u00e9 16h",
+     "dias_aula":"Terça e Quinta","horario":"14h até 16h",
      "data_inicio":"08/09/2026","encerramento":"01/10/2026","endereco_id":"11"},
     {"id":"402","curso_id":"4","local_id":"5","turma_codigo":"26/DSUN-005",
-     "dias_aula":"Segunda a Sexta","horario":"18h30 at\u00e9 20h30",
+     "dias_aula":"Segunda a Sexta","horario":"18h30 até 20h30",
      "data_inicio":"02/09/2026","encerramento":"08/09/2026","endereco_id":"5"},
     {"id":"501","curso_id":"5","local_id":"7","turma_codigo":"26/RECP-001",
-     "dias_aula":"Segunda e Quarta","horario":"18h30 at\u00e9 20h30",
+     "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
      "data_inicio":"09/09/2026","encerramento":"05/10/2026","endereco_id":"7"},
     {"id":"601","curso_id":"6","local_id":"8","turma_codigo":"26/MNCR-008",
-     "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h30",
+     "dias_aula":"Segunda a Sexta","horario":"13h até 17h30",
      "data_inicio":"09/09/2026","encerramento":"15/09/2026","endereco_id":"8"},
     {"id":"701","curso_id":"7","local_id":"9","turma_codigo":"26/EXTC-005",
-     "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h30",
+     "dias_aula":"Segunda a Sexta","horario":"13h até 17h30",
      "data_inicio":"31/08/2026","encerramento":"04/09/2026","endereco_id":"9"},
     {"id":"801","curso_id":"8","local_id":"11","turma_codigo":"26/SOMD-008",
-     "dias_aula":"Segunda e Quarta","horario":"14h at\u00e9 16h",
+     "dias_aula":"Segunda e Quarta","horario":"14h até 16h",
      "data_inicio":"09/09/2026","encerramento":"30/09/2026","endereco_id":"11"},
     {"id":"901","curso_id":"9","local_id":"13","turma_codigo":"26/TRNC-004",
-     "dias_aula":"Segunda a Sexta","horario":"13h at\u00e9 17h",
+     "dias_aula":"Segunda a Sexta","horario":"13h até 17h",
      "data_inicio":"14/09/2026","encerramento":"18/09/2026","endereco_id":"13"},
+    # 26/SOMD-009 — início alterado para 28/09/2026, encerramento 21/10/2026
     {"id":"802","curso_id":"8","local_id":"14","turma_codigo":"26/SOMD-009",
-     "dias_aula":"Segunda e Quarta","horario":"18h30 at\u00e9 20h30",
-     "data_inicio":"21/09/2026","encerramento":"14/10/2026","endereco_id":"14"},
+     "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
+     "data_inicio":"28/09/2026","encerramento":"21/10/2026","endereco_id":"14"},
     {"id":"203","curso_id":"2","local_id":"15","turma_codigo":"26/MARK-007",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"18h30 at\u00e9 20h30",
+     "dias_aula":"Terça e Quinta","horario":"18h30 até 20h30",
      "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"15"},
+    # 26/ADMN-004 — início 13/10/2026, encerramento 05/11/2026, horário 14h30 às 16h30
     {"id":"1001","curso_id":"10","local_id":"17","turma_codigo":"26/ADMN-004",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"18h30 at\u00e9 20h30",
-     "data_inicio":"06/10/2026","encerramento":"29/10/2026","endereco_id":"6"},
+     "dias_aula":"Terça e Quinta","horario":"14h30 até 16h30",
+     "data_inicio":"13/10/2026","encerramento":"05/11/2026","endereco_id":"6"},
     {"id":"602","curso_id":"6","local_id":"15","turma_codigo":"26/MNCR-009",
-     "dias_aula":"Segunda a Sexta","horario":"13h30 at\u00e9 17h30",
+     "dias_aula":"Segunda a Sexta","horario":"13h30 até 17h30",
      "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"15"},
     {"id":"306","curso_id":"3","local_id":"16","turma_codigo":"26/OFDN-006",
-     "dias_aula":"S\u00e1bado","horario":"18h",
+     "dias_aula":"Sábado","horario":"18h",
      "data_inicio":"05/09/2026","encerramento":"05/09/2026","endereco_id":"16"},
     {"id":"803","curso_id":"8","local_id":"18","turma_codigo":"26/SOMD-010",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"14h30 at\u00e9 16h30",
+     "dias_aula":"Terça e Quinta","horario":"14h30 até 16h30",
      "data_inicio":"22/09/2026","encerramento":"15/10/2026","endereco_id":"18"},
     {"id":"103","curso_id":"1","local_id":"19","turma_codigo":"26/INAT-005",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"08h at\u00e9 10h",
+     "dias_aula":"Terça e Quinta","horario":"08h até 10h",
      "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"19"},
     {"id":"104","curso_id":"1","local_id":"19","turma_codigo":"26/INAT-006",
-     "dias_aula":"Ter\u00e7a e Quinta","horario":"14h at\u00e9 16h",
+     "dias_aula":"Terça e Quinta","horario":"14h até 16h",
      "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"19"},
+    # 26/MARK-008 — início 06/10/2026, encerramento 29/10/2026
     {"id":"204","curso_id":"2","local_id":"20","turma_codigo":"26/MARK-008",
-     "dias_aula":"Ter\u00e7a e Sexta","horario":"16h30 at\u00e9 18h30",
-     "data_inicio":"22/09/2026","encerramento":"16/10/2026","endereco_id":"20"},
+     "dias_aula":"Terça e Sexta","horario":"16h30 até 18h30",
+     "data_inicio":"06/10/2026","encerramento":"29/10/2026","endereco_id":"20"},
     {"id":"1002","curso_id":"10","local_id":"20","turma_codigo":"26/ADMN-005",
-     "dias_aula":"Segunda e Quarta","horario":"16h30 at\u00e9 18h30",
+     "dias_aula":"Segunda e Quarta","horario":"16h30 até 18h30",
      "data_inicio":"21/09/2026","encerramento":"14/10/2026","endereco_id":"20"},
+    # 26/INAT-007 — início 07/10/2026, encerramento 29/10/2026
     {"id":"105","curso_id":"1","local_id":"20","turma_codigo":"26/INAT-007",
-     "dias_aula":"Quarta e Quinta","horario":"08h at\u00e9 10h",
-     "data_inicio":"23/09/2026","encerramento":"15/10/2026","endereco_id":"20"},
+     "dias_aula":"Quarta e Quinta","horario":"08h até 10h",
+     "data_inicio":"07/10/2026","encerramento":"29/10/2026","endereco_id":"20"},
     {"id":"403","curso_id":"4","local_id":"21","turma_codigo":"26/DSUN-006",
-     "dias_aula":"18h30 at\u00e9 21h","horario":"18h30 at\u00e9 21h",
+     "dias_aula":"18h30 até 21h","horario":"18h30 até 21h",
      "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"21"},
     {"id":"603","curso_id":"6","local_id":"5","turma_codigo":"26/MNCR-010",
-     "dias_aula":"Segunda a Sexta","horario":"18h30 at\u00e9 21h",
+     "dias_aula":"Segunda a Sexta","horario":"18h30 até 21h",
      "data_inicio":"28/09/2026","encerramento":"02/10/2026","endereco_id":"5"},
     {"id":"1101","curso_id":"11","local_id":"5","turma_codigo":"26/DSBR-012",
-     "dias_aula":"Segunda a Sexta","horario":"18h30 at\u00e9 21h",
+     "dias_aula":"Segunda a Sexta","horario":"18h30 até 21h",
      "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"5"},
 ]
 COMO_CONHECEU_OPCOES = ["Facebook", "Instagram", "Whatsapp", "Outros"]
@@ -527,11 +531,11 @@ TEMPLATE_WIZARD = r"""
             function mostrarInfoCurso(show){[infoLocalGroup,infoDiasGroup,infoHorarioGroup,infoInicioGroup,infoEncGroup,infoEndGroup].forEach(function(el){if(el)el.style.display=show?'':'none';});}
             function aplicarOpcao(opcaoId){var op=courseOptionsById[String(opcaoId||'')];if(!op){opcaoIdInput.value='';localIdInput.value='';localInput.value='';if(localDisplay)localDisplay.value='';cursoInput.value='';turmaInput.value='';diasAulaInput.value='';horarioInput.value='';dataInicioInput.value='';encerramentoInput.value='';enderecoInput.value='';mostrarInfoCurso(false);return;}opcaoIdInput.value=op.id;localIdInput.value=op.local_id;localInput.value=op.local;if(localDisplay)localDisplay.value=op.local;cursoInput.value=op.curso;turmaInput.value=op.turma;diasAulaInput.value=op.dias_aula;horarioInput.value=op.horario;dataInicioInput.value=op.data_inicio;encerramentoInput.value=op.encerramento;enderecoInput.value=op.endereco_curso;mostrarInfoCurso(true);setError('curso_id','');setError('opcao_id','');syncReview();}
             function atualizarCursosPorLocal(localId,selectedCursoId,selectedOpcaoId){var turmasDoLocal=courseOptions.filter(function(o){return String(o.local_id)===String(localId||'');});courseSelect.innerHTML='';opcaoSelectEl.innerHTML='';turmaGroup.style.display='none';aplicarOpcao('');if(turmasDoLocal.length===0){cursoGroup.style.display='none';return;}cursoGroup.style.display='';var ph=document.createElement('option');ph.value='';ph.textContent='Selecione um curso';courseSelect.appendChild(ph);var seen={};turmasDoLocal.forEach(function(op){if(!seen[op.curso_id]){seen[op.curso_id]=true;var opt=document.createElement('option');opt.value=op.curso_id;opt.textContent=op.curso;if(String(op.curso_id)===String(selectedCursoId||''))opt.selected=true;courseSelect.appendChild(opt);}});if(selectedCursoId){atualizarHorariosPorCurso(localId,selectedCursoId,selectedOpcaoId);}else if(Object.keys(seen).length===1){courseSelect.value=Object.keys(seen)[0];atualizarHorariosPorCurso(localId,Object.keys(seen)[0],selectedOpcaoId);}}
-            function atualizarHorariosPorCurso(localId,cursoId,selectedOpcaoId){var turmas=courseOptions.filter(function(o){return String(o.local_id)===String(localId||'')&&String(o.curso_id)===String(cursoId||'');});opcaoSelectEl.innerHTML='';if(turmas.length===0){turmaGroup.style.display='none';aplicarOpcao('');return;}if(turmas.length===1){turmaGroup.style.display='none';aplicarOpcao(turmas[0].id);return;}turmaGroup.style.display='';var ph=document.createElement('option');ph.value='';ph.textContent='Selecione um hor\u00e1rio';opcaoSelectEl.appendChild(ph);turmas.forEach(function(op){var opt=document.createElement('option');opt.value=op.id;opt.textContent=op.dias_aula+' | '+op.horario+' (in\u00edcio '+op.data_inicio+')';if(String(op.id)===String(selectedOpcaoId||''))opt.selected=true;opcaoSelectEl.appendChild(opt);});if(selectedOpcaoId&&turmas.some(function(o){return String(o.id)===String(selectedOpcaoId);})){aplicarOpcao(selectedOpcaoId);}else{aplicarOpcao('');}}
+            function atualizarHorariosPorCurso(localId,cursoId,selectedOpcaoId){var turmas=courseOptions.filter(function(o){return String(o.local_id)===String(localId||'')&&String(o.curso_id)===String(cursoId||'');});opcaoSelectEl.innerHTML='';if(turmas.length===0){turmaGroup.style.display='none';aplicarOpcao('');return;}if(turmas.length===1){turmaGroup.style.display='none';aplicarOpcao(turmas[0].id);return;}turmaGroup.style.display='';var ph=document.createElement('option');ph.value='';ph.textContent='Selecione um horário';opcaoSelectEl.appendChild(ph);turmas.forEach(function(op){var opt=document.createElement('option');opt.value=op.id;opt.textContent=op.dias_aula+' | '+op.horario+' (início '+op.data_inicio+')';if(String(op.id)===String(selectedOpcaoId||''))opt.selected=true;opcaoSelectEl.appendChild(opt);});if(selectedOpcaoId&&turmas.some(function(o){return String(o.id)===String(selectedOpcaoId);})){aplicarOpcao(selectedOpcaoId);}else{aplicarOpcao('');}}
             localSelectEl.addEventListener('change',function(){setError('local_id','');var l=localSelectEl.value;if(l){atualizarCursosPorLocal(l,'','');}else{cursoGroup.style.display='none';turmaGroup.style.display='none';aplicarOpcao('');}syncReview();});
             courseSelect.addEventListener('change',function(){setError('curso_id','');var c=courseSelect.value;var l=localSelectEl.value;if(c&&l){atualizarHorariosPorCurso(l,c,'');}else{turmaGroup.style.display='none';aplicarOpcao('');}syncReview();});
             opcaoSelectEl.addEventListener('change',function(){setError('opcao_id','');aplicarOpcao(opcaoSelectEl.value);});
-            if(btnCopiarEndereco&&enderecoInput){btnCopiarEndereco.addEventListener('click',function(){navigator.clipboard.writeText(enderecoInput.value).then(function(){btnCopiarEndereco.textContent='COPIADO \u2705';}).catch(function(){enderecoInput.select();document.execCommand('copy');btnCopiarEndereco.textContent='COPIADO \u2705';});setTimeout(function(){btnCopiarEndereco.textContent='COPIAR \uD83D\uDCCB';},1200);});}
+            if(btnCopiarEndereco&&enderecoInput){btnCopiarEndereco.addEventListener('click',function(){navigator.clipboard.writeText(enderecoInput.value).then(function(){btnCopiarEndereco.textContent='COPIADO ✅';}).catch(function(){enderecoInput.select();document.execCommand('copy');btnCopiarEndereco.textContent='COPIADO ✅';});setTimeout(function(){btnCopiarEndereco.textContent='COPIAR \u{1F4CB}';},1200);});}
             function mostrarPasso(step){panels.forEach(function(p){p.classList.toggle('ativo',p.dataset.step===step);});labels.forEach(function(l){l.classList.toggle('ativo',l.dataset.stepLabel===step);});fill.style.width=(progressByStep[step]||25)+'%';window.scrollTo({top:0,behavior:'smooth'});}
             function syncReview(){reviewTargets.forEach(function(t){var key=t.dataset.review;if(key==='curso_nome'){t.textContent=cursoInput?cursoInput.value.trim():'';return;}if(key==='local_nome'){t.textContent=localInput?localInput.value.trim():'';return;}var f=document.getElementById(key);if(!f){t.textContent='';return;}if(f.tagName==='SELECT'){var s=f.options[f.selectedIndex];t.textContent=s?s.text.trim():'';}else{t.textContent=f.value.trim();}});}
             function validarCPF(cpf){var d=somenteDigitos(cpf);if(d.length!==11||/^(\d)\1+$/.test(d))return false;var s=0,g;for(var i=0;i<9;i++)s+=Number(d[i])*(10-i);g=(s*10)%11;if(g===10)g=0;if(g!==Number(d[9]))return false;s=0;for(var i=0;i<10;i++)s+=Number(d[i])*(11-i);g=(s*10)%11;if(g===10)g=0;return g===Number(d[10]);}
@@ -542,16 +546,16 @@ TEMPLATE_WIZARD = r"""
             function mascNasc(){var v=somenteDigitos(nascimentoInput.value).slice(0,8);if(v.length>4)v=v.replace(/(\d{2})(\d{2})(\d{1,4})/,'$1/$2/$3');else if(v.length>2)v=v.replace(/(\d{2})(\d{1,2})/,'$1/$2');nascimentoInput.value=v;}
             function mascWpp(){var v=somenteDigitos(whatsappInput.value).slice(0,11);if(v.length>6)v=v.replace(/(\d{2})(\d{5})(\d{0,4})/,'($1) $2-$3');else if(v.length>2)v=v.replace(/(\d{2})(\d{1,5})/,'($1) $2');whatsappInput.value=v;}
             function mascCep(){var v=somenteDigitos(cepInput.value).slice(0,8);if(v.length>5)v=v.replace(/(\d{5})(\d{1,3})/,'$1-$2');cepInput.value=v;}
-            function vNome(){var v=nomeInput.value.trim();if(!v){setError('nome','Digite seu nome completo.');return false;}if(v.length>50){setError('nome','M\u00e1ximo 50 caracteres.');return false;}if(!/^[A-Za-z\u00C0-\u00FF '\u00b4`^~.-]+$/.test(v)){setError('nome','Use apenas letras e sinais permitidos.');return false;}setError('nome','');return true;}
-            function vGenero(){if(!generoInput.value){setError('genero','Selecione o g\u00eanero.');return false;}setError('genero','');return true;}
-            function vCPF(){if(!validarCPF(cpfInput.value)){setError('cpf','CPF inv\u00e1lido.');return false;}setError('cpf','');return true;}
+            function vNome(){var v=nomeInput.value.trim();if(!v){setError('nome','Digite seu nome completo.');return false;}if(v.length>50){setError('nome','Máximo 50 caracteres.');return false;}if(!/^[A-Za-zÀ-ÿ '´`^~.-]+$/.test(v)){setError('nome','Use apenas letras e sinais permitidos.');return false;}setError('nome','');return true;}
+            function vGenero(){if(!generoInput.value){setError('genero','Selecione o gênero.');return false;}setError('genero','');return true;}
+            function vCPF(){if(!validarCPF(cpfInput.value)){setError('cpf','CPF inválido.');return false;}setError('cpf','');return true;}
             function vNasc(){if(!idadePermitida(nascimentoInput.value)){setError('nascimento','Idade permitida: 16 a 90 anos.');return false;}setError('nascimento','');return true;}
-            function vWpp(){var d=somenteDigitos(whatsappInput.value);if(d.length!==11||!/^\(\d{2}\) \d{5}-\d{4}$/.test(whatsappInput.value)||!validarDDD(whatsappInput.value)){setError('whatsapp','Informe um WhatsApp com DDD v\u00e1lido do Brasil.');return false;}setError('whatsapp','');return true;}
-            function vCep(){if(!/^\d{5}-\d{3}$/.test(cepInput.value.trim())){setError('cep','CEP inv\u00e1lido. Formato: 00000-000.');return false;}setError('cep','');return true;}
-            function vBairro(){var v=bairroInput.value.trim();if(!v){setError('bairro','Informe o bairro.');return false;}if(v.length>40){setError('bairro','M\u00e1ximo 40 caracteres.');return false;}setError('bairro','');return true;}
-            function vEmail(){if(!validarEmail(emailInput.value)){setError('email','Digite um e-mail v\u00e1lido (Gmail, Hotmail, Outlook ou Yahoo).');return false;}setError('email','');return true;}
+            function vWpp(){var d=somenteDigitos(whatsappInput.value);if(d.length!==11||!/^\(\d{2}\) \d{5}-\d{4}$/.test(whatsappInput.value)||!validarDDD(whatsappInput.value)){setError('whatsapp','Informe um WhatsApp com DDD válido do Brasil.');return false;}setError('whatsapp','');return true;}
+            function vCep(){if(!/^\d{5}-\d{3}$/.test(cepInput.value.trim())){setError('cep','CEP inválido. Formato: 00000-000.');return false;}setError('cep','');return true;}
+            function vBairro(){var v=bairroInput.value.trim();if(!v){setError('bairro','Informe o bairro.');return false;}if(v.length>40){setError('bairro','Máximo 40 caracteres.');return false;}setError('bairro','');return true;}
+            function vEmail(){if(!validarEmail(emailInput.value)){setError('email','Digite um e-mail válido (Gmail, Hotmail, Outlook ou Yahoo).');return false;}setError('email','');return true;}
             function validarPassoDados(){var checks=[{ok:vNome(),f:nomeInput},{ok:vGenero(),f:generoInput},{ok:vCPF(),f:cpfInput},{ok:vNasc(),f:nascimentoInput},{ok:vWpp(),f:whatsappInput},{ok:vCep(),f:cepInput},{ok:vBairro(),f:bairroInput},{ok:vEmail(),f:emailInput}];var first=checks.find(function(c){return!c.ok;});if(first){first.f.focus();return false;}return true;}
-            function validarPassoEscolher(){if(!localSelectEl.value){localSelectEl.focus();return false;}if(cursoGroup.style.display!=='none'&&!courseSelect.value){setError('curso_id','Selecione um curso.');courseSelect.focus();return false;}if(turmaGroup.style.display!=='none'&&!opcaoSelectEl.value){setError('opcao_id','Selecione um hor\u00e1rio.');opcaoSelectEl.focus();return false;}if(!opcaoIdInput.value){setError('curso_id','N\u00e3o foi poss\u00edvel determinar a turma. Tente novamente.');return false;}return true;}
+            function validarPassoEscolher(){if(!localSelectEl.value){localSelectEl.focus();return false;}if(cursoGroup.style.display!=='none'&&!courseSelect.value){setError('curso_id','Selecione um curso.');courseSelect.focus();return false;}if(turmaGroup.style.display!=='none'&&!opcaoSelectEl.value){setError('opcao_id','Selecione um horário.');opcaoSelectEl.focus();return false;}if(!opcaoIdInput.value){setError('curso_id','Não foi possível determinar a turma. Tente novamente.');return false;}return true;}
             function validarPassoRevisao(){if(!confirmaDadosInput.checked){setError('confirma_dados','Confirme os dados para finalizar.');confirmaDadosInput.focus();return false;}setError('confirma_dados','');return true;}
             async function buscarBairro(){var limpo=somenteDigitos(cepInput.value);if(limpo.length!==8)return;try{var r=await fetch('https://viacep.com.br/ws/'+limpo+'/json/');var d=await r.json();if(!d.erro&&d.bairro){bairroInput.value=d.bairro;vBairro();syncReview();}}catch(e){console.error(e);}}
             document.querySelectorAll('[data-next]').forEach(function(btn){btn.addEventListener('click',function(){var t=btn.dataset.next;if(t==='escolher'&&!validarPassoDados())return;if(t==='revisao'&&!validarPassoEscolher())return;syncReview();mostrarPasso(t);});});
@@ -570,7 +574,7 @@ TEMPLATE_WIZARD = r"""
             function toggleOutroField(){if(comoConheceuSel&&comoConheceuOutroGrp){var show=comoConheceuSel.value==='Outros';comoConheceuOutroGrp.style.display=show?'':'none';if(!show&&comoConheceuOutroInput)comoConheceuOutroInput.value='';}}
             if(comoConheceuSel){comoConheceuSel.addEventListener('change',function(){toggleOutroField();syncReview();});toggleOutroField();}
             if(comoConheceuOutroInput){comoConheceuOutroInput.addEventListener('input',syncReview);}
-            function initBenefitsSlider(slider){var slides=Array.from(slider.querySelectorAll('.benefit-slide')),dotsHost=slider.querySelector('[data-benefits-dots]'),prevBtn=slider.querySelector('[data-benefits-prev]'),nextBtn=slider.querySelector('[data-benefits-next]');if(!slides.length||!dotsHost||!prevBtn||!nextBtn)return;var cur=Math.max(slides.findIndex(function(s){return s.classList.contains('ativo');}),0),timer;var dots=slides.map(function(_,i){var dot=document.createElement('button');dot.type='button';dot.className='benefits-dot';dot.setAttribute('aria-label','Benef\u00edcio '+(i+1));dot.addEventListener('click',function(){show(i);restart();});dotsHost.appendChild(dot);return dot;});function show(i){cur=(i+slides.length)%slides.length;slides.forEach(function(s,j){s.classList.toggle('ativo',j===cur);});dots.forEach(function(d,j){d.classList.toggle('ativo',j===cur);});}function restart(){clearInterval(timer);timer=setInterval(function(){show(cur+1);},3200);}prevBtn.addEventListener('click',function(){show(cur-1);restart();});nextBtn.addEventListener('click',function(){show(cur+1);restart();});slider.addEventListener('mouseenter',function(){clearInterval(timer);});slider.addEventListener('mouseleave',restart);show(cur);restart();}
+            function initBenefitsSlider(slider){var slides=Array.from(slider.querySelectorAll('.benefit-slide')),dotsHost=slider.querySelector('[data-benefits-dots]'),prevBtn=slider.querySelector('[data-benefits-prev]'),nextBtn=slider.querySelector('[data-benefits-next]');if(!slides.length||!dotsHost||!prevBtn||!nextBtn)return;var cur=Math.max(slides.findIndex(function(s){return s.classList.contains('ativo');}),0),timer;var dots=slides.map(function(_,i){var dot=document.createElement('button');dot.type='button';dot.className='benefits-dot';dot.setAttribute('aria-label','Benefício '+(i+1));dot.addEventListener('click',function(){show(i);restart();});dotsHost.appendChild(dot);return dot;});function show(i){cur=(i+slides.length)%slides.length;slides.forEach(function(s,j){s.classList.toggle('ativo',j===cur);});dots.forEach(function(d,j){d.classList.toggle('ativo',j===cur);});}function restart(){clearInterval(timer);timer=setInterval(function(){show(cur+1);},3200);}prevBtn.addEventListener('click',function(){show(cur-1);restart();});nextBtn.addEventListener('click',function(){show(cur+1);restart();});slider.addEventListener('mouseenter',function(){clearInterval(timer);});slider.addEventListener('mouseleave',restart);show(cur);restart();}
             var initCursoId='{{ form_data.get("curso_id","") }}',initLocalId='{{ form_data.get("local_id","") }}',initOpcaoId='{{ form_data.get("opcao_id","") }}';
             if(initLocalId){localSelectEl.value=initLocalId;atualizarCursosPorLocal(initLocalId,initCursoId,initOpcaoId);}else{cursoGroup.style.display='none';turmaGroup.style.display='none';}
             if(initOpcaoId&&courseOptionsById[initOpcaoId])mostrarInfoCurso(true);
@@ -737,26 +741,26 @@ def validate_form_data(form_data):
     selected_option = get_course_option(form_data.get("opcao_id",""))
     if not selected_curso: errors["curso_id"] = "Selecione um curso."
     if not selected_option:
-        errors["curso_id"] = errors.get("curso_id", "Selecione um local e hor\u00e1rio para o curso.")
+        errors["curso_id"] = errors.get("curso_id", "Selecione um local e horário para o curso.")
     elif selected_option and selected_curso and selected_option["curso_id"] != selected_curso:
-        errors["curso_id"] = "A turma n\u00e3o pertence ao curso escolhido."
+        errors["curso_id"] = "A turma não pertence ao curso escolhido."
     nome = form_data["nome"]
     if not nome: errors["nome"] = "Digite seu nome completo."
-    elif len(nome) > 50: errors["nome"] = "O nome deve ter no m\u00e1ximo 50 caracteres."
+    elif len(nome) > 50: errors["nome"] = "O nome deve ter no máximo 50 caracteres."
     elif not NAME_PATTERN.fullmatch(nome): errors["nome"] = "Use apenas letras e sinais permitidos no nome."
-    if form_data["genero"] not in {"Feminino","Masculino","Outro","Prefiro n\u00e3o dizer"}:
-        errors["genero"] = "Selecione o g\u00eanero."
-    if not cpf_valido(form_data["cpf"]): errors["cpf"] = "CPF inv\u00e1lido. Verifique e digite novamente."
-    if not idade_aceita(form_data["nascimento"]): errors["nascimento"] = "Idade permitida: de 16 at\u00e9 90 anos."
-    if not whatsapp_valido(form_data["whatsapp"]): errors["whatsapp"] = "Informe um WhatsApp com DDD v\u00e1lido do Brasil."
-    if not re.fullmatch(r"\d{5}-\d{3}", form_data["cep"] or ""): errors["cep"] = "CEP inv\u00e1lido. Formato: 00000-000."
+    if form_data["genero"] not in {"Feminino","Masculino","Outro","Prefiro não dizer"}:
+        errors["genero"] = "Selecione o gênero."
+    if not cpf_valido(form_data["cpf"]): errors["cpf"] = "CPF inválido. Verifique e digite novamente."
+    if not idade_aceita(form_data["nascimento"]): errors["nascimento"] = "Idade permitida: de 16 até 90 anos."
+    if not whatsapp_valido(form_data["whatsapp"]): errors["whatsapp"] = "Informe um WhatsApp com DDD válido do Brasil."
+    if not re.fullmatch(r"\d{5}-\d{3}", form_data["cep"] or ""): errors["cep"] = "CEP inválido. Formato: 00000-000."
     bairro = form_data["bairro"]
     if not bairro: errors["bairro"] = "Informe o bairro."
-    elif len(bairro) > 40: errors["bairro"] = "O bairro deve ter no m\u00e1ximo 40 caracteres."
+    elif len(bairro) > 40: errors["bairro"] = "O bairro deve ter no máximo 40 caracteres."
     if not ALLOWED_EMAIL_PATTERN.fullmatch(form_data["email"] or ""):
-        errors["email"] = "Digite um e-mail v\u00e1lido do Gmail, Hotmail, Outlook ou Yahoo."
+        errors["email"] = "Digite um e-mail válido do Gmail, Hotmail, Outlook ou Yahoo."
     if form_data["confirma_dados"] != "sim":
-        errors["confirma_dados"] = "Confirme os dados para finalizar a inscri\u00e7\u00e3o."
+        errors["confirma_dados"] = "Confirme os dados para finalizar a inscrição."
     return errors
 def error_step(errors):
     if "confirma_dados" in errors: return "revisao"
@@ -775,7 +779,7 @@ def render_wizard(form_data=None, errors=None, current_step="index"):
         current_step         = current_step,
         errors               = errors or {},
         form_data            = current_form_data,
-        generos              = ["Feminino","Masculino","Outro","Prefiro n\u00e3o dizer"],
+        generos              = ["Feminino","Masculino","Outro","Prefiro não dizer"],
     )
 @app.route("/", methods=["GET"])
 def home(): return render_wizard()
