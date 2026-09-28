@@ -869,30 +869,3 @@ def send_registration_to_supabase(form_data):
 if __name__=="__main__":
     port=int(os.environ.get("PORT",5000))
     app.run(host="0.0.0.0",port=port)
-
-Agora esse
-
-adiciona essas turmas
-
-OPÇÃO 1
-CURSO = 26/MARK 010 - MARKETING DIGITAL
-###OPÇÃO 1.1
-LOCAL = REGIONAL I - IEQ JARDIM GUANABARA
-DIA / HORÁRIO = Segunda e Quarta | 18h30 até 20:30h
-VAGAS = 20
-DATA DE INÍCIO = 05/10/2026
-ENCERRAMENTO = 04/11/2026
-ENDEREÇO = 📍Rua Cariús, nº 669, bairro Jardim Guanabara - Fortaleza, CE - CEP.: 60.346-270.
-OPÇÃO 2
-CURSO = 26/TRNC 005 - TRANCISTA
-###OPÇÃO 2.1
-LOCAL = REGIONAL V - ESPAÇO DO PROJETO VIDA EM MOVIMENTO
-DIA / HORÁRIO = Segunda a Sexta | 18h até 21:30h
-VAGAS = 20
-DATA DE INÍCIO = 05/10/2026
-ENCERRAMENTO = 09/10/2026
-ENDEREÇO = 📍Rua Barra Mansa, nº 478, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.540-060
-
-mas não tira as turmas que ja tem
-
-me der o codigo completo em app.py
