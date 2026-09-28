@@ -41,6 +41,7 @@ LOCAL_OPTIONS = [
     {"id": "19", "nome": "REGIONAL V - PROJETO AMIGOS DE DEUS (Colégio Pequeno Aprendiz)"},
     {"id": "20", "nome": "REGIONAL V - CRECHE NOVO MUNDO PIONEIRO"},
     {"id": "21", "nome": "REGIONAL X - ASSOCIAÇÃO MOVIMENTO ORQÚIDEAS DO PARQUE SANTANA"},
+    {"id": "22", "nome": "REGIONAL V - ESPAÇO DO PROJETO VIDA EM MOVIMENTO"},
 ]
 COURSE_CATALOG = [
     {"id": "1",  "nome": "INTELIGÊNCIA ARTIFICIAL"},
@@ -72,6 +73,7 @@ ADDRESS_OPTIONS = {
     "19": "\U0001f4cdRua Londrina, nº 1972 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-485",
     "20": "\U0001f4cdRua Pereira Barbosa, nº 1460 - bairro Siqueira - Fortaleza, CE - CEP.: 60732-382",
     "21": "\U0001f4cdRua 05, n° 1440, casa B - bairro Mondubim - Comunidade Parque Santana - Fortaleza, CE - CEP.: 60767-650",
+    "22": "\U0001f4cdRua Barra Mansa, nº 478, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.540-060",
 }
 TURMA_OPTIONS = [
     {"id":"101","curso_id":"1","local_id":"1","turma_codigo":"26/INAT-001",
@@ -147,6 +149,12 @@ TURMA_OPTIONS = [
     {"id":"1101","curso_id":"11","local_id":"5","turma_codigo":"26/DSBR-012",
      "dias_aula":"Segunda a Sexta","horario":"18h30 até 21h",
      "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"5"},
+    {"id":"205","curso_id":"2","local_id":"16","turma_codigo":"26/MARK-010",
+     "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
+     "data_inicio":"05/10/2026","encerramento":"04/11/2026","endereco_id":"16"},
+    {"id":"902","curso_id":"9","local_id":"22","turma_codigo":"26/TRNC-005",
+     "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
+     "data_inicio":"05/10/2026","encerramento":"09/10/2026","endereco_id":"22"},
 ]
 COMO_CONHECEU_OPCOES = ["Facebook", "Instagram", "Whatsapp", "Outros"]
 def build_course_options():
@@ -861,3 +869,30 @@ def send_registration_to_supabase(form_data):
 if __name__=="__main__":
     port=int(os.environ.get("PORT",5000))
     app.run(host="0.0.0.0",port=port)
+
+Agora esse
+
+adiciona essas turmas
+
+OPÇÃO 1
+CURSO = 26/MARK 010 - MARKETING DIGITAL
+###OPÇÃO 1.1
+LOCAL = REGIONAL I - IEQ JARDIM GUANABARA
+DIA / HORÁRIO = Segunda e Quarta | 18h30 até 20:30h
+VAGAS = 20
+DATA DE INÍCIO = 05/10/2026
+ENCERRAMENTO = 04/11/2026
+ENDEREÇO = 📍Rua Cariús, nº 669, bairro Jardim Guanabara - Fortaleza, CE - CEP.: 60.346-270.
+OPÇÃO 2
+CURSO = 26/TRNC 005 - TRANCISTA
+###OPÇÃO 2.1
+LOCAL = REGIONAL V - ESPAÇO DO PROJETO VIDA EM MOVIMENTO
+DIA / HORÁRIO = Segunda a Sexta | 18h até 21:30h
+VAGAS = 20
+DATA DE INÍCIO = 05/10/2026
+ENCERRAMENTO = 09/10/2026
+ENDEREÇO = 📍Rua Barra Mansa, nº 478, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.540-060
+
+mas não tira as turmas que ja tem
+
+me der o codigo completo em app.py
