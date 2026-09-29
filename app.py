@@ -85,33 +85,18 @@ ADDRESS_OPTIONS = {
     "26": "\U0001f4cdRua Coronel Matos Dourados, nº 1499, bairro Planalto Pici - Fortaleza, CE - CEP.: 60.360-561",
 }
 TURMA_OPTIONS = [
-    {"id":"101","curso_id":"1","local_id":"1","turma_codigo":"26/INAT-001",
-     "dias_aula":"Terça e Quinta","horario":"15h até 17h",
-     "data_inicio":"01/09/2026","encerramento":"24/09/2026","endereco_id":"1"},
     {"id":"102","curso_id":"1","local_id":"6","turma_codigo":"26/INAT-004",
      "dias_aula":"Terça e Quinta","horario":"18h30 até 20h30",
      "data_inicio":"08/09/2026","encerramento":"01/10/2026","endereco_id":"6"},
     {"id":"202","curso_id":"2","local_id":"11","turma_codigo":"26/MARK-006",
      "dias_aula":"Terça e Quinta","horario":"14h até 16h",
      "data_inicio":"08/09/2026","encerramento":"01/10/2026","endereco_id":"11"},
-    {"id":"402","curso_id":"4","local_id":"5","turma_codigo":"26/DSUN-005",
-     "dias_aula":"Segunda a Sexta","horario":"18h30 até 20h30",
-     "data_inicio":"02/09/2026","encerramento":"08/09/2026","endereco_id":"5"},
     {"id":"501","curso_id":"5","local_id":"7","turma_codigo":"26/RECP-001",
      "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
      "data_inicio":"09/09/2026","encerramento":"05/10/2026","endereco_id":"7"},
-    {"id":"601","curso_id":"6","local_id":"8","turma_codigo":"26/MNCR-008",
-     "dias_aula":"Segunda a Sexta","horario":"13h até 17h30",
-     "data_inicio":"09/09/2026","encerramento":"15/09/2026","endereco_id":"8"},
-    {"id":"701","curso_id":"7","local_id":"9","turma_codigo":"26/EXTC-005",
-     "dias_aula":"Segunda a Sexta","horario":"13h até 17h30",
-     "data_inicio":"31/08/2026","encerramento":"04/09/2026","endereco_id":"9"},
     {"id":"801","curso_id":"8","local_id":"11","turma_codigo":"26/SOMD-008",
      "dias_aula":"Segunda e Quarta","horario":"14h até 16h",
      "data_inicio":"09/09/2026","encerramento":"30/09/2026","endereco_id":"11"},
-    {"id":"901","curso_id":"9","local_id":"13","turma_codigo":"26/TRNC-004",
-     "dias_aula":"Segunda a Sexta","horario":"13h até 17h",
-     "data_inicio":"14/09/2026","encerramento":"18/09/2026","endereco_id":"13"},
     # 26/SOMD-009 — início alterado para 28/09/2026, encerramento 21/10/2026
     {"id":"802","curso_id":"8","local_id":"14","turma_codigo":"26/SOMD-009",
      "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
@@ -123,12 +108,6 @@ TURMA_OPTIONS = [
     {"id":"1001","curso_id":"10","local_id":"17","turma_codigo":"26/ADMN-004",
      "dias_aula":"Terça e Quinta","horario":"14h30 até 16h30",
      "data_inicio":"13/10/2026","encerramento":"05/11/2026","endereco_id":"6"},
-    {"id":"602","curso_id":"6","local_id":"15","turma_codigo":"26/MNCR-009",
-     "dias_aula":"Segunda a Sexta","horario":"13h30 até 17h30",
-     "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"15"},
-    {"id":"306","curso_id":"3","local_id":"16","turma_codigo":"26/OFDN-006",
-     "dias_aula":"Sábado","horario":"18h",
-     "data_inicio":"05/09/2026","encerramento":"05/09/2026","endereco_id":"16"},
     {"id":"803","curso_id":"8","local_id":"18","turma_codigo":"26/SOMD-010",
      "dias_aula":"Terça e Quinta","horario":"14h30 até 16h30",
      "data_inicio":"22/09/2026","encerramento":"15/10/2026","endereco_id":"18"},
@@ -149,15 +128,9 @@ TURMA_OPTIONS = [
     {"id":"105","curso_id":"1","local_id":"20","turma_codigo":"26/INAT-007",
      "dias_aula":"Quarta e Quinta","horario":"08h até 10h",
      "data_inicio":"07/10/2026","encerramento":"29/10/2026","endereco_id":"20"},
-    {"id":"403","curso_id":"4","local_id":"21","turma_codigo":"26/DSUN-006",
-     "dias_aula":"18h30 até 21h","horario":"18h30 até 21h",
-     "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"21"},
     {"id":"603","curso_id":"6","local_id":"5","turma_codigo":"26/MNCR-010",
      "dias_aula":"Segunda a Sexta","horario":"18h30 até 21h",
      "data_inicio":"28/09/2026","encerramento":"02/10/2026","endereco_id":"5"},
-    {"id":"1101","curso_id":"11","local_id":"5","turma_codigo":"26/DSBR-012",
-     "dias_aula":"Segunda a Sexta","horario":"18h30 até 21h",
-     "data_inicio":"21/09/2026","encerramento":"25/09/2026","endereco_id":"5"},
     {"id":"205","curso_id":"2","local_id":"16","turma_codigo":"26/MARK-010",
      "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
      "data_inicio":"05/10/2026","encerramento":"04/11/2026","endereco_id":"16"},
@@ -887,3 +860,7 @@ def send_registration_to_supabase(form_data):
     if not response.ok:
         raise RuntimeError(f"Supabase retornou {response.status_code}: {response.text[:500]}")
     return response
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
