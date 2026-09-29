@@ -42,6 +42,10 @@ LOCAL_OPTIONS = [
     {"id": "20", "nome": "REGIONAL V - CRECHE NOVO MUNDO PIONEIRO"},
     {"id": "21", "nome": "REGIONAL X - ASSOCIAÇÃO MOVIMENTO ORQÚIDEAS DO PARQUE SANTANA"},
     {"id": "22", "nome": "REGIONAL V - ESPAÇO DO PROJETO VIDA EM MOVIMENTO"},
+    {"id": "23", "nome": "REGIONAL IX - CUCA JANGURUSSU"},
+    {"id": "24", "nome": "REGIONAL VIII - CUCA JOSÉ WALTER"},
+    {"id": "25", "nome": "REGIONAL V - SECRETARIA EXECUTIVA"},
+    {"id": "26", "nome": "REGIONAL XI - CUCA PICI"},
 ]
 COURSE_CATALOG = [
     {"id": "1",  "nome": "INTELIGÊNCIA ARTIFICIAL"},
@@ -55,6 +59,7 @@ COURSE_CATALOG = [
     {"id": "9",  "nome": "TRANCISTA"},
     {"id": "10", "nome": "AUXILIAR ADMINISTRATIVO"},
     {"id": "11", "nome": "DESIGNER DE SOBRANCELHAS"},
+    {"id": "12", "nome": "COSTURA"},
 ]
 ADDRESS_OPTIONS = {
     "1":  "\U0001f4cdRua Jorn. Antônio Pontes, nº 1138, bairro Cajazeiras - CEP.: 60.864-590",
@@ -74,6 +79,10 @@ ADDRESS_OPTIONS = {
     "20": "\U0001f4cdRua Pereira Barbosa, nº 1460 - bairro Siqueira - Fortaleza, CE - CEP.: 60732-382",
     "21": "\U0001f4cdRua 05, n° 1440, casa B - bairro Mondubim - Comunidade Parque Santana - Fortaleza, CE - CEP.: 60767-650",
     "22": "\U0001f4cdRua Barra Mansa, nº 478, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.540-060",
+    "23": "\U0001f4cdAvenida Governador Leonel Brizola, S/N, bairro Jangurussu - Fortaleza, CE - CEP.: 60.866-681",
+    "24": "\U0001f4cdRua 69, S/N, bairro Prefeito José Walter - Fortaleza, CE - CEP.: 60.810-670",
+    "25": "\U0001f4cdAvenida Oscar Araripe, nº 1030, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.543-452",
+    "26": "\U0001f4cdRua Coronel Matos Dourados, nº 1499, bairro Planalto Pici - Fortaleza, CE - CEP.: 60.360-561",
 }
 TURMA_OPTIONS = [
     {"id":"101","curso_id":"1","local_id":"1","turma_codigo":"26/INAT-001",
@@ -155,6 +164,18 @@ TURMA_OPTIONS = [
     {"id":"902","curso_id":"9","local_id":"22","turma_codigo":"26/TRNC-005",
      "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
      "data_inicio":"05/10/2026","encerramento":"09/10/2026","endereco_id":"22"},
+    {"id":"1201","curso_id":"12","local_id":"23","turma_codigo":"26/COST-001",
+     "dias_aula":"Segunda a Sexta","horario":"08h até 12h",
+     "data_inicio":"06/10/2026","encerramento":"23/10/2026","endereco_id":"23"},
+    {"id":"1202","curso_id":"12","local_id":"24","turma_codigo":"26/COST-002",
+     "dias_aula":"Segunda a Sexta","horario":"08h até 12h",
+     "data_inicio":"06/10/2026","encerramento":"23/10/2026","endereco_id":"24"},
+    {"id":"1203","curso_id":"12","local_id":"25","turma_codigo":"26/COST-003",
+     "dias_aula":"Segunda a Sexta","horario":"08h até 12h",
+     "data_inicio":"06/10/2026","encerramento":"23/10/2026","endereco_id":"25"},
+    {"id":"1204","curso_id":"12","local_id":"26","turma_codigo":"26/COST-004",
+     "dias_aula":"Segunda a Sexta","horario":"08h até 12h",
+     "data_inicio":"06/10/2026","encerramento":"23/10/2026","endereco_id":"26"},
 ]
 COMO_CONHECEU_OPCOES = ["Facebook", "Instagram", "Whatsapp", "Outros"]
 def build_course_options():
@@ -866,6 +887,3 @@ def send_registration_to_supabase(form_data):
     if not response.ok:
         raise RuntimeError(f"Supabase retornou {response.status_code}: {response.text[:500]}")
     return response
-if __name__=="__main__":
-    port=int(os.environ.get("PORT",5000))
-    app.run(host="0.0.0.0",port=port)
