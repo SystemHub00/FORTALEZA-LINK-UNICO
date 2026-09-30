@@ -124,7 +124,7 @@ TURMA_OPTIONS = [
      "data_inicio":"05/10/2026","encerramento":"04/11/2026","endereco_id":"16"},
     {"id":"902","curso_id":"9","local_id":"22","turma_codigo":"26/TRNC-005",
      "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
-     "data_inicio":"05/10/2026","encerramento":"09/10/2026","endereco_id":"22"},
+     "data_inicio":"12/10/2026","encerramento":"16/10/2026","endereco_id":"22"},
     {"id":"1201","curso_id":"12","local_id":"23","turma_codigo":"26/COST-001",
      "dias_aula":"Segunda a Sexta","horario":"08h até 12h",
      "data_inicio":"06/10/2026","encerramento":"23/10/2026","endereco_id":"23"},
