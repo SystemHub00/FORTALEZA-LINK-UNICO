@@ -72,19 +72,9 @@ ADDRESS_OPTIONS = {
     "25": "\U0001f4cdAvenida Oscar Araripe, nº 1030, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.543-452",
     "26": "\U0001f4cdRua Coronel Matos Dourados, nº 1499, bairro Planalto Pici - Fortaleza, CE - CEP.: 60.360-561",
 }
+# Turmas finalizadas removidas em 06/10/2026:
+# 26/INAT-004, 26/MARK-006, 26/RECP-001, 26/SOMD-008, 26/MNCR-010
 TURMA_OPTIONS = [
-    {"id":"102","curso_id":"1","local_id":"6","turma_codigo":"26/INAT-004",
-     "dias_aula":"Terça e Quinta","horario":"18h30 até 20h30",
-     "data_inicio":"08/09/2026","encerramento":"01/10/2026","endereco_id":"6"},
-    {"id":"202","curso_id":"2","local_id":"11","turma_codigo":"26/MARK-006",
-     "dias_aula":"Terça e Quinta","horario":"14h até 16h",
-     "data_inicio":"08/09/2026","encerramento":"01/10/2026","endereco_id":"11"},
-    {"id":"501","curso_id":"5","local_id":"7","turma_codigo":"26/RECP-001",
-     "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
-     "data_inicio":"09/09/2026","encerramento":"05/10/2026","endereco_id":"7"},
-    {"id":"801","curso_id":"8","local_id":"11","turma_codigo":"26/SOMD-008",
-     "dias_aula":"Segunda e Quarta","horario":"14h até 16h",
-     "data_inicio":"09/09/2026","encerramento":"30/09/2026","endereco_id":"11"},
     # 26/SOMD-009 — início alterado para 28/09/2026, encerramento 21/10/2026
     {"id":"802","curso_id":"8","local_id":"14","turma_codigo":"26/SOMD-009",
      "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
@@ -116,9 +106,6 @@ TURMA_OPTIONS = [
     {"id":"105","curso_id":"1","local_id":"20","turma_codigo":"26/INAT-007",
      "dias_aula":"Quarta e Quinta","horario":"08h até 10h",
      "data_inicio":"07/10/2026","encerramento":"29/10/2026","endereco_id":"20"},
-    {"id":"603","curso_id":"6","local_id":"5","turma_codigo":"26/MNCR-010",
-     "dias_aula":"Segunda a Sexta","horario":"18h30 até 21h",
-     "data_inicio":"28/09/2026","encerramento":"02/10/2026","endereco_id":"5"},
     {"id":"205","curso_id":"2","local_id":"16","turma_codigo":"26/MARK-010",
      "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
      "data_inicio":"05/10/2026","encerramento":"04/11/2026","endereco_id":"16"},
@@ -164,6 +151,9 @@ COURSE_OPTIONS       = build_course_options()
 COURSE_OPTIONS_BY_ID = {opt["id"]: opt for opt in COURSE_OPTIONS}
 COURSE_CATALOG_BY_ID = {opt["id"]: opt for opt in COURSE_CATALOG}
 LOCAL_OPTIONS_BY_ID  = {opt["id"]: opt for opt in LOCAL_OPTIONS}
+# Somente locais que ainda possuem pelo menos uma turma ativa aparecem no select
+_LOCAIS_COM_TURMA    = {t["local_id"] for t in TURMA_OPTIONS}
+ACTIVE_LOCAL_OPTIONS = [opt for opt in LOCAL_OPTIONS if opt["id"] in _LOCAIS_COM_TURMA]
 COURSE_INFO          = COURSE_OPTIONS[0] if COURSE_OPTIONS else None
 def build_whatsapp_share_url(home_url):
     message = ("Acabei de me inscrever em uma oportunidade de qualificacao profissional. Confira aqui: " + home_url)
@@ -762,7 +752,7 @@ def render_wizard(form_data=None, errors=None, current_step="index"):
     return render_template_string(
         TEMPLATE_WIZARD,
         course_info          = selected_option,
-        local_options        = LOCAL_OPTIONS,
+        local_options        = ACTIVE_LOCAL_OPTIONS,
         course_catalog       = COURSE_CATALOG,
         course_options       = COURSE_OPTIONS,
         como_conheceu_opcoes = COMO_CONHECEU_OPCOES,
