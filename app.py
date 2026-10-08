@@ -74,6 +74,8 @@ ADDRESS_OPTIONS = {
 }
 # Turmas finalizadas removidas em 06/10/2026:
 # 26/INAT-004, 26/MARK-006, 26/RECP-001, 26/SOMD-008, 26/MNCR-010
+# Turmas removidas em 08/10/2026 (local REGIONAL V - CRECHE NOVO MUNDO PIONEIRO):
+# 26/INAT-007 - Inteligência Artificial, 26/MARK-008 - Marketing Digital
 TURMA_OPTIONS = [
     # 26/SOMD-009 — início alterado para 28/09/2026, encerramento 21/10/2026
     {"id":"802","curso_id":"8","local_id":"14","turma_codigo":"26/SOMD-009",
@@ -95,17 +97,9 @@ TURMA_OPTIONS = [
     {"id":"104","curso_id":"1","local_id":"19","turma_codigo":"26/INAT-006",
      "dias_aula":"Terça e Quinta","horario":"14h até 16h",
      "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"19"},
-    # 26/MARK-008 — início 06/10/2026, encerramento 29/10/2026
-    {"id":"204","curso_id":"2","local_id":"20","turma_codigo":"26/MARK-008",
-     "dias_aula":"Terça e Sexta","horario":"16h30 até 18h30",
-     "data_inicio":"06/10/2026","encerramento":"29/10/2026","endereco_id":"20"},
     {"id":"1002","curso_id":"10","local_id":"20","turma_codigo":"26/ADMN-005",
      "dias_aula":"Segunda e Quarta","horario":"16h30 até 18h30",
      "data_inicio":"21/09/2026","encerramento":"14/10/2026","endereco_id":"20"},
-    # 26/INAT-007 — início 07/10/2026, encerramento 29/10/2026
-    {"id":"105","curso_id":"1","local_id":"20","turma_codigo":"26/INAT-007",
-     "dias_aula":"Quarta e Quinta","horario":"08h até 10h",
-     "data_inicio":"07/10/2026","encerramento":"29/10/2026","endereco_id":"20"},
     {"id":"205","curso_id":"2","local_id":"16","turma_codigo":"26/MARK-010",
      "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
      "data_inicio":"05/10/2026","encerramento":"04/11/2026","endereco_id":"16"},
