@@ -76,6 +76,8 @@ ADDRESS_OPTIONS = {
 # 26/INAT-004, 26/MARK-006, 26/RECP-001, 26/SOMD-008, 26/MNCR-010
 # Turmas removidas em 08/10/2026 (local REGIONAL V - CRECHE NOVO MUNDO PIONEIRO):
 # 26/INAT-007 - Inteligência Artificial, 26/MARK-008 - Marketing Digital
+# Turma removida em 15/10/2026:
+# 26/TRNC-005 - Trancista (REGIONAL V - ESPAÇO DO PROJETO VIDA EM MOVIMENTO)
 TURMA_OPTIONS = [
     # 26/SOMD-009 — início alterado para 28/09/2026, encerramento 21/10/2026
     {"id":"802","curso_id":"8","local_id":"14","turma_codigo":"26/SOMD-009",
@@ -103,9 +105,6 @@ TURMA_OPTIONS = [
     {"id":"205","curso_id":"2","local_id":"16","turma_codigo":"26/MARK-010",
      "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
      "data_inicio":"05/10/2026","encerramento":"04/11/2026","endereco_id":"16"},
-    {"id":"902","curso_id":"9","local_id":"22","turma_codigo":"26/TRNC-005",
-     "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
-     "data_inicio":"12/10/2026","encerramento":"16/10/2026","endereco_id":"22"},
     {"id":"1201","curso_id":"12","local_id":"23","turma_codigo":"26/COST-001",
      "dias_aula":"Segunda a Sexta","horario":"08h até 12h",
      "data_inicio":"06/10/2026","encerramento":"23/10/2026","endereco_id":"23"},
@@ -361,10 +360,9 @@ TEMPLATE_WIZARD = r"""
                                     <span class="curso-tag">&#128337; Manicure</span>
                                     <span class="curso-tag">&#128064; Extens&#227;o de C&#237;lios</span>
                                     <span class="curso-tag">&#128202; Social Media</span>
-                                    <span class="curso-tag">&#9986;&#65039; Trancista</span>
                                     <span class="curso-tag">&#128203; Auxiliar Administrativo</span>
                                     <span class="curso-tag">&#128133; Designer de Sobrancelhas</span>
-                                    <span class="curso-tag">&#128100; Recepcionista</span>
+                                    <span class="curso-tag">&#9989; Costura</span>
                                 </div>
                             </div>
                             <div class="hero-highlight">
@@ -509,7 +507,7 @@ TEMPLATE_WIZARD = r"""
             localSelectEl.addEventListener('change',function(){setError('local_id','');var l=localSelectEl.value;if(l){atualizarCursosPorLocal(l,'','');}else{cursoGroup.style.display='none';turmaGroup.style.display='none';aplicarOpcao('');}syncReview();});
             courseSelect.addEventListener('change',function(){setError('curso_id','');var c=courseSelect.value;var l=localSelectEl.value;if(c&&l){atualizarHorariosPorCurso(l,c,'');}else{turmaGroup.style.display='none';aplicarOpcao('');}syncReview();});
             opcaoSelectEl.addEventListener('change',function(){setError('opcao_id','');aplicarOpcao(opcaoSelectEl.value);});
-            if(btnCopiarEndereco&&enderecoInput){btnCopiarEndereco.addEventListener('click',function(){navigator.clipboard.writeText(enderecoInput.value).then(function(){btnCopiarEndereco.textContent='COPIADO ✅';}).catch(function(){enderecoInput.select();document.execCommand('copy');btnCopiarEndereco.textContent='COPIADO ✅';});setTimeout(function(){btnCopiarEndereco.textContent='COPIAR \u{1F4CB}';},1200);});}
+            if(btnCopiarEndereco&&enderecoInput){btnCopiarEndereco.addEventListener('click',function(){navigator.clipboard.writeText(enderecoInput.value).then(function(){btnCopiarEndereco.textContent='COPIADO ✅';}).catch(function(){enderecoInput.select();document.execCommand('copy');btnCopiarEndereco.textContent='COPIADO ✅';});setTimeout(function(){btnCopiarEndereco.textContent='COPIAR 📋';},1200);});}
             function mostrarPasso(step){panels.forEach(function(p){p.classList.toggle('ativo',p.dataset.step===step);});labels.forEach(function(l){l.classList.toggle('ativo',l.dataset.stepLabel===step);});fill.style.width=(progressByStep[step]||25)+'%';window.scrollTo({top:0,behavior:'smooth'});}
             function syncReview(){reviewTargets.forEach(function(t){var key=t.dataset.review;if(key==='curso_nome'){t.textContent=cursoInput?cursoInput.value.trim():'';return;}if(key==='local_nome'){t.textContent=localInput?localInput.value.trim():'';return;}var f=document.getElementById(key);if(!f){t.textContent='';return;}if(f.tagName==='SELECT'){var s=f.options[f.selectedIndex];t.textContent=s?s.text.trim():'';}else{t.textContent=f.value.trim();}});}
             function validarCPF(cpf){var d=somenteDigitos(cpf);if(d.length!==11||/^(\d)\1+$/.test(d))return false;var s=0,g;for(var i=0;i<9;i++)s+=Number(d[i])*(10-i);g=(s*10)%11;if(g===10)g=0;if(g!==Number(d[9]))return false;s=0;for(var i=0;i<10;i++)s+=Number(d[i])*(11-i);g=(s*10)%11;if(g===10)g=0;return g===Number(d[10]);}
