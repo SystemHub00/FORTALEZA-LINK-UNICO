@@ -78,30 +78,21 @@ ADDRESS_OPTIONS = {
 # 26/INAT-007 - Inteligência Artificial, 26/MARK-008 - Marketing Digital
 # Turma removida em 15/10/2026:
 # 26/TRNC-005 - Trancista (REGIONAL V - ESPAÇO DO PROJETO VIDA EM MOVIMENTO)
+# Turmas finalizadas removidas em 19/10/2026:
+# 26/MARK-007 - Marketing Digital (REGIONAL I - INSTITUTO VIVA AGAPÊ) — encerrou 08/10/2026
+# 26/INAT-005 - Inteligência Artificial (REGIONAL V - PROJETO AMIGOS DE DEUS (Colégio Pequeno Aprendiz)) — encerrou 08/10/2026
+# 26/INAT-006 - Inteligência Artificial (REGIONAL V - PROJETO AMIGOS DE DEUS (Colégio Pequeno Aprendiz)) — encerrou 08/10/2026
+# 26/ADMN-005 - Auxiliar Administrativo (REGIONAL V - CRECHE NOVO MUNDO PIONEIRO) — encerrou 14/10/2026
+# 26/SOMD-010 - Social Media (REGIONAL IV - INSTITUTO VIVA IDOSO) — encerrou 15/10/2026
 TURMA_OPTIONS = [
     # 26/SOMD-009 — início alterado para 28/09/2026, encerramento 21/10/2026
     {"id":"802","curso_id":"8","local_id":"14","turma_codigo":"26/SOMD-009",
      "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
      "data_inicio":"28/09/2026","encerramento":"21/10/2026","endereco_id":"14"},
-    {"id":"203","curso_id":"2","local_id":"15","turma_codigo":"26/MARK-007",
-     "dias_aula":"Terça e Quinta","horario":"18h30 até 20h30",
-     "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"15"},
     # 26/ADMN-004 — início 13/10/2026, encerramento 05/11/2026, horário 14h30 às 16h30
     {"id":"1001","curso_id":"10","local_id":"17","turma_codigo":"26/ADMN-004",
      "dias_aula":"Terça e Quinta","horario":"14h30 até 16h30",
      "data_inicio":"13/10/2026","encerramento":"05/11/2026","endereco_id":"6"},
-    {"id":"803","curso_id":"8","local_id":"18","turma_codigo":"26/SOMD-010",
-     "dias_aula":"Terça e Quinta","horario":"14h30 até 16h30",
-     "data_inicio":"22/09/2026","encerramento":"15/10/2026","endereco_id":"18"},
-    {"id":"103","curso_id":"1","local_id":"19","turma_codigo":"26/INAT-005",
-     "dias_aula":"Terça e Quinta","horario":"08h até 10h",
-     "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"19"},
-    {"id":"104","curso_id":"1","local_id":"19","turma_codigo":"26/INAT-006",
-     "dias_aula":"Terça e Quinta","horario":"14h até 16h",
-     "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"19"},
-    {"id":"1002","curso_id":"10","local_id":"20","turma_codigo":"26/ADMN-005",
-     "dias_aula":"Segunda e Quarta","horario":"16h30 até 18h30",
-     "data_inicio":"21/09/2026","encerramento":"14/10/2026","endereco_id":"20"},
     {"id":"205","curso_id":"2","local_id":"16","turma_codigo":"26/MARK-010",
      "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
      "data_inicio":"05/10/2026","encerramento":"04/11/2026","endereco_id":"16"},
