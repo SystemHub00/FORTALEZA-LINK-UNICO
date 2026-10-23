@@ -40,6 +40,7 @@ LOCAL_OPTIONS = [
     {"id": "24", "nome": "REGIONAL VIII - CUCA JOSÉ WALTER"},
     {"id": "25", "nome": "REGIONAL V - SECRETARIA EXECUTIVA"},
     {"id": "26", "nome": "REGIONAL XI - CUCA PICI"},
+    {"id": "27", "nome": "REGIONAL VIII - CAOF (CENTRO DE APOIO E ORIENTAÇÃO)"},
 ]
 COURSE_CATALOG = [
     {"id": "1",  "nome": "INTELIGÊNCIA ARTIFICIAL"},
@@ -71,6 +72,7 @@ ADDRESS_OPTIONS = {
     "24": "\U0001f4cdRua 69, S/N, bairro Prefeito José Walter - Fortaleza, CE - CEP.: 60.810-670",
     "25": "\U0001f4cdAvenida Oscar Araripe, nº 1030, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.543-452",
     "26": "\U0001f4cdRua Coronel Matos Dourados, nº 1499, bairro Planalto Pici - Fortaleza, CE - CEP.: 60.360-561",
+    "27": "\U0001f4cdRua H, nº 61, bairro Parque Dois Irmãos - Fortaleza, CE - CEP.: 60810-670",
 }
 # Turmas finalizadas removidas em 06/10/2026:
 # 26/INAT-004, 26/MARK-006, 26/RECP-001, 26/SOMD-008, 26/MNCR-010
@@ -78,21 +80,30 @@ ADDRESS_OPTIONS = {
 # 26/INAT-007 - Inteligência Artificial, 26/MARK-008 - Marketing Digital
 # Turma removida em 15/10/2026:
 # 26/TRNC-005 - Trancista (REGIONAL V - ESPAÇO DO PROJETO VIDA EM MOVIMENTO)
-# Turmas finalizadas removidas em 19/10/2026:
-# 26/MARK-007 - Marketing Digital (REGIONAL I - INSTITUTO VIVA AGAPÊ) — encerrou 08/10/2026
-# 26/INAT-005 - Inteligência Artificial (REGIONAL V - PROJETO AMIGOS DE DEUS (Colégio Pequeno Aprendiz)) — encerrou 08/10/2026
-# 26/INAT-006 - Inteligência Artificial (REGIONAL V - PROJETO AMIGOS DE DEUS (Colégio Pequeno Aprendiz)) — encerrou 08/10/2026
-# 26/ADMN-005 - Auxiliar Administrativo (REGIONAL V - CRECHE NOVO MUNDO PIONEIRO) — encerrou 14/10/2026
-# 26/SOMD-010 - Social Media (REGIONAL IV - INSTITUTO VIVA IDOSO) — encerrou 15/10/2026
 TURMA_OPTIONS = [
     # 26/SOMD-009 — início alterado para 28/09/2026, encerramento 21/10/2026
     {"id":"802","curso_id":"8","local_id":"14","turma_codigo":"26/SOMD-009",
      "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
      "data_inicio":"28/09/2026","encerramento":"21/10/2026","endereco_id":"14"},
+    {"id":"203","curso_id":"2","local_id":"15","turma_codigo":"26/MARK-007",
+     "dias_aula":"Terça e Quinta","horario":"18h30 até 20h30",
+     "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"15"},
     # 26/ADMN-004 — início 13/10/2026, encerramento 05/11/2026, horário 14h30 às 16h30
     {"id":"1001","curso_id":"10","local_id":"17","turma_codigo":"26/ADMN-004",
      "dias_aula":"Terça e Quinta","horario":"14h30 até 16h30",
      "data_inicio":"13/10/2026","encerramento":"05/11/2026","endereco_id":"6"},
+    {"id":"803","curso_id":"8","local_id":"18","turma_codigo":"26/SOMD-010",
+     "dias_aula":"Terça e Quinta","horario":"14h30 até 16h30",
+     "data_inicio":"22/09/2026","encerramento":"15/10/2026","endereco_id":"18"},
+    {"id":"103","curso_id":"1","local_id":"19","turma_codigo":"26/INAT-005",
+     "dias_aula":"Terça e Quinta","horario":"08h até 10h",
+     "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"19"},
+    {"id":"104","curso_id":"1","local_id":"19","turma_codigo":"26/INAT-006",
+     "dias_aula":"Terça e Quinta","horario":"14h até 16h",
+     "data_inicio":"15/09/2026","encerramento":"08/10/2026","endereco_id":"19"},
+    {"id":"1002","curso_id":"10","local_id":"20","turma_codigo":"26/ADMN-005",
+     "dias_aula":"Segunda e Quarta","horario":"16h30 até 18h30",
+     "data_inicio":"21/09/2026","encerramento":"14/10/2026","endereco_id":"20"},
     {"id":"205","curso_id":"2","local_id":"16","turma_codigo":"26/MARK-010",
      "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
      "data_inicio":"05/10/2026","encerramento":"04/11/2026","endereco_id":"16"},
@@ -108,6 +119,15 @@ TURMA_OPTIONS = [
     {"id":"1204","curso_id":"12","local_id":"26","turma_codigo":"26/COST-004",
      "dias_aula":"Segunda a Sexta","horario":"08h até 12h",
      "data_inicio":"06/10/2026","encerramento":"23/10/2026","endereco_id":"26"},
+    # Turmas adicionadas em 23/10/2026:
+    # 26/DSUN-007 - Designer de Unhas (REGIONAL VIII - CAOF) — início 02/11/2026, encerramento 06/11/2026
+    # 26/DSBR-013 - Designer de Sobrancelhas (REGIONAL VIII - CAOF) — início 09/11/2026, encerramento 13/11/2026
+    {"id":"401","curso_id":"4","local_id":"27","turma_codigo":"26/DSUN-007",
+     "dias_aula":"Segunda a Sexta","horario":"13h30 até 17h30",
+     "data_inicio":"02/11/2026","encerramento":"06/11/2026","endereco_id":"27"},
+    {"id":"1101","curso_id":"11","local_id":"27","turma_codigo":"26/DSBR-013",
+     "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
+     "data_inicio":"09/11/2026","encerramento":"13/11/2026","endereco_id":"27"},
 ]
 COMO_CONHECEU_OPCOES = ["Facebook", "Instagram", "Whatsapp", "Outros"]
 def build_course_options():
