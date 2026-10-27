@@ -41,7 +41,7 @@ LOCAL_OPTIONS = [
     {"id": "25", "nome": "REGIONAL V - SECRETARIA EXECUTIVA"},
     {"id": "26", "nome": "REGIONAL XI - CUCA PICI"},
     {"id": "27", "nome": "REGIONAL VIII - CAOF (CENTRO DE APOIO E ORIENTAÇÃO)"},
-    {"id": "28", "nome": "REGIONAL V - CRE (CENTRO DE REFERÊNCIA DO EMPREENDEDOR)"},
+    {"id": "28", "nome": "CRE BOM JARDIM (CENTRO DE REFERÊNCIA DO EMPREENDEDOR)"},
 ]
 COURSE_CATALOG = [
     {"id": "1",  "nome": "INTELIGÊNCIA ARTIFICIAL"},
@@ -110,7 +110,7 @@ TURMA_OPTIONS = [
      "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
      "data_inicio":"09/11/2026","encerramento":"13/11/2026","endereco_id":"27"},
     # Turma adicionada em 27/10/2026:
-    # 26/MNCR-011 - Manicure (REGIONAL V - CRE) — início 03/11/2026, encerramento 11/11/2026
+    # 26/MNCR-011 - Manicure (CRE BOM JARDIM) — início 03/11/2026, encerramento 11/11/2026
     {"id":"601","curso_id":"6","local_id":"28","turma_codigo":"26/MNCR-011",
      "dias_aula":"Terça e Quarta","horario":"13h até 17h",
      "data_inicio":"03/11/2026","encerramento":"11/11/2026","endereco_id":"25"},
