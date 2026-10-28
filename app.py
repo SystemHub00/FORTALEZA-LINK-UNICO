@@ -92,14 +92,10 @@ ADDRESS_OPTIONS = {
 # 26/COST-002 - Costura (REGIONAL VIII - CUCA JOSÉ WALTER) — enc. 23/10/2026
 # 26/COST-003 - Costura (REGIONAL V - SECRETARIA EXECUTIVA) — enc. 23/10/2026
 # 26/COST-004 - Costura (REGIONAL XI - CUCA PICI) — enc. 23/10/2026
+# Turmas removidas em 28/10/2026:
+# 26/ADMN-004 - Auxiliar Administrativo (REGIONAL II - INSTITUTO LOURDES VIANA) — enc. 05/11/2026
+# 26/MARK-010 - Marketing Digital (IEQ JARDIM GUANABARA) — enc. 04/11/2026
 TURMA_OPTIONS = [
-    # 26/ADMN-004 — início 13/10/2026, encerramento 05/11/2026, horário 14h30 às 16h30
-    {"id":"1001","curso_id":"10","local_id":"17","turma_codigo":"26/ADMN-004",
-     "dias_aula":"Terça e Quinta","horario":"14h30 até 16h30",
-     "data_inicio":"13/10/2026","encerramento":"05/11/2026","endereco_id":"6"},
-    {"id":"205","curso_id":"2","local_id":"16","turma_codigo":"26/MARK-010",
-     "dias_aula":"Segunda e Quarta","horario":"18h30 até 20h30",
-     "data_inicio":"05/10/2026","encerramento":"04/11/2026","endereco_id":"16"},
     # Turmas adicionadas em 23/10/2026:
     # 26/DSUN-007 - Designer de Unhas (REGIONAL VIII - CAOF) — início 02/11/2026, encerramento 06/11/2026
     # 26/DSBR-013 - Designer de Sobrancelhas (REGIONAL VIII - CAOF) — início 09/11/2026, encerramento 13/11/2026
