@@ -97,11 +97,11 @@ ADDRESS_OPTIONS = {
 # 26/MARK-010 - Marketing Digital (IEQ JARDIM GUANABARA) — enc. 04/11/2026
 TURMA_OPTIONS = [
     # Turmas adicionadas em 23/10/2026:
-    # 26/DSUN-007 - Designer de Unhas (REGIONAL VIII - CAOF) — início 02/11/2026, encerramento 06/11/2026
+    # 26/DSUN-007 - Designer de Unhas (REGIONAL VIII - CAOF) — início 09/11/2026, encerramento 13/11/2026
     # 26/DSBR-013 - Designer de Sobrancelhas (REGIONAL VIII - CAOF) — início 09/11/2026, encerramento 13/11/2026
     {"id":"401","curso_id":"4","local_id":"27","turma_codigo":"26/DSUN-007",
      "dias_aula":"Segunda a Sexta","horario":"13h30 até 17h30",
-     "data_inicio":"02/11/2026","encerramento":"06/11/2026","endereco_id":"27"},
+     "data_inicio":"09/11/2026","encerramento":"13/11/2026","endereco_id":"27"},
     {"id":"1101","curso_id":"11","local_id":"27","turma_codigo":"26/DSBR-013",
      "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
      "data_inicio":"09/11/2026","encerramento":"13/11/2026","endereco_id":"27"},
