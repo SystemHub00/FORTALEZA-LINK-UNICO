@@ -95,6 +95,8 @@ ADDRESS_OPTIONS = {
 # Turmas removidas em 28/10/2026:
 # 26/ADMN-004 - Auxiliar Administrativo (REGIONAL II - INSTITUTO LOURDES VIANA) — enc. 05/11/2026
 # 26/MARK-010 - Marketing Digital (IEQ JARDIM GUANABARA) — enc. 04/11/2026
+# Turma removida em 30/10/2026:
+# 26/MNCR-011 - Manicure (CRE BOM JARDIM) — enc. 11/11/2026
 TURMA_OPTIONS = [
     # Turmas adicionadas em 23/10/2026:
     # 26/DSUN-007 - Designer de Unhas (REGIONAL VIII - CAOF) — início 09/11/2026, encerramento 13/11/2026
@@ -105,11 +107,6 @@ TURMA_OPTIONS = [
     {"id":"1101","curso_id":"11","local_id":"27","turma_codigo":"26/DSBR-013",
      "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
      "data_inicio":"09/11/2026","encerramento":"13/11/2026","endereco_id":"27"},
-    # Turma adicionada em 27/10/2026:
-    # 26/MNCR-011 - Manicure (CRE BOM JARDIM) — início 03/11/2026, encerramento 11/11/2026
-    {"id":"601","curso_id":"6","local_id":"28","turma_codigo":"26/MNCR-011",
-     "dias_aula":"Terça e Quarta","horario":"13h até 17h",
-     "data_inicio":"03/11/2026","encerramento":"11/11/2026","endereco_id":"25"},
 ]
 COMO_CONHECEU_OPCOES = ["Facebook", "Instagram", "Whatsapp", "Outros"]
 def build_course_options():
