@@ -79,6 +79,9 @@ ADDRESS_OPTIONS = {
     "25": "\U0001f4cdAvenida Oscar Araripe, nº 1030, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.543-452",
     "26": "\U0001f4cdRua Coronel Matos Dourados, nº 1499, bairro Planalto Pici - Fortaleza, CE - CEP.: 60.360-561",
     "27": "\U0001f4cdRua H, nº 61, bairro Parque Dois Irmãos - Fortaleza, CE - CEP.: 60810-670",
+    "29": "\U0001f4cdRua Dom Lino, nº 546, bairro Parquelândia - Fortaleza, CE - CEP.: 60.450-285",
+    "30": "\U0001f4cdAvenida Santos Dumont, nº 2500, bairro Aldeota - Fortaleza, CE - CEP.: 60.150-161",
+    "31": "\U0001f4cdAvenida Augusto dos Anjos, nº 2466, bairro Bonsucesso (prédio da antiga Regional) - Fortaleza, CE - CEP.: 60542-164",
 }
 # Turmas finalizadas removidas em 06/10/2026:
 # 26/INAT-004, 26/MARK-006, 26/RECP-001, 26/SOMD-008, 26/MNCR-010
@@ -112,6 +115,31 @@ TURMA_OPTIONS = [
     {"id":"1101","curso_id":"11","local_id":"27","turma_codigo":"26/DSBR-013",
      "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
      "data_inicio":"09/11/2026","encerramento":"13/11/2026","endereco_id":"27"},
+    # Turmas adicionadas em 03/11/2026:
+    # 26/ADMN-007 - Auxiliar Administrativo (SINE MUNICIPAL PARQUELÂNDIA) — início 10/11/2026, encerramento 24/11/2026
+    # 26/MNCR-012 - Manicure (SINE MUNICIPAL PARQUELÂNDIA) — início 09/11/2026, encerramento 13/11/2026
+    # 26/ASLO-01 - Assistente de Logística (SINE MUNICIPAL ALDEOTA) — início 10/11/2026, encerramento 24/11/2026
+    # 26/RECP-003 - Recepcionista (SINE MUNICIPAL SIQUEIRA) — início 10/11/2026, encerramento 24/11/2026
+    # 26/MLRE-01 - Monitor Lazer e Recreação (SINE MUNICIPAL SIQUEIRA) — início 10/11/2026, encerramento 24/11/2026
+    # 26/TRNC-006 - Trancista (CRE BOM JARDIM) — início 16/11/2026, encerramento 20/11/2026
+    {"id":"1001","curso_id":"10","local_id":"29","turma_codigo":"26/ADMN-007",
+     "dias_aula":"Terça e Quinta","horario":"09h até 12h",
+     "data_inicio":"10/11/2026","encerramento":"24/11/2026","endereco_id":"29"},
+    {"id":"602","curso_id":"6","local_id":"29","turma_codigo":"26/MNCR-012",
+     "dias_aula":"Terça e Quinta","horario":"13h até 17h",
+     "data_inicio":"09/11/2026","encerramento":"13/11/2026","endereco_id":"29"},
+    {"id":"1301","curso_id":"13","local_id":"30","turma_codigo":"26/ASLO-01",
+     "dias_aula":"Terça e Quinta","horario":"13h30 até 16h30",
+     "data_inicio":"10/11/2026","encerramento":"24/11/2026","endereco_id":"30"},
+    {"id":"501","curso_id":"5","local_id":"31","turma_codigo":"26/RECP-003",
+     "dias_aula":"Terça e Quinta","horario":"09h até 12h",
+     "data_inicio":"10/11/2026","encerramento":"24/11/2026","endereco_id":"31"},
+    {"id":"1401","curso_id":"14","local_id":"31","turma_codigo":"26/MLRE-01",
+     "dias_aula":"Terça e Quinta","horario":"13h30 até 16h30",
+     "data_inicio":"10/11/2026","encerramento":"24/11/2026","endereco_id":"31"},
+    {"id":"901","curso_id":"9","local_id":"28","turma_codigo":"26/TRNC-006",
+     "dias_aula":"Segunda a Sexta","horario":"13h até 17h",
+     "data_inicio":"16/11/2026","encerramento":"20/11/2026","endereco_id":"25"},
 ]
 COMO_CONHECEU_OPCOES = ["Facebook", "Instagram", "Whatsapp", "Outros"]
 def build_course_options():
