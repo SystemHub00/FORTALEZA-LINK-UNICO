@@ -42,6 +42,9 @@ LOCAL_OPTIONS = [
     {"id": "26", "nome": "REGIONAL XI - CUCA PICI"},
     {"id": "27", "nome": "REGIONAL VIII - CAOF (CENTRO DE APOIO E ORIENTAÇÃO)"},
     {"id": "28", "nome": "CRE BOM JARDIM (CENTRO DE REFERÊNCIA DO EMPREENDEDOR)"},
+    {"id": "29", "nome": "SINE MUNICIPAL PARQUELÂNDIA"},
+    {"id": "30", "nome": "SINE MUNICIPAL ALDEOTA"},
+    {"id": "31", "nome": "SINE MUNICIPAL SIQUEIRA"},
 ]
 COURSE_CATALOG = [
     {"id": "1",  "nome": "INTELIGÊNCIA ARTIFICIAL"},
@@ -56,6 +59,8 @@ COURSE_CATALOG = [
     {"id": "10", "nome": "AUXILIAR ADMINISTRATIVO"},
     {"id": "11", "nome": "DESIGNER DE SOBRANCELHAS"},
     {"id": "12", "nome": "COSTURA"},
+    {"id": "13", "nome": "ASSISTENTE DE LOGÍSTICA"},
+    {"id": "14", "nome": "MONITOR LAZER E RECREAÇÃO"},
 ]
 ADDRESS_OPTIONS = {
     "5":  "\U0001f4cdRua Costa Freire, nº 2238, bairro Parangaba - Fortaleza, CE - CEP.: 60.730-255",
