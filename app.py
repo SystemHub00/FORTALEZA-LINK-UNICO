@@ -114,27 +114,13 @@ TURMA_OPTIONS = [
      "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
      "data_inicio":"09/11/2026","encerramento":"13/11/2026","endereco_id":"27"},
     # Turmas adicionadas em 03/11/2026:
-    # 26/ADMN-007 - Auxiliar Administrativo (SINE MUNICIPAL PARQUELÂNDIA) — início alterado em 04/11/2026: 17/11/2026, encerramento 01/12/2026
-    # 26/MNCR-012 - Manicure (SINE MUNICIPAL PARQUELÂNDIA) — início alterado em 04/11/2026: 16/11/2026, encerramento 20/11/2026
-    # 26/ASLO-01 - Assistente de Logística (SINE MUNICIPAL ALDEOTA) — início alterado em 04/11/2026: 17/11/2026, encerramento 01/12/2026
-    # 26/RECP-003 - Recepcionista (SINE MUNICIPAL SIQUEIRA) — início alterado em 04/11/2026: 17/11/2026, encerramento 01/12/2026
-    # 26/MLRE-01 - Monitor Lazer e Recreação (SINE MUNICIPAL SIQUEIRA) — início alterado em 04/11/2026: 17/11/2026, encerramento 01/12/2026
+    # Turmas removidas em 05/11/2026:
+    # 26/ADMN-007 - Auxiliar Administrativo (SINE MUNICIPAL PARQUELÂNDIA) — início 17/11/2026, encerramento 01/12/2026
+    # 26/MNCR-012 - Manicure (SINE MUNICIPAL PARQUELÂNDIA) — início 16/11/2026, encerramento 20/11/2026
+    # 26/ASLO-01 - Assistente de Logística (SINE MUNICIPAL ALDEOTA) — início 17/11/2026, encerramento 01/12/2026
+    # 26/RECP-003 - Recepcionista (SINE MUNICIPAL SIQUEIRA) — início 17/11/2026, encerramento 01/12/2026
+    # 26/MLRE-01 - Monitor Lazer e Recreação (SINE MUNICIPAL SIQUEIRA) — início 17/11/2026, encerramento 01/12/2026
     # 26/TRNC-006 - Trancista (CRE BOM JARDIM) — início 16/11/2026, encerramento 20/11/2026
-    {"id":"1001","curso_id":"10","local_id":"29","turma_codigo":"26/ADMN-007",
-     "dias_aula":"Terça e Quinta","horario":"09h até 12h",
-     "data_inicio":"17/11/2026","encerramento":"01/12/2026","endereco_id":"29"},
-    {"id":"602","curso_id":"6","local_id":"29","turma_codigo":"26/MNCR-012",
-     "dias_aula":"Terça e Quinta","horario":"13h até 17h",
-     "data_inicio":"16/11/2026","encerramento":"20/11/2026","endereco_id":"29"},
-    {"id":"1301","curso_id":"13","local_id":"30","turma_codigo":"26/ASLO-01",
-     "dias_aula":"Terça e Quinta","horario":"13h30 até 16h30",
-     "data_inicio":"17/11/2026","encerramento":"01/12/2026","endereco_id":"30"},
-    {"id":"501","curso_id":"5","local_id":"31","turma_codigo":"26/RECP-003",
-     "dias_aula":"Terça e Quinta","horario":"09h até 12h",
-     "data_inicio":"17/11/2026","encerramento":"01/12/2026","endereco_id":"31"},
-    {"id":"1401","curso_id":"14","local_id":"31","turma_codigo":"26/MLRE-01",
-     "dias_aula":"Terça e Quinta","horario":"13h30 até 16h30",
-     "data_inicio":"17/11/2026","encerramento":"01/12/2026","endereco_id":"31"},
     {"id":"901","curso_id":"9","local_id":"28","turma_codigo":"26/TRNC-006",
      "dias_aula":"Segunda a Sexta","horario":"13h até 17h",
      "data_inicio":"16/11/2026","encerramento":"20/11/2026","endereco_id":"25"},
