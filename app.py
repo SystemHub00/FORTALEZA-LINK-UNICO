@@ -63,25 +63,25 @@ COURSE_CATALOG = [
     {"id": "14", "nome": "MONITOR LAZER E RECREAÇÃO"},
 ]
 ADDRESS_OPTIONS = {
-    "5":  "\U0001f4cdRua Costa Freire, nº 2238, bairro Parangaba - Fortaleza, CE - CEP.: 60.730-255",
-    "6":  "\U0001f4cdRua Júlia Vasconcelos, nº 199 - Tatuapé - Fortaleza, CE - CEP.: 60125-150",
-    "7":  "\U0001f4cdTravessa Ferreira dos Santos, nº 8b, bairro Álvaro Weyne - Fortaleza, CE - CEP.: 60.335-570",
-    "11": "\U0001f4cdRua Humberto Lomeu, nº 2074 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
-    "14": "\U0001f4cdRua Rosário, nº 38 - Bairro Aldeota. Fortaleza, CE - CEP.: 60.135-310",
-    "15": "\U0001f4cdRua Pedro Sampaio, nº 453 - bairro Vila Velha - Fortaleza, CE - CEP.: 60346-285",
-    "16": "\U0001f4cdRua Cariús, nº 669, bairro Jardim Guanabara - Fortaleza, CE - CEP.: 60.346-270",
-    "18": "\U0001f4cdRua Nove, nº 803, bairro Passaré - Fortaleza, CE - CEP.: 60.810-670",
-    "19": "\U0001f4cdRua Londrina, nº 1972 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-485",
-    "20": "\U0001f4cdRua Pereira Barbosa, nº 1460 - bairro Siqueira - Fortaleza, CE - CEP.: 60732-382",
-    "22": "\U0001f4cdRua Barra Mansa, nº 478, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.540-060",
-    "23": "\U0001f4cdAvenida Governador Leonel Brizola, S/N, bairro Jangurussu - Fortaleza, CE - CEP.: 60.866-681",
-    "24": "\U0001f4cdRua 69, S/N, bairro Prefeito José Walter - Fortaleza, CE - CEP.: 60.810-670",
-    "25": "\U0001f4cdAvenida Oscar Araripe, nº 1030, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.543-452",
-    "26": "\U0001f4cdRua Coronel Matos Dourados, nº 1499, bairro Planalto Pici - Fortaleza, CE - CEP.: 60.360-561",
-    "27": "\U0001f4cdRua H, nº 61, bairro Parque Dois Irmãos - Fortaleza, CE - CEP.: 60810-670",
-    "29": "\U0001f4cdRua Dom Lino, nº 546, bairro Parquelândia - Fortaleza, CE - CEP.: 60.450-285",
-    "30": "\U0001f4cdAvenida Santos Dumont, nº 2500, bairro Aldeota - Fortaleza, CE - CEP.: 60.150-161",
-    "31": "\U0001f4cdAvenida Augusto dos Anjos, nº 2466, bairro Bonsucesso (prédio da antiga Regional) - Fortaleza, CE - CEP.: 60542-164",
+    "5":  "📍Rua Costa Freire, nº 2238, bairro Parangaba - Fortaleza, CE - CEP.: 60.730-255",
+    "6":  "📍Rua Júlia Vasconcelos, nº 199 - Tatuapé - Fortaleza, CE - CEP.: 60125-150",
+    "7":  "📍Travessa Ferreira dos Santos, nº 8b, bairro Álvaro Weyne - Fortaleza, CE - CEP.: 60.335-570",
+    "11": "📍Rua Humberto Lomeu, nº 2074 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-355",
+    "14": "📍Rua Rosário, nº 38 - Bairro Aldeota. Fortaleza, CE - CEP.: 60.135-310",
+    "15": "📍Rua Pedro Sampaio, nº 453 - bairro Vila Velha - Fortaleza, CE - CEP.: 60346-285",
+    "16": "📍Rua Cariús, nº 669, bairro Jardim Guanabara - Fortaleza, CE - CEP.: 60.346-270",
+    "18": "📍Rua Nove, nº 803, bairro Passaré - Fortaleza, CE - CEP.: 60.810-670",
+    "19": "📍Rua Londrina, nº 1972 - bairro Granja Portugal - Fortaleza, CE - CEP.: 60540-485",
+    "20": "📍Rua Pereira Barbosa, nº 1460 - bairro Siqueira - Fortaleza, CE - CEP.: 60732-382",
+    "22": "📍Rua Barra Mansa, nº 478, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.540-060",
+    "23": "📍Avenida Governador Leonel Brizola, S/N, bairro Jangurussu - Fortaleza, CE - CEP.: 60.866-681",
+    "24": "📍Rua 69, S/N, bairro Prefeito José Walter - Fortaleza, CE - CEP.: 60.810-670",
+    "25": "📍Avenida Oscar Araripe, nº 1030, bairro Bom Jardim - Fortaleza, CE - CEP.: 60.543-452",
+    "26": "📍Rua Coronel Matos Dourados, nº 1499, bairro Planalto Pici - Fortaleza, CE - CEP.: 60.360-561",
+    "27": "📍Rua H, nº 61, bairro Parque Dois Irmãos - Fortaleza, CE - CEP.: 60810-670",
+    "29": "📍Rua Dom Lino, nº 546, bairro Parquelândia - Fortaleza, CE - CEP.: 60.450-285",
+    "30": "📍Avenida Santos Dumont, nº 2500, bairro Aldeota - Fortaleza, CE - CEP.: 60.150-161",
+    "31": "📍Avenida Augusto dos Anjos, nº 2466, bairro Bonsucesso (prédio da antiga Regional) - Fortaleza, CE - CEP.: 60542-164",
 }
 # Turmas finalizadas removidas em 06/10/2026:
 # 26/INAT-004, 26/MARK-006, 26/RECP-001, 26/SOMD-008, 26/MNCR-010
@@ -107,23 +107,19 @@ ADDRESS_OPTIONS = {
 # 26/MNCR-011 - Manicure (CRE BOM JARDIM) — enc. 11/11/2026
 # Turma removida em 03/11/2026:
 # 26/DSUN-007 - Designer de Unhas (REGIONAL VIII - CAOF) — enc. 13/11/2026
+# Turmas removidas em 05/11/2026:
+# 26/ADMN-007 - Auxiliar Administrativo (SINE MUNICIPAL PARQUELÂNDIA) — início 17/11/2026, encerramento 01/12/2026
+# 26/MNCR-012 - Manicure (SINE MUNICIPAL PARQUELÂNDIA) — início 16/11/2026, encerramento 20/11/2026
+# 26/ASLO-01 - Assistente de Logística (SINE MUNICIPAL ALDEOTA) — início 17/11/2026, encerramento 01/12/2026
+# 26/RECP-003 - Recepcionista (SINE MUNICIPAL SIQUEIRA) — início 17/11/2026, encerramento 01/12/2026
+# 26/MLRE-01 - Monitor Lazer e Recreação (SINE MUNICIPAL SIQUEIRA) — início 17/11/2026, encerramento 01/12/2026
+# Turma removida em 05/11/2026:
+# 26/TRNC-006 - Trancista (CRE BOM JARDIM) — início 16/11/2026, encerramento 20/11/2026
 TURMA_OPTIONS = [
-    # Turmas adicionadas em 23/10/2026:
-    # 26/DSBR-013 - Designer de Sobrancelhas (REGIONAL VIII - CAOF) — início 09/11/2026, encerramento 13/11/2026
+    # Turma adicionada em 23/10/2026:
     {"id":"1101","curso_id":"11","local_id":"27","turma_codigo":"26/DSBR-013",
      "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
      "data_inicio":"09/11/2026","encerramento":"13/11/2026","endereco_id":"27"},
-    # Turmas adicionadas em 03/11/2026:
-    # Turmas removidas em 05/11/2026:
-    # 26/ADMN-007 - Auxiliar Administrativo (SINE MUNICIPAL PARQUELÂNDIA) — início 17/11/2026, encerramento 01/12/2026
-    # 26/MNCR-012 - Manicure (SINE MUNICIPAL PARQUELÂNDIA) — início 16/11/2026, encerramento 20/11/2026
-    # 26/ASLO-01 - Assistente de Logística (SINE MUNICIPAL ALDEOTA) — início 17/11/2026, encerramento 01/12/2026
-    # 26/RECP-003 - Recepcionista (SINE MUNICIPAL SIQUEIRA) — início 17/11/2026, encerramento 01/12/2026
-    # 26/MLRE-01 - Monitor Lazer e Recreação (SINE MUNICIPAL SIQUEIRA) — início 17/11/2026, encerramento 01/12/2026
-    # 26/TRNC-006 - Trancista (CRE BOM JARDIM) — início 16/11/2026, encerramento 20/11/2026
-    {"id":"901","curso_id":"9","local_id":"28","turma_codigo":"26/TRNC-006",
-     "dias_aula":"Segunda a Sexta","horario":"13h até 17h",
-     "data_inicio":"16/11/2026","encerramento":"20/11/2026","endereco_id":"25"},
 ]
 COMO_CONHECEU_OPCOES = ["Facebook", "Instagram", "Whatsapp", "Outros"]
 def build_course_options():
@@ -359,17 +355,7 @@ TEMPLATE_WIZARD = r"""
                             <div class="hero-highlight">
                                 <strong>CURSOS DISPON&#205;VEIS:</strong>
                                 <div class="cursos-lista">
-                                    <span class="curso-tag">&#129302; Intelig&#234;ncia Artificial</span>
-                                    <span class="curso-tag">&#128241; Marketing Digital</span>
-                                    <span class="curso-tag">&#128131; Oficina de Dan&#231;a</span>
-                                    <span class="curso-tag">&#128133; Designer de Unhas</span>
-                                    <span class="curso-tag">&#128100; Recepcionista</span>
-                                    <span class="curso-tag">&#128337; Manicure</span>
-                                    <span class="curso-tag">&#128064; Extens&#227;o de C&#237;lios</span>
-                                    <span class="curso-tag">&#128202; Social Media</span>
-                                    <span class="curso-tag">&#128203; Auxiliar Administrativo</span>
                                     <span class="curso-tag">&#128133; Designer de Sobrancelhas</span>
-                                    <span class="curso-tag">&#9989; Costura</span>
                                 </div>
                             </div>
                             <div class="hero-highlight">
