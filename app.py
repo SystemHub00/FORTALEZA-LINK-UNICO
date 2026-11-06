@@ -115,11 +115,10 @@ ADDRESS_OPTIONS = {
 # 26/MLRE-01 - Monitor Lazer e Recreação (SINE MUNICIPAL SIQUEIRA) — início 17/11/2026, encerramento 01/12/2026
 # Turma removida em 05/11/2026:
 # 26/TRNC-006 - Trancista (CRE BOM JARDIM) — início 16/11/2026, encerramento 20/11/2026
+# Turma removida em 06/11/2026:
+# 26/DSBR-013 - Designer de Sobrancelhas (REGIONAL VIII - CAOF) — início 09/11/2026, encerramento 13/11/2026
 TURMA_OPTIONS = [
-    # Turma adicionada em 23/10/2026:
-    {"id":"1101","curso_id":"11","local_id":"27","turma_codigo":"26/DSBR-013",
-     "dias_aula":"Segunda a Sexta","horario":"18h até 21h30",
-     "data_inicio":"09/11/2026","encerramento":"13/11/2026","endereco_id":"27"},
+    # Nenhuma turma ativa no momento. Nova(s) turma(s) prevista(s) para a semana de 09/11/2026.
 ]
 COMO_CONHECEU_OPCOES = ["Facebook", "Instagram", "Whatsapp", "Outros"]
 def build_course_options():
@@ -241,6 +240,8 @@ TEMPLATE_WIZARD = r"""
         .hero-highlight,.info-card,.review-box,.step-card{border-radius:22px;border:1px solid #f0c0c0;background:#fff;box-shadow:0 8px 24px rgba(139,0,0,0.08);}
         .hero-highlight{padding:12px 14px;color:#8b0000;font-size:0.95rem;font-weight:700;}
         .hero-highlight strong{display:block;color:var(--cor-principal);font-size:1.1rem;margin-bottom:6px;}
+        .aviso-banner{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 18px;border-radius:18px;background:linear-gradient(90deg,#fff3cd,#ffe69c);border:2px solid #e6a817;color:#7a4f00;font-size:1rem;font-weight:800;line-height:1.4;text-align:center;box-shadow:0 6px 18px rgba(230,168,23,0.18);}
+        .aviso-banner .aviso-icon{font-size:1.5rem;flex-shrink:0;}
         .cursos-lista{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:8px;}
         .curso-tag{padding:6px 14px;border-radius:999px;background:var(--cor-principal);color:#fff;font-size:0.88rem;font-weight:800;letter-spacing:0.03em;text-transform:uppercase;}
         .benefits-slider{display:grid;gap:12px;margin-top:8px;}
@@ -322,6 +323,7 @@ TEMPLATE_WIZARD = r"""
             .hero-subtitle,.panel-subtitle{font-size:0.92rem;}
             .wizard-shell{border-radius:16px;}
             .form-group.full{grid-column:auto;}
+            .aviso-banner{font-size:0.92rem;padding:12px 12px;}
         }
     </style>
 </head>
@@ -352,11 +354,9 @@ TEMPLATE_WIZARD = r"""
                         <h1 class="hero-title">INVISTA EM VOC&#202;. CONSTRUA SEU FUTURO.</h1>
                         <p class="hero-subtitle">Descubra novas possibilidades, adquira conhecimentos pr&#225;ticos e d&#234; o primeiro passo para transformar sua vida profissional.</p>
                         <div class="hero-highlights">
-                            <div class="hero-highlight">
-                                <strong>CURSOS DISPON&#205;VEIS:</strong>
-                                <div class="cursos-lista">
-                                    <span class="curso-tag">&#128133; Designer de Sobrancelhas</span>
-                                </div>
+                            <div class="aviso-banner">
+                                <span class="aviso-icon">&#128276;</span>
+                                <span>Nova(s) turma(s) chegando na pr&#243;xima segunda-feira, <strong>09/11/2026</strong>! Fique de olho e garanta sua vaga.</span>
                             </div>
                             <div class="hero-highlight">
                                 <strong>BENEF&#205;CIOS</strong>
